@@ -697,8 +697,22 @@ button:not([disabled]):hover,
   transform: rotate(90deg);
 }
 .tooltip-inner {
+  background: #177ba6;
   font-size: 0.75rem;
 }
+.tooltip.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
+  border-top-color: #177ba6;
+}
+.tooltip.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
+  border-bottom-color: #177ba6;
+}
+.tooltip.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+  border-left-color: #177ba6;
+}
+.tooltip.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+  border-right-color: #177ba6;
+}
+
 .preloader {
   display: flex;
   align-items: center;

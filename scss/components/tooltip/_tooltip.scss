@@ -3,14 +3,14 @@
 
 .tooltip {
   &-inner {
-    // background: var(--footertitle);
+    background: darken($primary, 15%);
     font-size: size(12);
   }
 
   &.bs-tooltip-auto[data-popper-placement^="top"] {
     .tooltip-arrow {
       &::before {
-        // border-top-color: var(--footertitle);
+        border-top-color: darken($primary, 15%);
       }
     }
   }
@@ -18,7 +18,7 @@
   &.bs-tooltip-auto[data-popper-placement^="bottom"] {
     .tooltip-arrow {
       &::before {
-        // border-bottom-color: var(--footertitle);
+        border-bottom-color: darken($primary, 15%);
       }
     }
   }
@@ -26,7 +26,7 @@
   &.bs-tooltip-auto[data-popper-placement^="left"] {
     .tooltip-arrow {
       &::before {
-        // border-left-color: var(--footertitle);
+        border-left-color: darken($primary, 15%);
       }
     }
   }
@@ -34,7 +34,7 @@
   &.bs-tooltip-auto[data-popper-placement^="right"] {
     .tooltip-arrow {
       &::before {
-        // border-right-color: var(--footertitle);
+        border-right-color: darken($primary, 15%);
       }
     }
   }
