@@ -48,6 +48,7 @@
       .searchfield {
         @include setBgColor(transparent, $black);
         padding: size(8) size(16);
+        @include w100;
 
         &::placeholder {
           color: $textplaceholder;

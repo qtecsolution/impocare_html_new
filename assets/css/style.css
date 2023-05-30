@@ -655,6 +655,7 @@ button:not([disabled]):hover,
   background: transparent;
   color: hsl(0, 0%, 0%);
   padding: 0.5rem 1rem;
+  width: 100%;
 }
 .searchbox .leftinfo .search .searchfield::-moz-placeholder {
   color: hsl(0, 0%, 77%);
