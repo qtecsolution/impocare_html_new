@@ -31,6 +31,13 @@
 
         svg {
           @include wh100;
+          @include transitionsall;
+        }
+
+        @include hover {
+          svg {
+            color: $primary;
+          }
         }
       }
     }
