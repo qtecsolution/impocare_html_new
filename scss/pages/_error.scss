@@ -37,7 +37,7 @@
     .st4,
     .st5 {
       &::selection {
-        @include setBgColor(transparent, $red);
+        // @include setBgColor(transparent, $red);
       }
     }
   }

@@ -1,11 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
-@import url('https://fonts.cdnfonts.com/css/vivaldi');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
 
-$calista: 'callista';
-$zagora: 'zagora';
-$tt-nooks-script-trial: 'TT Nooks Script Trial';
-$alexbrush: 'Alex Brush', cursive;
-$vivaldi: 'Vivaldi', sans-serif;
+$primaryFont: 'Jost', sans-serif;
 
 // FONT SIZE PIXEL TO REM
 @function calculateRem($size, $base: 16) {
