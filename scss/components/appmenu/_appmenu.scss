@@ -1,0 +1,67 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.appmenu {
+  background: $white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  @include w100;
+  height: size(64);
+  @include border-single(top, solid, 1, $bgcolor);
+
+  @include breakpoint(tab992) {
+    display: none;
+  }
+
+  .applist {
+    @include flex-center-between;
+    gap: size(4);
+    @include wh100;
+
+    &-link {
+      background: $white;
+      width: calc(100% / 5);
+      @include h100;
+      @include flex-center-column;
+      gap: size(4);
+
+      .icon {
+        @include square(22);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
+        }
+      }
+
+      .text {
+        color: $primary;
+        @include font($primaryFont, 12, semibold, normal, 16.8);
+      }
+    }
+
+    .homelink {
+      @include flex-center;
+
+      .homelinkinfo {
+        background: $primary;
+        @include square(60);
+        @include circle;
+        @include flex-center;
+        position: relative;
+        margin-top: size(-16);
+
+        .homeicon {
+          @include square(40);
+          @include flex-center;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+  }
+}
