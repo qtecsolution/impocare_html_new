@@ -9,6 +9,7 @@
   @include w100;
   height: size(64);
   @include border-single(top, solid, 1, $bgcolor);
+  z-index: 9999;
 
   @include breakpoint(tab992) {
     display: none;
