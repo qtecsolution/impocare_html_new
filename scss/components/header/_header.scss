@@ -2,8 +2,66 @@
 @use "../../partials" as *;
 
 .header {
+  background: $white;
+  padding: size(8) size(16);
+  height: size(104);
+
+  @include breakpoint(mobile768) {
+    height: size(64);
+    padding: size(10) size(24);
+  }
   
   &-nav {
-    
+    .headertop {
+      @include flex-center-between;
+      margin-bottom: size(10);
+
+      @include breakpoint(mobile768) {
+        margin-bottom: size(0);
+      }
+
+      .logo {
+        width: size(168);
+        height: size(38);
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+          object-fit: cover;
+        }
+      }
+
+      .uploadfile {
+        @include square(24);
+        @include flex-center;
+
+        label {
+          cursor: pointer;
+          @include square(22);
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+
+      .iconlist {
+        @include list-horizontal;
+        gap: size(12);
+
+        &-link {
+          @include square(24);
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
   }
 }

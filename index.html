@@ -5,11 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ImpoCare</title>
+  <!-- FAVICON-ICON -->
   <link rel="shortcut icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
+  <!-- BACK-TO-TOP-CSS -->
+  <link rel="stylesheet" href="assets/css/back-top/back-top.css">
+  <!-- BOOTSTRAP-CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+  <!-- CUSTOM-STYLESHEET -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <!-- HEADER-SECTION START -->
-  <header class="header">
+  <header class="header fixed-top">
     <nav class="header-nav">
       <div class="headertop">
         <!-- BRAND-LOGO -->
@@ -18,7 +25,7 @@
         </a>
 
         <!-- DESKTOP-SEARCH -->
-        <div class="d-none d-lg-block">
+        <div class="d-none d-md-block">
           <div class="searchbox">
             <div class="leftinfo">
               <div class="uploadfile">
@@ -48,8 +55,27 @@
         <ul class="iconlist">
           <li class="iconlist-item">
             <a href="#" class="iconlist-link">
-              <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#fff" style="color:#fff" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#26AAE1" style="color:#26AAE1" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </a>
+          </li>
+
+          <li class="iconlist-item">
+            <a href="#" class="iconlist-link">
+              <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#26AAE1" style="color:#26AAE1" height="28" width="28" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </a>
+          </li>
+
+          <li class="iconlist-item">
+            <a href="#" class="iconlist-link">
+              <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" color="#26AAE1" style="color:#26AAE1" height="29" width="29" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
               </svg>
             </a>
           </li>
@@ -57,12 +83,12 @@
       </div>
 
       <!-- MOBILE-SEARCH -->
-      <div class="d-lg-none d-block">
+      <div class="d-md-none d-block">
         <div class="searchbox">
           <div class="leftinfo">
             <div class="uploadfile">
-              <input type="file" id="uploadfile" hidden>
-              <label for="uploadfile">
+              <input type="file" id="uploadfile-mobile" hidden>
+              <label for="uploadfile-mobile">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#555" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"></path>
                   <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"></path>
@@ -85,5 +111,17 @@
     </nav>
   </header>
   <!-- HEADER-SECTION END -->
+
+  <main>
+    <h1>Main Content</h1>
+  </main>
+
+  <!-- BOOTSTRAP SCRIPT -->
+  <script src="assets/js/bootsrap/bootstrap.bundle.min.js"></script>
+  <!-- TOOLTIP-JS -->
+  <script src="assets/js/tooltip/tooltip.js"></script>
+  <!-- BACK-TO-TOP -->
+  <script src="assets/js/back-top/back-top.js"></script>
+  <script src="assets/js/back-top/backtotop.js"></script>
 </body>
 </html>

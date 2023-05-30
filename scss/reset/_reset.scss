@@ -101,19 +101,26 @@ ul,
 var,
 video {
   margin: 0;
+  font: inherit;
 
   &::selection {
-    // @include setBgColor($countdowntext, $white);
+    @include setBgColor($primary, $white);
   }
 }
 
 body {
-  // @include setBgColor($bodybg, $textprimary);
+  @include setBgColor($bodybg, $textprimary);
+  @include font($primaryFont, 14, normal, normal, 19.6);
   letter-spacing: size(0.48);
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   margin: 0;
+  margin-top: size(112);
+
+  @include breakpoint(tab992) {
+    margin-top: size(72);
+  }
 }
 
 h1,
@@ -125,7 +132,7 @@ h6 {
   margin: 0;
 
   &::selection {
-    // @include setBgColor($countdowntext, $white);
+    @include setBgColor($primary, $white);
   }
 }
 

@@ -1,3 +1,58 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.searchbox {
+  @include flex-center-vert;
+  @include radius(50);
+  height: size(40);
+  overflow: hidden;
+  flex-grow: 100;
+  @include border(solid, 1, $primary);
+
+  @include breakpoint(desktop1024) {
+    min-width: size(500);
+    max-width: size(600);
+  }
+  
+  .leftinfo {
+    @include flex-center-vert;
+    padding-left: size(16);
+    width: calc(100% - size(64));
+
+    .uploadfile {
+      @include square(24);
+      @include flex-center;
+
+      label {
+        cursor: pointer;
+        @include square(22);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
+        }
+      }
+    }
+
+    .search {
+      width: calc(100% - size(24));
+
+      .searchfield {
+        @include setBgColor(transparent, $black);
+        padding: size(8) size(16);
+
+        &::placeholder {
+          color: $textplaceholder;
+        }
+      }
+    }
+  }
+
+  .btn-search {
+    width: size(64);
+    height: size(40);
+    background: $primary;
+    @include flex-center;
+  }
+}
