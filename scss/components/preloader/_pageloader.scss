@@ -12,7 +12,84 @@
 	background: $white;
 
 	.loader {
-		@include square(250);
-		@include flex-center;
+		@include square(100);
+		animation-name: rotateAnim;
+		animation-duration: .35s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		
+		div {
+			@include square(8);
+			@include border(solid, 1, $primary);
+			@include circle;
+			position: absolute;
+			top: size(2);
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+
+			&:nth-child(odd){
+				border-top: none;
+				border-left: none;
+			}
+
+			&:nth-child(even){
+				border-bottom: none;
+				border-right: none;
+			}
+
+			&:nth-child(2){
+				border-width: size(2);
+				left: size(0);
+				top: size(-4);
+				@include square(12);
+			}
+			
+			&:nth-child(3){
+				border-width: size(2);
+				left: size(-1);
+				top: size(3);
+				@include square(18);
+			}
+
+			&:nth-child(4){
+				border-width: size(3);
+				left: size(-1);
+				top: size(-4);
+				@include square(24);
+			}
+
+			&:nth-child(5){
+				border-width: size(3);
+				left: size(-1);
+				top: size(4);
+				@include square(32);
+			}
+
+			&:nth-child(6){
+				border-width: size(4);
+				left: size(0);
+				top: size(-4);
+				@include square(40);
+			}
+
+			&:nth-child(7){
+				border-width: size(4);
+				left: size(0);
+				top: size(6);
+				@include square(50);
+			}
+		}
 	}
+}
+
+@keyframes rotateAnim {
+  from {
+		@include rotate(0);
+  }
+
+  to {
+		@include rotate(360);
+  }
 }
