@@ -1,3 +1,27 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+.sidebar {
+  background: $white;
+  width: size(260);
+  height: calc(100vh - size(64));
+  position: fixed;
+  top: size(64);
+  left: size(0);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: none;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: size(8);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @include radius(8);
+  }
+
+  @include breakpoint(tab992) {
+    display: block;
+  }
+}

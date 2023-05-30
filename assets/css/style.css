@@ -416,7 +416,7 @@ table tr th, table tr td {
   width: 100%;
   height: 4rem;
   border-top: solid 0.0625rem hsl(0, 0%, 92%);
-  z-index: 9999;
+  z-index: 999;
 }
 @media screen and (min-width: 62rem) {
   .appmenu {
@@ -902,6 +902,31 @@ button:not([disabled]):hover,
     transform: rotate(360deg);
   }
 }
+.sidebar {
+  background: hsl(0, 0%, 100%);
+  width: 16.25rem;
+  height: calc(100vh - 4rem);
+  position: fixed;
+  top: 4rem;
+  left: 0rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: none;
+}
+.sidebar::-webkit-scrollbar {
+  background: transparent;
+  width: 0.5rem;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+@media screen and (min-width: 62rem) {
+  .sidebar {
+    display: block;
+  }
+}
+
 .custom-radio .radio-input:checked ~ .radio-label::after {
   opacity: 1;
   visibility: visible;
