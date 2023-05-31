@@ -1,3 +1,79 @@
 @use "../global" as *;
 @use "../partials" as *;
 
+.homebanner {
+  overflow: hidden;
+
+  .swiper {
+    @include w100;
+    height: size(180);
+
+    @include breakpoint(mobile576) {
+      height: size(250);
+    }
+
+    @include breakpoint(mobile768) {
+      height: size(310);
+    }
+
+    &-slide {
+      @include flex-center;
+      @include w100;
+      height: size(180);
+      flex-grow: 1;
+      overflow: hidden;
+  
+      @include breakpoint(mobile576) {
+        height: size(250);
+      }
+  
+      @include breakpoint(mobile768) {
+        height: size(310);
+      }
+
+      img {
+        @include wh100;
+        vertical-align: top;
+        object-fit: fill;
+        object-position: 50% 50%;
+      }
+    }
+
+    &-button-prev,
+    &-button-next {
+      width: size(32);
+      background: transparent;
+      @include h100;
+      margin-top: size(0);
+      top: size(0);
+      color: $red;
+
+      &::after {
+        content: '';
+        width: size(0);
+        height: size(0);
+        display: none;
+      }
+
+      @include hover {
+        background: rgba($black, 0.2);
+      }
+    }
+
+    &-button-prev {
+      left: size(0);
+    }
+
+    &-button-next {
+      right: size(0);
+    }
+
+    &-pagination {
+      &-bullet {
+        &-active {
+          background: $red;
+        }
+      }
+    }
+  }
+}

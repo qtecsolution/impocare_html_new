@@ -1,4 +1,13 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+.maincontent {
+  @include w100;
+  height: auto;
 
+  @include breakpoint(tab992) {
+    width: calc(100% - size(260));
+    margin-left: auto;
+    padding: size(8);
+  }
+}

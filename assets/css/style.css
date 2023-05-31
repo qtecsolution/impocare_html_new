@@ -1088,6 +1088,18 @@ button:not([disabled]):hover,
   display: block;
 }
 
+.maincontent {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 62rem) {
+  .maincontent {
+    width: calc(100% - 16.25rem);
+    margin-left: auto;
+    padding: 0.5rem;
+  }
+}
+
 .custom-radio .radio-input:checked ~ .radio-label::after {
   opacity: 1;
   visibility: visible;
@@ -1126,6 +1138,78 @@ button:not([disabled]):hover,
   opacity: 0;
   visibility: hidden;
   transition: transform 350ms ease-in-out;
+}
+
+.homebanner {
+  overflow: hidden;
+}
+.homebanner .swiper {
+  width: 100%;
+  height: 11.25rem;
+}
+@media screen and (min-width: 36rem) {
+  .homebanner .swiper {
+    height: 15.625rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .homebanner .swiper {
+    height: 19.375rem;
+  }
+}
+.homebanner .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 11.25rem;
+  flex-grow: 1;
+  overflow: hidden;
+}
+@media screen and (min-width: 36rem) {
+  .homebanner .swiper-slide {
+    height: 15.625rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .homebanner .swiper-slide {
+    height: 19.375rem;
+  }
+}
+.homebanner .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+.homebanner .swiper-button-prev, .homebanner .swiper-button-next {
+  width: 2rem;
+  background: transparent;
+  height: 100%;
+  margin-top: 0rem;
+  top: 0rem;
+  color: hsl(354, 73%, 43%);
+}
+.homebanner .swiper-button-prev::after, .homebanner .swiper-button-next::after {
+  content: "";
+  width: 0rem;
+  height: 0rem;
+  display: none;
+}
+.homebanner .swiper-button-prev:not([disabled]):hover, .homebanner .swiper-button-next:not([disabled]):hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.homebanner .swiper-button-prev {
+  left: 0rem;
+}
+.homebanner .swiper-button-next {
+  right: 0rem;
+}
+.homebanner .swiper-pagination-bullet-active {
+  background: hsl(354, 73%, 43%);
 }
 
 /*
