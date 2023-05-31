@@ -31,45 +31,27 @@
 
     &-link {
       background: $white;
-      @include flex-center-vert;
-      gap: size(16);
+      @include flex-center-between;
+      gap: size(8);
+      @include w100;
       padding: size(14) size(18);
       @include transitionsall;
-      @include w100;
 
-      .icon {
-        @include square(24);
-        @include flex-center;
-        overflow: hidden;
-
-        img {
-          @include wh100;
-        }
+      .text {
+        color: $black;
+        @include font($primaryFont, 12, medium, normal, 19.6);
+        flex: 1 1;
       }
 
-      .info {
-        width: calc(100% - size(40));
-        @include flex-center-between;
-        gap: size(8);
-
-        .text {
-          color: $black;
-          @include font($primaryFont, 12, medium, normal, 19.6);
-          flex: 1 1;
-        }
-
-        .arrow {
-          @include transitionsall;
-        }
+      .arrow {
+        @include transitionsall;
       }
 
       @include hover {
         background: $linkhoverbg;
 
-        .info {  
-          .arrow {
-            @include translateX(size(4));
-          }
+        .arrow {
+          @include translateX(size(4));
         }
       }
     }
@@ -107,7 +89,6 @@
         gap: size(8);
         padding: size(14) size(18);
         background: $white;
-        height: size(52);
 
         .text {
           color: $black;
@@ -161,7 +142,6 @@
           gap: size(8);
           padding: size(14) size(18);
           background: $white;
-          height: size(52);
   
           .text {
             color: $black;

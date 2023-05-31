@@ -116,10 +116,10 @@ body {
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   margin: 0;
-  margin-top: size(112);
+  margin-top: size(104);
 
-  @include breakpoint(tab992) {
-    margin-top: size(72);
+  @include breakpoint(mobile768) {
+    margin-top: size(64);
   }
 }
 
