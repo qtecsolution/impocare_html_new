@@ -8,20 +8,196 @@
   position: fixed;
   top: size(64);
   left: size(0);
-  overflow-x: hidden;
-  overflow-y: scroll;
   display: none;
-
-  &::-webkit-scrollbar {
-    background: transparent;
-    width: size(8);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    @include radius(8);
-  }
 
   @include breakpoint(tab992) {
     display: block;
+  }
+
+  .categorylist {
+    @include wh100;
+    @include list-vertical;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: size(0);
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      @include radius(8);
+    }
+
+    &-link {
+      background: $white;
+      @include flex-center-vert;
+      gap: size(16);
+      padding: size(14) size(18);
+      @include transitionsall;
+      @include w100;
+
+      .icon {
+        @include square(24);
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+        }
+      }
+
+      .info {
+        width: calc(100% - size(40));
+        @include flex-center-between;
+        gap: size(8);
+
+        .text {
+          color: $black;
+          @include font($primaryFont, 12, medium, normal, 19.6);
+          flex: 1 1;
+        }
+
+        .arrow {
+          @include transitionsall;
+        }
+      }
+
+      @include hover {
+        background: $linkhoverbg;
+
+        .info {  
+          .arrow {
+            @include translateX(size(4));
+          }
+        }
+      }
+    }
+
+    .categorybox {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background: $white;
+      width: size(260);
+      @include h100;
+      display: none;
+      @extend %animation;
+      @extend %slideRightIn;
+    }
+
+    .subcategory {
+      @include list-vertical;
+      
+      overflow-x: hidden;
+      overflow-y: scroll;
+      max-height: 99%;
+    
+      &::-webkit-scrollbar {
+        background: transparent;
+        width: size(0);
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        @include radius(8);
+      }
+
+      &-link {
+        @include flex-center-between;
+        gap: size(8);
+        padding: size(14) size(18);
+        background: $white;
+        height: size(52);
+
+        .text {
+          color: $black;
+          @include font($primaryFont, 12, medium, normal, 19.6);
+          flex: 1 1;
+        }
+
+        .arrow {
+          @include transitionsall;
+        }
+
+        @include hover {
+          background: $linkhoverbg;
+  
+          .arrow {
+            @include translateX(size(4));
+          }
+        }
+      }
+
+      .subsubcategorybox {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        display: none;
+        width: size(260);
+        @include h100;
+        background: $white;
+      }
+
+      .subsubcategory {
+        @include list-vertical;
+        @extend %animation;
+        @extend %slideRightIn;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-height: 99%;
+      
+        &::-webkit-scrollbar {
+          background: transparent;
+          width: size(0);
+        }
+      
+        &::-webkit-scrollbar-thumb {
+          @include radius(8);
+        }
+  
+        &-link {
+          @include flex-center-between;
+          gap: size(8);
+          padding: size(14) size(18);
+          background: $white;
+          height: size(52);
+  
+          .text {
+            color: $black;
+            @include font($primaryFont, 12, medium, normal, 19.6);
+            flex: 1 1;
+          }
+  
+          .arrow {
+            @include transitionsall;
+          }
+  
+          @include hover {
+            background: $linkhoverbg;
+    
+            .arrow {
+              @include translateX(size(4));
+            }
+          }
+        }
+      }
+
+      &-item {
+        @include hover {
+          .subsubcategorybox {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &-item {
+      @include hover {
+        .categorybox {
+          display: block;
+        }
+      }
+    }
   }
 }
