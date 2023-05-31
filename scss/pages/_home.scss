@@ -47,6 +47,7 @@
       margin-top: size(0);
       top: size(0);
       color: $red;
+      @include transitionsall;
 
       &::after {
         content: '';
