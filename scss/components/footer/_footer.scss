@@ -42,8 +42,44 @@
           }
         }
       }
-      .listsocial {}
-      .contactlist {}
+
+      .listsocial {
+        @include list-horizontal;
+        gap: size(10);
+
+        &-link {
+          display: inline-block;
+
+          i {
+            color: $white;
+            font-size: size(36);
+          }
+        }
+      }
+
+      .contactlist {
+        @include list-vertical;
+        gap: size(8);
+
+        &-link {
+          color: $white;
+          @include flex-center-vert;
+          align-items: flex-start;
+          gap: size(12);
+          font-style: normal;
+          font-weight: 500;
+          @include transitionsall;
+
+          i {
+            color: inherit;
+            font-size: size(18);
+          }
+
+          &:hover {
+            color: lighten($primary, 25%);
+          }
+        }
+      }
     }
   }
 

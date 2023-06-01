@@ -8288,6 +8288,46 @@ button:not([disabled]):hover,
   color: #98d6f1;
   text-decoration: underline;
 }
+.footer .footerdetail-body .listsocial {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.footer .footerdetail-body .listsocial-link {
+  display: inline-block;
+}
+.footer .footerdetail-body .listsocial-link i {
+  color: hsl(0, 0%, 100%);
+  font-size: 2.25rem;
+}
+.footer .footerdetail-body .contactlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer .footerdetail-body .contactlist-link {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  transition: all 350ms ease-in-out;
+}
+.footer .footerdetail-body .contactlist-link i {
+  color: inherit;
+  font-size: 1.125rem;
+}
+.footer .footerdetail-body .contactlist-link:hover {
+  color: #98d6f1;
+}
 .footer .copyright {
   background: hsl(0, 0%, 7%);
   display: flex;
