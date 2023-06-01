@@ -534,6 +534,83 @@ button:not([disabled]):hover,
   opacity: 1;
 }
 
+.homeproduct {
+  border: solid 0.0625rem hsl(0, 0%, 97%);
+  padding: 1rem 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  height: 100%;
+}
+.homeproduct-header {
+  width: 100%;
+  height: 12.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.homeproduct-header img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center center;
+     object-position: center center;
+  transition: transform 350ms ease-in-out;
+}
+.homeproduct-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0.5rem 0.3125rem;
+}
+.homeproduct-body .producttitle {
+  color: hsl(0, 0%, 0%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 48rem) {
+  .homeproduct-body .producttitle {
+    font-size: 0.875rem;
+  }
+}
+.homeproduct-body .productprice {
+  color: hsl(354, 73%, 43%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+}
+.homeproduct-body .productprice span {
+  color: inherit;
+  font: inherit;
+}
+.homeproduct-body .soldbadge {
+  font-family: "Jost", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(0, 0%, 37%);
+}
+@media screen and (min-width: 48rem) {
+  .homeproduct-body .soldbadge {
+    font-size: 0.75rem;
+  }
+}
+.homeproduct:not([disabled]):hover .homeproduct-header img {
+  transform: scale(0.95);
+}
+
 .header {
   background: hsl(0, 0%, 100%);
   padding: 0.5rem 1rem;
@@ -1094,6 +1171,9 @@ button:not([disabled]):hover,
 .maincontent {
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 @media screen and (min-width: 62rem) {
   .maincontent {
@@ -1214,6 +1294,90 @@ button:not([disabled]):hover,
 }
 .homebanner .swiper-pagination-bullet-active {
   background: hsl(354, 73%, 43%);
+}
+
+.homeproducts {
+  background: hsl(0, 0%, 100%);
+}
+.homeproducts-header {
+  border-bottom: solid 0.0625rem hsl(0, 0%, 93%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+}
+.homeproducts-header .homeproducts-title {
+  color: hsl(0, 0%, 0%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.homeproducts-header .viewmore {
+  height: 1.875rem;
+  padding-inline: 0.625rem;
+  background: #1d9cd3;
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.homeproducts-body .productlink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.trendingproducts {
+  background: hsl(0, 0%, 100%);
+}
+.trendingproducts-header {
+  border-bottom: solid 0.0625rem hsl(0, 0%, 93%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.25rem;
+  text-align: center;
+}
+.trendingproducts-header .trendingproducts-title {
+  color: hsl(0, 0%, 0%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.trendingproducts-body .productlink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.trendingproducts-body .loadmore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: hsl(0, 0%, 96%);
+}
+.trendingproducts-body .btn-loadmore {
+  height: 2.5rem;
+  padding-inline: 1.5rem;
+  background: #1d9cd3;
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.5rem;
+  text-align: center;
 }
 
 /*

@@ -4,6 +4,8 @@
 .maincontent {
   @include w100;
   height: auto;
+  @include flex-column;
+  gap: size(8);
 
   @include breakpoint(tab992) {
     width: calc(100% - size(260));

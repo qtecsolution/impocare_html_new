@@ -78,3 +78,75 @@
     }
   }
 }
+
+.homeproducts {
+  background: $white;
+
+  &-header {
+    @include border-single(bottom, solid, 1, $border-1);
+    @include flex-center-between;
+    padding: size(16) size(20);
+
+    .homeproducts-title {
+      color: $black;
+      @include font($primaryFont, 15, bold, normal, 21);
+      text-transform: uppercase;
+    }
+
+    .viewmore {
+      height: size(30);
+      padding-inline: size(10);
+      @include setBgColor(darken($primary, 5%), $white);
+      @include radius(4);
+      @include flex-center;
+      text-align: center;
+    }
+  }
+
+  &-body {
+    .productlink {
+      display: block;
+      @include wh100;
+    }
+  }
+}
+
+.trendingproducts {
+  background: $white;
+
+  &-header {
+    @include border-single(bottom, solid, 1, $border-1);
+    @include flex-center;
+    padding: size(16) size(20);
+    text-align: center;
+
+    .trendingproducts-title {
+      color: $black;
+      @include font($primaryFont, 15, bold, normal, 21);
+      text-transform: uppercase;
+    }
+  }
+
+  &-body {
+    .productlink {
+      display: block;
+      @include wh100;
+    }
+
+    .loadmore {
+      @include flex-center;
+      padding: size(32);
+      background: $bodybg;
+    }
+
+    .btn-loadmore {
+      height: size(40);
+      padding-inline: size(24);
+      @include setBgColor(darken($primary, 5%), $white);
+      @include radius(4);
+      @include flex-center;
+      width: size(120);
+      text-align: center;
+    }
+  }
+}

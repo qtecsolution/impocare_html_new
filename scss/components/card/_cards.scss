@@ -1,3 +1,67 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+.homeproduct {
+  @include border(solid, 1, $border-2);
+  padding: size(16) size(8) size(8);
+  @include flex-column;
+  gap: size(6);
+  @include h100;
+
+  &-header {
+    @include w100;
+    height: size(200);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: contain;
+      object-position: center center;
+      @include transitiontransform;
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(8);
+    padding: size(8) size(8) size(5);
+  
+    .producttitle {
+      color: $black;
+      @include font($primaryFont, 12, medium, normal, 16.8);
+      @include text-overflow;
+
+      @include breakpoint(mobile768) {
+        font-size: size(14);
+      }
+    }
+
+    .productprice {
+      color: $red;
+      @include font($primaryFont, 15, bold, normal, 21);
+
+      span {
+        color: inherit;
+        font: inherit;
+      }
+    }
+
+    .soldbadge {
+      @include font($primaryFont, 10, medium, normal, 14);
+      color: $textgray;
+
+      @include breakpoint(mobile768) {
+        font-size: size(12);
+      }
+    }
+  }
+
+  @include hover {
+    .homeproduct-header {
+      img {
+        @include scale(.95);
+      }
+    }
+  }
+}
