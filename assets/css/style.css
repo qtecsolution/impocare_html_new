@@ -8273,6 +8273,21 @@ button:not([disabled]):hover,
   line-height: 1.4;
   text-transform: uppercase;
 }
+.footer .footerdetail-body .footlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer .footerdetail-body .footlist-link {
+  color: hsl(0, 0%, 100%);
+}
+.footer .footerdetail-body .footlist-link:hover {
+  color: #98d6f1;
+  text-decoration: underline;
+}
 .footer .copyright {
   background: hsl(0, 0%, 7%);
   display: flex;

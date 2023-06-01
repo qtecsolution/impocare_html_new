@@ -29,7 +29,21 @@
     }
 
     &-body {
-      
+      .footlist {
+        @include list-vertical;
+        gap: size(8);
+
+        &-link {
+          color: $white;
+
+          &:hover {
+            color: lighten($primary, 25%);
+            text-decoration: underline;
+          }
+        }
+      }
+      .listsocial {}
+      .contactlist {}
     }
   }
 
