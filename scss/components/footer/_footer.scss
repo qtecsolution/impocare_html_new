@@ -2,5 +2,46 @@
 @use "../../partials" as *;
 
 .footer {
-  
+  background: $textgray;
+  @include w100;
+  padding: size(8) size(0) size(64);
+
+  @include breakpoint(tab992) {
+    width: calc(100% - size(260));
+    margin-left: auto;
+    padding: size(8) size(0) size(0);
+  }
+
+  .footertop {
+    padding: size(40);
+  }
+
+  .footerdetail {
+    @include flex-column;
+    gap: size(16);
+
+    &-header {
+      .footer-title {
+        color: $white;
+        @include font($primaryFont, 15, bold, normal, 21);
+        text-transform: uppercase;
+      }
+    }
+
+    &-body {
+      
+    }
+  }
+
+  .copyright {
+    background: $textprimary;
+    @include flex-center;
+    text-align: center;
+    height: size(40);
+
+    .textcopyright {
+      color: $white;
+      @include font($primaryFont, 14, medium, normal, 19.6);
+    }
+  }
 }
