@@ -8428,7 +8428,7 @@ button:not([disabled]):hover,
   color: hsl(0, 0%, 100%);
 }
 .footer .footerdetail-body .footlist-link:hover {
-  color: #98d6f1;
+  color: #81cdee;
   text-decoration: underline;
 }
 .footer .footerdetail-body .listsocial {
@@ -8440,11 +8440,16 @@ button:not([disabled]):hover,
   gap: 0.625rem;
 }
 .footer .footerdetail-body .listsocial-link {
+  color: hsl(0, 0%, 100%);
   display: inline-block;
+  transition: color 350ms ease-in-out;
 }
 .footer .footerdetail-body .listsocial-link i {
-  color: hsl(0, 0%, 100%);
+  color: inherit;
   font-size: 2.25rem;
+}
+.footer .footerdetail-body .listsocial-link:not([disabled]):hover {
+  color: hsl(198, 76%, 52%);
 }
 .footer .footerdetail-body .contactlist {
   margin: 0;
@@ -8468,7 +8473,7 @@ button:not([disabled]):hover,
   color: inherit;
   font-size: 1.125rem;
 }
-.footer .footerdetail-body .contactlist-link:hover {
+.footer .footerdetail-body .contactlist-link:not([disabled]):hover {
   color: #98d6f1;
 }
 .footer .copyright {
@@ -8482,7 +8487,7 @@ button:not([disabled]):hover,
 .footer .copyright .textcopyright {
   color: hsl(0, 0%, 100%);
   font-family: "Jost", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   font-style: normal;
   line-height: 1.4;
@@ -8969,6 +8974,11 @@ button:not([disabled]):hover,
   justify-content: center;
   width: 7.5rem;
   text-align: center;
+}
+
+.productdetails {
+  padding: 0.5rem;
+  background: hsl(0, 0%, 100%);
 }
 
 /*

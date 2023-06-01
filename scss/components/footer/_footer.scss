@@ -37,7 +37,7 @@
           color: $white;
 
           &:hover {
-            color: lighten($primary, 25%);
+            color: lighten($primary, 20%);
             text-decoration: underline;
           }
         }
@@ -48,11 +48,17 @@
         gap: size(10);
 
         &-link {
+          color: $white;
           display: inline-block;
+          @include transitionscolor;
 
           i {
-            color: $white;
+            color: inherit;
             font-size: size(36);
+          }
+
+          @include hover {
+            color: $primary;
           }
         }
       }
@@ -75,7 +81,7 @@
             font-size: size(18);
           }
 
-          &:hover {
+          @include hover {
             color: lighten($primary, 25%);
           }
         }
@@ -91,7 +97,7 @@
 
     .textcopyright {
       color: $white;
-      @include font($primaryFont, 14, medium, normal, 19.6);
+      @include font($primaryFont, 13, medium, normal, 18.2);
     }
   }
 }

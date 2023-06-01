@@ -1,2 +1,7 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+.productdetails {
+  padding: size(8);
+  background: $white;
+}
