@@ -15,6 +15,7 @@
 
   &.offcanvas-start {
     border-right: 0;
+    width: size(260);
   }
 
   &.offcanvas-end {
@@ -63,6 +64,115 @@
   }
 
   &-body {
+
+    .categorylist {
+      @include wh100;
+      @include list-vertical;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    
+      &::-webkit-scrollbar {
+        background: transparent;
+        width: size(0);
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        @include radius(8);
+      }
+  
+      &-link {
+        background: $white;
+        @include flex-center-between;
+        gap: size(8);
+        @include w100;
+        padding: size(14) size(18);
+        @include transitionsall;
+  
+        .text {
+          color: $black;
+          @include font($primaryFont, 12, medium, normal, 19.6);
+          flex: 1 1;
+        }
+  
+        .arrow {
+          @include transitionsall;
+        }
+  
+        @include hover {
+          background: $linkhoverbg;
+  
+          .arrow {
+            @include translateX(size(4));
+          }
+        }
+      }
+  
+      .categorybox {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background: $white;
+        width: size(260);
+        @include h100;
+        @extend %animation;
+        @extend %slideLeftIn;
+        z-index: 1000;
+
+        &.active {
+          left: size(0);
+        }
+      }
+  
+      .subcategory {
+        @include list-vertical;
+        
+        overflow-x: hidden;
+        overflow-y: scroll;
+        max-height: 99%;
+      
+        &::-webkit-scrollbar {
+          background: transparent;
+          width: size(0);
+        }
+      
+        &::-webkit-scrollbar-thumb {
+          @include radius(8);
+        }
+  
+        &-link {
+          @include flex-center-between;
+          gap: size(8);
+          padding: size(14) size(18);
+          background: $white;
+  
+          .text {
+            color: $black;
+            @include font($primaryFont, 12, medium, normal, 19.6);
+            flex: 1 1;
+          }
+  
+          .arrow {
+            @include transitionsall;
+          }
+  
+          @include hover {
+            background: $linkhoverbg;
+    
+            .arrow {
+              @include translateX(size(4));
+            }
+          }
+        }
+      }
+  
+      &-item {
+        &:focus {
+          .categorybox {
+            left: 0;
+          }
+        }
+      }
+    }
 
     &::-webkit-scrollbar {
       background: transparent;
