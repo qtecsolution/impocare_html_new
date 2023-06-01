@@ -8183,11 +8183,41 @@ button:not([disabled]):hover,
   left: -100%;
   background: hsl(0, 0%, 100%);
   width: 16.25rem;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   z-index: 1000;
 }
-.offcanvas-body .categorylist .categorybox.active {
+.offcanvas-body .categorylist .categorybox.is-active {
   left: 0rem;
+}
+.offcanvas-body .categorylist .categorybox .back-category {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.125rem;
+  background: hsl(0, 0%, 100%);
+  border-bottom: solid 0.25rem hsl(0, 0%, 96%);
+  height: 3rem;
+}
+.offcanvas-body .categorylist .categorybox .back-category .text {
+  color: hsl(0, 0%, 0%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.6333333333;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+.offcanvas-body .categorylist .categorybox .back-category .icon {
+  transition: all 350ms ease-in-out;
+}
+.offcanvas-body .categorylist .categorybox .back-category:not([disabled]):hover {
+  background: hsl(163, 19%, 93%);
+}
+.offcanvas-body .categorylist .categorybox .back-category:not([disabled]):hover .icon {
+  transform: translateX(-0.25rem);
 }
 .offcanvas-body .categorylist .subcategory {
   margin: 0;

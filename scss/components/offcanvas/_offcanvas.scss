@@ -113,13 +113,42 @@
         left: -100%;
         background: $white;
         width: size(260);
+        @include flex-column;
         @include h100;
         @extend %animation;
         @extend %slideLeftIn;
         z-index: 1000;
 
-        &.active {
+        &.is-active {
           left: size(0);
+        }
+
+        .back-category {
+          @include flex-center-vert;
+          gap: size(8);
+          padding: size(14) size(18);
+          background: $white;
+          @include border-single(bottom, solid, 4, $bodybg);
+          height: size(48);
+  
+          .text {
+            color: $black;
+            @include font($primaryFont, 12, medium, normal, 19.6);
+            display: inline-block;
+            margin-top: size(4);
+          }
+  
+          .icon {
+            @include transitionsall;
+          }
+  
+          @include hover {
+            background: $linkhoverbg;
+    
+            .icon {
+              @include translateX(size(-4));
+            }
+          }
         }
       }
   
