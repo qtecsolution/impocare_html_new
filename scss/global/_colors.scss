@@ -41,6 +41,9 @@ $border-1: hsl(0, 0%, 93%); //#eeeeee
 $border-2: hsl(0, 0%, 97%); //#f8f8f8
 
 // SHADOWS
+$shadow1: hsl(0, 0%, 80%); //#cccccc
+
+$bordershadow-1: inset 0 0 0 .0625rem $shadow1;
 
 // BOX-SHADOWS
 

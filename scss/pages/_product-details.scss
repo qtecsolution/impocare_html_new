@@ -4,4 +4,68 @@
 .productdetails {
   padding: size(8);
   background: $white;
+
+  &-body {
+    background: rebeccapurple;
+    @include flex-start;
+
+    .vanilla-zoom {
+      .sidebar {
+        .previewthumb {
+          width: calc(100% / 4 - size(5));
+          @include flex-center;
+          background: $white;
+          @include border(solid, 2, $shadow1);
+          box-shadow: $bordershadow-1;
+          padding: size(4);
+          @include radius(4);
+          overflow: hidden;
+          
+          .small-preview {
+            @include wh100;
+          }
+        }
+      }
+    }
+
+    .details {
+      @include w100;
+
+      .quantities {
+        .colors {
+          .color {
+
+          }
+        }
+
+        .colors-variant {
+          @include flex-center-vert;
+          flex-wrap: wrap;
+          gap: size(5);
+
+          .previewthumb {
+            @include square(49);
+            @include flex-center;
+            background: $white;
+            @include border(solid, 2, $shadow1);
+            box-shadow: $bordershadow-1;
+            @include radius(4);
+            padding: size(3);
+            overflow: hidden;
+            
+            .small-preview {
+              @include wh100;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .productleftinfo {
+
+    &-body {
+      background: rebeccapurple;
+    }
+  }
 }

@@ -1,7 +1,7 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
-.sidebar {
+.desktopsidebar {
   background: $white;
   width: size(260);
   height: calc(100vh - size(64));
@@ -42,6 +42,7 @@
         color: $black;
         @include font($primaryFont, 12, medium, normal, 19.6);
         flex: 1 1;
+        @include line-clamp;
       }
 
       .arrow {
