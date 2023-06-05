@@ -432,9 +432,227 @@
     }
   }
 
+  &-footer {
+    padding-top: size(20);
+    background: $white;
+    @include border-single(bottom, solid, 1, $border-1);
+    margin-top: size(16);
+    @include flex-column;
+    gap: size(8);
+    @include radius(4);
+
+    .nav-tabs {
+      justify-content: center;
+      flex-wrap: nowrap;
+      border: none;
+      gap: size(16);
+
+      .nav-link {
+        height: size(48);
+        @include border(solid, 1, darken($primary, 25%));
+        @include setBgColor($white, darken($primary, 25%));
+        @include flex-center;
+        text-align: center;
+        @include radius(0);
+        text-transform: uppercase;
+        @include radius(4);
+        font-weight: bold;
+        width: auto;
+        font-size: size(10);
+        padding: size(10) size(16);
+
+        @include breakpoint(mobile576) {
+          width: size(120);
+          font-size: size(12);
+        }
+
+        &.active {
+          @include setBgColor(darken($primary, 25%), $white);
+        }
+      }
+    }
+
+    .tabinfo {
+      background: $white;
+      padding: size(16);
+    }
+  }
+
   .productleftinfo {
     &-body {
-      background: rebeccapurple;
+      
+    }
+  }
+
+  .productrightinfo {
+    @include flex-column;
+    gap: size(8);
+
+    .sellerinfo {
+      background: $white;
+      @include radius(4);
+      padding: size(24) size(16);
+      @include flex-column;
+      gap: size(20);
+
+      &-top {
+        @include flex-center-column;
+        gap: size(8);
+        text-align: center;
+
+        .icon {
+          @include square(40);
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+
+        .brandtitle {
+          color: $black;
+          font-size: size(16);
+          font-weight: bold;
+        }
+
+        .storeinfo {
+          color: $black;
+          font-size: size(14);
+        }
+
+        .btn-view {
+          @include setBgColor($primary, $white);
+          padding: size(5) size(20);
+          @include radius(40);
+          font-size: size(14);
+        }
+
+        .scorebadge {
+          @include setBgColor(darken($primary, 25%), $white);
+          padding: size(4) size(8);
+          @include radius(40);
+          font-size: size(12);
+        }
+      }
+
+      &-down {
+        @include flex-center-vert;
+
+        .item {
+          width: 33%;
+          @include flex-center-column;
+          @include border-single(right, solid, 1, $border-1);
+
+          &:last-child {
+            border-right: size(0);
+          }
+        }
+      }
+    }
+
+    .conditions {
+      background: $white;
+      @include radius(4);
+
+      &-header {
+        @include border-single(bottom, solid, 1, $border-1);
+        @include flex-center;
+        padding: size(12);
+        text-align: center;
+
+        .title {
+          color: $black;
+          font-size: size(16);
+          font-weight: 700;
+        }
+      }
+
+      &-body {
+        padding: size(12);
+
+        .conditionlist {
+          @include flex-column;
+          gap: size(8);
+
+          &-item {
+            color: $textprimary;
+            font-size: size(13);
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .shippingcharge {
+      background: $white;
+      @include radius(4);
+
+      &-header {
+        @include border-single(bottom, solid, 1, $border-1);
+        @include flex-center;
+        padding: size(12);
+        text-align: center;
+
+        .title {
+          color: $black;
+          font-size: size(16);
+          font-weight: 700;
+        }
+      }
+
+      &-body {
+        padding: size(12);
+        @include flex-column;
+        gap: size(8);
+
+        .chargebox {
+          @include flex-column;
+          gap: size(5);
+
+          .title {
+            color: $black;
+            font-size: size(14);
+            font-weight: 700;
+          }
+
+          .text {
+            color: $textprimary;
+            font-size: size(12);
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .similarproducts {
+      background: $white;
+      @include radius(4);
+
+      &-header {
+        @include border-single(bottom, solid, 1, $border-1);
+        @include flex-center;
+        padding: size(12);
+        text-align: center;
+
+        .title {
+          color: $black;
+          font-size: size(16);
+          font-weight: 700;
+        }
+      }
+
+      &-body {
+        padding: size(12);
+        max-height: size(312);
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          background: transparent;
+          width: size(0);
+        }
+      }
     }
   }
 }
