@@ -5,6 +5,7 @@ addbuttons.forEach(button => {
 })
 
 function showCounter() {
+  this.classList.add('d-none');
   const counterbox = this.nextElementSibling;
   
   if(counterbox.classList.contains('active')) {
@@ -20,10 +21,13 @@ function showCounter() {
   input.value++;
 
   decrement.addEventListener('click', () => {
-    input.value--;
+    if(input.value > 0) {
+      input.value--;
+    }
 
     if(input.value < 1) {
       counterbox.classList.remove('active');
+      this.classList.remove('d-none');
     }
   })
 
