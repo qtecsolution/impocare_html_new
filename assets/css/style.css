@@ -9015,10 +9015,13 @@ button:not([disabled]):hover,
 }
 .productdetails-body {
   background: hsl(0, 0%, 100%);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   padding: 1rem;
+  overflow: hidden;
 }
 @media screen and (min-width: 75rem) {
   .productdetails-body {
@@ -9087,6 +9090,7 @@ button:not([disabled]):hover,
 @media screen and (min-width: 36rem) {
   .productdetails-body .details-header .ranges {
     flex-wrap: nowrap;
+    width: auto;
   }
 }
 .productdetails-body .details-header .ranges .rangesingle {
@@ -9102,6 +9106,13 @@ button:not([disabled]):hover,
   gap: 0.5rem;
   padding: 0.625rem;
   text-align: center;
+  width: calc(33.3333333333% - 0.625rem);
+  min-height: 5.9375rem;
+}
+@media screen and (min-width: 36rem) {
+  .productdetails-body .details-header .ranges .rangesingle {
+    width: auto;
+  }
 }
 .productdetails-body .details-header .ranges .rangesingle .rangeprice .price {
   color: hsl(0, 0%, 7%);
@@ -9442,6 +9453,7 @@ button:not([disabled]):hover,
   gap: 0.5rem;
   border-radius: 0.25rem;
   border-radius: 0.25rem;
+  overflow: hidden;
 }
 .productdetails-footer .nav-tabs {
   justify-content: center;
@@ -9481,6 +9493,11 @@ button:not([disabled]):hover,
 .productdetails-footer .tabinfo {
   background: hsl(0, 0%, 100%);
   padding: 1rem;
+}
+.productdetails .productleftinfo {
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
 }
 .productdetails .productspecification {
   padding: 1rem;

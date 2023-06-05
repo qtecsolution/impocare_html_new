@@ -26,9 +26,11 @@
 
   &-body {
     background: $white;
+    @include radius(4);
     @include flex-column;
     gap: size(20);
     padding: size(16);
+    overflow: hidden;
 
     @include breakpoint(desktop1200) {
       flex-direction: row;
@@ -92,6 +94,7 @@
 
           @include breakpoint(mobile576) {
             flex-wrap: nowrap;
+            width: auto;
           }
 
           .rangesingle {
@@ -102,6 +105,12 @@
             gap: size(8);
             padding: size(10);
             text-align: center;
+            width: calc(100% / 3 - size(10));
+            min-height: size(95);
+
+            @include breakpoint(mobile576) {
+              width: auto;
+            }
 
             .rangeprice {
               .price {
@@ -440,6 +449,7 @@
     @include flex-column;
     gap: size(8);
     @include radius(4);
+    overflow: hidden;
 
     .nav-tabs {
       justify-content: center;
@@ -476,6 +486,11 @@
       background: $white;
       padding: size(16);
     }
+  }
+
+  .productleftinfo {
+    @include radius(4);
+    overflow: hidden;
   }
 
   .productspecification {
