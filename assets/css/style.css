@@ -9482,6 +9482,39 @@ button:not([disabled]):hover,
   background: hsl(0, 0%, 100%);
   padding: 1rem;
 }
+.productdetails .productspecification {
+  padding: 1rem;
+  width: 100%;
+}
+.productdetails .productspecification table {
+  padding: 0rem 2rem 2rem;
+  width: 100%;
+}
+.productdetails .productspecification table tbody tr {
+  background: hsl(0, 0%, 97%);
+  padding: 0.35rem;
+}
+.productdetails .productspecification table tbody tr:nth-child(odd) {
+  background: hsl(0, 0%, 100%);
+}
+.productdetails .productspecification table tbody tr td {
+  border: solid 0.0625rem hsl(0, 0%, 93%);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  padding: 0.875rem;
+}
+.productdetails .productspecification table tbody tr td:first-child {
+  text-align: center;
+  color: hsl(0, 0%, 0%);
+  font-weight: bold;
+}
+.productdetails .productspecification table tbody tr td:nth-child(odd) {
+  background: hsl(189, 19%, 93%);
+}
+.productdetails .productspecification table tbody tr:not([disabled]):hover {
+  background: hsl(0, 0%, 97%);
+}
 .productdetails .productrightinfo {
   display: flex;
   flex-direction: column;

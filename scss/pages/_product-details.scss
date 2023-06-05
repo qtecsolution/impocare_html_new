@@ -478,9 +478,46 @@
     }
   }
 
-  .productleftinfo {
-    &-body {
-      
+  .productspecification {
+    padding: size(16);
+    @include w100;
+
+    table {
+      padding: size(0) size(32) size(32);
+      @include w100;
+
+      tbody {
+        tr {
+          background: $bgrow;
+          padding: size(5.6);
+          
+          &:nth-child(odd) {
+            background: $white;
+          }
+
+          td {
+            @include border(solid, 1, $border-1);
+            font-size: size(13);
+            font-weight: 500;
+            padding: size(8);
+            padding: size(14);
+
+            &:first-child {
+              text-align: center;
+              color: $black;
+              font-weight: bold;
+            }
+
+            &:nth-child(odd) {
+              background: $rowbg;
+            }
+          }
+
+          @include hover {
+            background: $bgrow;
+          }
+        }
+      }
     }
   }
 
