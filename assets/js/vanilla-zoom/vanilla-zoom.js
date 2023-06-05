@@ -39,6 +39,8 @@
           let imageSrc = elem.src
           zoomedImage.style.backgroundImage = 'url(' + imageSrc + ')'
         }
+
+        // console.log(elem.parentElement.classList.add('active'));
       })
 
       // Zoom image on mouse enter.

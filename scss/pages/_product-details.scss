@@ -3,19 +3,48 @@
 
 .productdetails {
   padding: size(8);
-  background: $white;
+
+  &-header {
+    background: $white;
+    @include border-single(bottom, solid, 1, $border-1);
+    padding: size(16);
+
+    @include breakpoint(tab992) {
+      padding: size(24);
+    }
+
+    .product-title {
+      color: $black;
+      font-size: size(16);
+      @include line-clamp;
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+    }
+  }
 
   &-body {
-    background: rebeccapurple;
+    background: $white;
     @include flex-start;
+    gap: size(20);
+    padding: size(16);
 
     .vanilla-zoom {
+      @include w100;
+      @include flex-column;
+      gap: size(24);
+
+      @include breakpoint(tab992) {
+        width: 50%;
+      }
+
       .sidebar {
         .previewthumb {
           width: calc(100% / 4 - size(5));
           @include flex-center;
           background: $white;
-          @include border(solid, 2, $shadow1);
+          @include border(solid, 1, $shadow1);
           box-shadow: $bordershadow-1;
           padding: size(4);
           @include radius(4);
@@ -30,35 +59,198 @@
 
     .details {
       @include w100;
+      @include flex-column;
+      gap: size(16);
+      
+      @include breakpoint(tab992) {
+        width: 50%;
+      }
 
-      .quantities {
-        .colors {
-          .color {
+      &-header {
+        @include flex-column;
+        gap: size(12);
 
+        .ranges {
+          @include flex-center-vert;
+          gap: size(10);
+
+          .rangesingle {
+            @include setBgColor($bodybg, $textprimary);
+            @include border(solid, 1, $border-1);
+            @include radius(10);
+            @include flex-center-column;
+            gap: size(8);
+            padding: size(10);
+            text-align: center;
+
+            .rangeprice {
+              .price {
+                color: $textprimary;
+                font-size: size(20);
+              }
+            }
+
+            .rangequantity {
+              color: $textprimary;
+              font-size: size(14);
+            }
+
+            &.active {
+              @include setBgColor(darken($primary, 20%), $white);
+              border-color: darken($primary, 20%);
+
+              .rangeprice {
+                .price {
+                  color: $white;
+                }
+              }
+  
+              .rangequantity {
+                color: $white;
+              }
+            }
           }
         }
 
-        .colors-variant {
-          @include flex-center-vert;
-          flex-wrap: wrap;
-          gap: size(5);
+        .quantities {
+          @include flex-column;
+          gap: size(8);
 
-          .previewthumb {
-            @include square(49);
-            @include flex-center;
-            background: $white;
-            @include border(solid, 2, $shadow1);
-            box-shadow: $bordershadow-1;
-            @include radius(4);
-            padding: size(3);
-            overflow: hidden;
-            
-            .small-preview {
-              @include wh100;
+          .colors {
+            .color {
+              color: $black;
+              font-size: size(16);
+              font-weight: 700;
+
+              span {
+                color: inherit;
+                font: inherit;
+              }
+            }
+          }
+  
+          .colors-variant {
+            @include flex-center-vert;
+            flex-wrap: wrap;
+            gap: size(5);
+  
+            .previewthumb {
+              @include square(48);
+              @include flex-center;
+              background: $white;
+              @include border(solid, 1, $shadow1);
+              box-shadow: $bordershadow-1;
+              @include radius(4);
+              padding: size(3);
+              overflow: hidden;
+              
+              .small-preview {
+                @include wh100;
+              }
+
+              &.active {
+                border-color: darken($primary, 20%);
+              }
             }
           }
         }
       }
+
+      &-body {
+        max-height: size(280);
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        .table {
+          thead {
+            background: $theadbg;
+
+            th {
+              font-size: size(14);
+              font-weight: 600;
+              text-align: center;
+            }
+          }
+
+          tbody {
+            td {
+              font-size: size(14);
+              font-weight: 500;
+              text-align: center;
+
+              .price {
+                font-size: size(14);
+                font-weight: 500;
+                text-align: center;
+              }
+            }
+
+            .add-counterprod {
+              @include flex-center-column;
+              margin-bottom: size(4);
+              position: relative;
+
+              .counterprod {
+                @include w100;
+                height: size(28);
+                background: $white;
+                @include border(solid, 2, darken($primary, 20%));
+                @include radius(50);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                display: none;
+
+                &.active {
+                  @include flex-center-vert;
+                }
+
+                .counterfield {
+                  font-size: size(13);
+                  width: calc(100% - size(48));
+                  text-align: center;
+                  padding-inline: size(4);
+                }
+
+                button {
+                  @include square(24);
+                  @include circle;
+                  @include setBgColor(darken($primary, 20%), $white);
+                  padding: size(4);
+                  @include flex-center;
+                  overflow: hidden;
+
+                  svg {
+                    @include wh100;
+
+                    path {
+                      stroke: $white;
+                    }
+                  }
+                }
+              }
+
+              .btn-add {
+                width: size(96);
+                height: size(28);
+                @include setBgColor(darken($primary, 20%), $white);
+                @include radius(4);
+                @include flex-center;
+                font-size: size(13);
+                font-weight: 500;
+                text-align: center;
+              }
+            }
+
+            .serial {
+              font-size: size(11);
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
     }
   }
 
