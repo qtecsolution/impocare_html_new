@@ -1,2 +1,122 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+.filtersection {
+  @include flex-column;
+  gap: size(8);
+  padding-bottom: size(80);
+
+  &-header {
+    background: $white;
+    @include border(solid, 1, $border-1);
+    @include radius(4);
+    padding: size(16);
+
+    .leftinfo {
+      .title {
+        color: $black;
+        @include font($primaryFont, 14, bold, normal, 19.6);
+        text-transform: uppercase;
+
+        span {
+          color: $primary;
+          font: inherit;
+          text-transform: inherit;
+        }
+      }
+    }
+
+    .rightinfo {
+      @include flex-center-vert;
+      gap: size(8);
+
+      .inputs {
+        @include flex-center-vert;
+        gap: size(8);
+
+        .priceinput {
+          width: size(100);
+          height: size(36);
+          padding: size(6) size(12);
+          @include border(solid, 1.5, $border-3);
+          @include radius(4);
+          @include setBgColor($white, $black);
+          font-size: size(13);
+          font-weight: 500;
+          @include transitionsall;
+
+          &::placeholder {
+            color: $textplaceholder;
+          }
+
+          &:focus {
+            border-color: $primary;
+          }
+        }
+
+        span {
+          color: $textgray;
+        }
+      }
+
+      .btn-filter {
+        width: size(76);
+        height: size(36);
+        @include radius(4);
+        font-size: size(13);
+        font-weight: 500;
+        @include setBgColor(darken($primary, 25%), $white);
+        @include transitionsall;
+
+        @include hover {
+          @include setBgColor(darken($primary, 15%), $white);
+        }
+      }
+    }
+  }
+  
+  &-body {
+
+  }
+
+  &-footer {
+    background: $white;
+    @include border(solid, 1, $border-1);
+    @include radius(4);
+    padding: size(16);
+    margin-top: size(24);
+
+    .pagination {
+      justify-content: center;
+      gap: size(8);
+      flex-wrap: wrap;
+
+      .page-item {
+        &:first-child,
+        &:last-child {
+          .page-link {
+            @include radius(100);
+          }
+        }
+      }
+
+      .page-link {
+        border-color: $bgcolor;
+        @include radius(100);
+        @include setBgColor($white, $black);
+        padding: sie(10) size(16);
+        font-size: size(14);
+        font-weight: 400;
+
+        &.active {
+          @include setBgColor(darken($primary, 25%), $white);
+        }
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
