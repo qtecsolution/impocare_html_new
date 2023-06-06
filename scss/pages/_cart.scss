@@ -17,6 +17,18 @@
       color: $black;
       @include font($primaryFont, 18, medium, normal, 25.2);
       text-transform: uppercase;
+      @include flex-center-vert;
+      gap: size(10);
+
+      .count {
+        @include setBgColor(darken($primary, 20%), $white);
+        font-size: size(14);
+        font-weight: bold;
+        @include square(24);
+        @include circle;
+        text-align: center;
+        @include flex-center;
+      }
     }
 
     .datetoday {
@@ -31,7 +43,10 @@
     @include radius(4);
     @include flex-center;
     padding: size(16);
-    @include h100;
+
+    // @include breakpoint(tab992) {
+    //   @include h100;
+    // }
 
     .emptythumb {
       padding: size(16);
@@ -48,7 +63,10 @@
 
   .cartdetail {
     @include flex-column;
-    @include h100;
+
+    // @include breakpoint(tab992) {
+    //   @include h100;
+    // }
 
     &-header {
       background: $white;
@@ -131,6 +149,192 @@
 
         @include hover {
           @include setBgColor(darken($primary, 10%), $white);
+        }
+      }
+    }
+  }
+
+  .cartitems {
+    @include flex-column;
+    gap: size(8);
+
+    .item {
+      background: $white;
+      @include border(solid, 1, $border-1);
+      @include radius(4);
+
+      &-header {
+        padding: size(12);
+        @include border-single(bottom, solid, 1, $border-1);
+        @include flex-center-vert;
+        gap: size(12);
+
+        @include breakpoint(tab992) {
+          padding: size(16);
+        }
+
+        .itemcheck {
+          @include square(24);
+          @include flex-center;
+        }
+
+        .item-detail {
+          width: calc(100% - size(34));
+          @include flex-center-vert;
+          gap: size(16);
+          padding-left: size(8);
+
+          .thumb {
+            @include square(64);
+            @include flex-center;
+            overflow: hidden;
+
+            img {
+              @include wh100;
+              object-fit: cover;
+            }
+          }
+
+          .detail {
+            width: calc(100% - size(80));
+            @include flex-center-vert;
+            gap: size(16);
+
+            .info {
+              width: calc(100% - size(40));
+
+              .orderid {
+                color: $black;
+                @include font($primaryFont, 15, medium, normal, 21);
+                @include text-overflow;
+              }
+
+              .text {
+                color: $black;
+                @include font($primaryFont, 13, normal, normal, 18.2);
+                @include line-clamp;
+              }
+            }
+
+            .deleteitem {
+              width: size(40);
+              @include flex-center;
+
+              .btn-delete {
+                @include transparent-button;
+              }
+            }
+          }
+        }
+      }
+
+      &-body {
+        .infolist {
+          @include list-vertical;
+
+          &-item {
+            @include flex-center-between;
+            padding: size(12);
+
+            @include breakpoint(tab992) {
+              padding: size(12) size(24);
+            }
+
+            .leftdetail,
+            .centerdetail,
+            .rightdetail {
+              color: $black;
+              @include font($primaryFont, 12, normal, normal, 19.6);
+    
+              @include breakpoint(tab992) {
+                font-size: size(14);
+              }
+
+              span {
+                color: inherit;
+                font: inherit;
+              }
+            }
+
+            .leftdetail {
+              flex: 3 1 0%;
+            }
+            
+            .centerdetail {
+              flex: 2 1 0%;
+            }
+
+            .rightdetail {
+              @include flex-center-vert;
+              gap: size(12);
+
+              .btn-edit {
+                @include setBgColor(darken($primary, 25%), $white);
+                @include flex-center;
+                text-align: center;
+                @include radius(4);
+                width: size(40);
+                height: size(24);
+                font-size: size(12);
+                padding: size(8);
+                @include transitionsall;
+
+                @include hover {
+                  @include setBgColor(darken($primary, 15%), $white);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &-footer {
+        @include border-single(top, solid, 1, $border-1);
+        @include flex-center-between;
+        padding: size(12);
+
+        @include breakpoint(tab992) {
+          padding: size(12) size(24);
+        }
+
+        .leftdetail {
+          flex: 3 1 0%;
+        }
+        
+        .centerdetail {
+          flex: 2 1 0%;
+        }
+
+        .title {
+          color: $black;
+          @include font($primaryFont, 12, normal, normal, 19.6);
+
+          @include breakpoint(tab992) {
+            font-size: size(14);
+          }
+        }
+
+        .totalitems {
+          color: $black;
+          @include font($primaryFont, 12, normal, normal, 19.6);
+
+          @include breakpoint(tab992) {
+            font-size: size(14);
+          }
+        }
+
+        .totalprice {
+          color: $black;
+          @include font($primaryFont, 12, normal, normal, 19.6);
+
+          @include breakpoint(tab992) {
+            font-size: size(14);
+          }
+
+          span {
+            color: inherit;
+            font: inherit;
+          }
         }
       }
     }
