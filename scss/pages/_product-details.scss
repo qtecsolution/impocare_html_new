@@ -112,6 +112,10 @@
               width: auto;
             }
 
+            @include breakpoint(tab992) {
+              min-width: size(96);
+            }
+
             .rangeprice {
               .price {
                 color: $textprimary;

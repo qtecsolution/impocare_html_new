@@ -1,0 +1,138 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.cartsection {
+  @include flex-column;
+  gap: size(8);
+  padding-bottom: size(96);
+
+  &-header {
+    background: $white;
+    @include border(solid, 1, $border-1);
+    @include radius(4);
+    @include flex-center-between;
+    padding: size(16);
+
+    .cart-title {
+      color: $black;
+      @include font($primaryFont, 18, medium, normal, 25.2);
+      text-transform: uppercase;
+    }
+
+    .datetoday {
+      color: $black;
+      @include font($primaryFont, 15, normal, normal, 21);
+    }
+  }
+
+  .emptycart {
+    background: $white;
+    @include border(solid, 1, $border-1);
+    @include radius(4);
+    @include flex-center;
+    padding: size(16);
+    @include h100;
+
+    .emptythumb {
+      padding: size(16);
+      @include square(182);
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .cartdetail {
+    @include flex-column;
+    @include h100;
+
+    &-header {
+      background: $white;
+      @include border-single(bottom, solid, 1, $border-1);
+      @include radius(4);
+      @include flex-center;
+      padding: size(12);
+
+      .cartdetail-title {
+        color: $black;
+        @include font($primaryFont, 18, medium, normal, 25.2);
+      }
+    }
+
+    &-body {
+      background: $white;
+      padding: size(16);
+      @include flex-column;
+      gap: size(16);
+
+      .cartlist {
+        @include list-vertical;
+        gap: size(16);
+
+        &-item {
+          @include flex-center-between;
+
+          .title {
+            color: $black;
+            @include font($primaryFont, 15, normal, normal, 21);
+          }
+
+          .text {
+            color: $black;
+            @include font($primaryFont, 15, semibold, normal, 21);
+
+            span {
+              color: inherit;
+              font: inherit;
+            }
+          }
+        }
+      }
+
+      .payinfo {
+        background: $rowbg;
+        @include radius(4);
+        @include flex-center-column;
+        gap: size(4);
+        text-align: center;
+        padding: size(8);
+
+        .title {
+          color: $black;
+          @include font($primaryFont, 18, medium, normal, 25.2);
+        }
+
+        .text {
+          color: $black;
+          cursor: pointer;
+          @include font($primaryFont, 15, normal, normal, 21);
+          @include flex-center-vert;
+        }
+      }
+    }
+
+    &-footer {
+      margin-top: size(12);
+
+      .btn-checkout {
+        @include w100;
+        height: size(42);
+        @include radius(4);
+        @include flex-center;
+        text-align: center;
+        font-size: size(15);
+        font-weight: 500;
+        @include setBgColor(darken($primary, 20%), $white);
+        @include transitionsall;
+
+        @include hover {
+          @include setBgColor(darken($primary, 10%), $white);
+        }
+      }
+    }
+  }
+}
