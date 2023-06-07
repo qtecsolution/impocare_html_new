@@ -29,6 +29,25 @@
     .rightinfo {
       @include flex-center-vert;
       gap: size(8);
+      flex-wrap: wrap;
+
+      @include breakpoint(mobile576) {
+        flex-wrap: nowrap;
+      }
+
+      .nice-select {
+        min-width: size(180);
+        background: $white;
+        border-color: $border-3;
+
+        &.open {
+          border-color: $primary;
+
+          &::after {
+            border-color: $primary;
+          }
+        }
+      }
 
       .inputs {
         @include flex-center-vert;

@@ -9993,6 +9993,23 @@ button:not([disabled]):hover,
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 36rem) {
+  .filtersection-header .rightinfo {
+    flex-wrap: nowrap;
+  }
+}
+.filtersection-header .rightinfo .nice-select {
+  min-width: 11.25rem;
+  background: hsl(0, 0%, 100%);
+  border-color: hsl(0, 0%, 87%);
+}
+.filtersection-header .rightinfo .nice-select.open {
+  border-color: hsl(198, 76%, 52%);
+}
+.filtersection-header .rightinfo .nice-select.open::after {
+  border-color: hsl(198, 76%, 52%);
 }
 .filtersection-header .rightinfo .inputs {
   display: flex;
