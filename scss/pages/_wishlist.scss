@@ -19,6 +19,25 @@
     }
   }
 
+  .emptywishlist {
+    background: $white;
+    @include flex-center;
+    padding: size(32);
+    height: calc(100vh - size(140));
+
+    .empty-thumb {
+      width: size(280);
+      height: size(200);
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        object-fit: contain;
+      }
+    }
+  }
+
   &-body {
     @include flex-column;
 
