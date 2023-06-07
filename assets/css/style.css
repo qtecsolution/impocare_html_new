@@ -10519,6 +10519,165 @@ button:not([disabled]):hover,
   font: inherit;
 }
 
+.wishlistsection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 6rem;
+}
+.wishlistsection-header {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(0, 0%, 93%);
+  padding: 1rem;
+}
+.wishlistsection-header .wish-title {
+  color: hsl(0, 0%, 0%);
+  font-family: "Jost", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+.wishlistsection-body {
+  display: flex;
+  flex-direction: column;
+}
+.wishlistsection-body .cardwish {
+  border-bottom: solid 0.0625rem hsl(0, 0%, 95%);
+  padding: 1rem;
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+@media screen and (min-width: 48rem) {
+  .wishlistsection-body .cardwish {
+    flex-wrap: nowrap;
+  }
+}
+.wishlistsection-body .cardwish .leftinfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .wishlistsection-body .cardwish .leftinfo {
+    width: 60%;
+  }
+}
+.wishlistsection-body .cardwish .leftinfo .wishthumb {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.wishlistsection-body .cardwish .leftinfo .wishthumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.wishlistsection-body .cardwish .leftinfo .name {
+  width: calc(100% - 5rem);
+}
+.wishlistsection-body .cardwish .leftinfo .name .prodlink {
+  display: flex;
+  align-items: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  color: hsl(0, 0%, 0%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+.wishlistsection-body .cardwish .rightinfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .wishlistsection-body .cardwish .rightinfo {
+    width: 40%;
+  }
+}
+.wishlistsection-body .cardwish .rightinfo .productprice {
+  color: hsl(354, 73%, 43%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+}
+.wishlistsection-body .cardwish .rightinfo .productprice span {
+  color: inherit;
+  font: inherit;
+}
+.wishlistsection-body .cardwish .rightinfo .wishbuttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.wishlistsection-body .cardwish .rightinfo .wishbuttons .btn-buy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #115a79;
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  width: 7.75rem;
+  height: 2.25rem;
+}
+.wishlistsection-body .cardwish .rightinfo .wishbuttons .btn-buy .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.wishlistsection-body .cardwish .rightinfo .wishbuttons .btn-buy .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.wishlistsection-body .cardwish .rightinfo .wishbuttons .btn-buy .text {
+  color: inherit;
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+}
+.wishlistsection-body .cardwish .rightinfo .wishbuttons .btn-remove {
+  width: 2.5rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(354, 73%, 43%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+}
+.wishlistsection-body .cardwish:last-child {
+  border-bottom: none;
+}
+
 /*
  ERROR-SECTION START
 */

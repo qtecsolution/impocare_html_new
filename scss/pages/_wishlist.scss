@@ -1,2 +1,132 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+.wishlistsection {
+  @include flex-column;
+  gap: size(8);
+  padding-bottom: size(96);
+
+  &-header {
+    background: $white;
+    @include border(solid, 1, $border-1);
+    // @include radius(4);
+    padding: size(16);
+
+    .wish-title {
+      color: $black;
+      @include font($primaryFont, 18, medium, normal, 25.2);
+      text-transform: capitalize;
+    }
+  }
+
+  &-body {
+    @include flex-column;
+
+    .cardwish {
+      @include border-single(bottom, solid, 1, $border-4);
+      padding: size(16);
+      background: $white;
+      @include flex-center-vert;
+      flex-wrap: wrap;
+      gap: size(12);
+
+      @include breakpoint(mobile768) {
+        flex-wrap: nowrap;
+      }
+
+      .leftinfo {
+        @include flex-center-vert;
+        gap: size(16);
+        @include w100;
+
+        @include breakpoint(mobile768) {
+          width: 60%;
+        }
+
+        .wishthumb {
+          @include square(64);
+          @include flex-center;
+          overflow: hidden;
+          
+          img {
+            @include wh100;
+            object-fit: contain;
+          }
+        }
+
+        .name {
+          width: calc(100% - size(80));
+
+          .prodlink {
+            @include flex-center-vert;
+            @include line-clamp;
+            color: $black;
+            @include font($primaryFont, 15, normal, normal, 21);
+          }
+        }
+      }
+
+      .rightinfo {
+        @include flex-center-between;
+        @include w100;
+
+        @include breakpoint(mobile768) {
+          width: 40%;
+        }
+
+        .productprice {
+          color: $red;
+          @include font($primaryFont, 15, bold, normal, 21);
+
+          span {
+            color: inherit;
+            font: inherit;
+          }
+        }
+
+        .wishbuttons {
+          @include flex-center-vert;
+          gap: size(16);
+
+          .btn-buy {
+            @include flex-center;
+            gap: size(8);
+            @include setBgColor(darken($primary, 25%), $white);
+            @include radius(4);
+            padding: size(8);
+            width: size(124);
+            height: size(36);
+
+            .icon {
+              @include square(24);
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+
+            .text {
+              color: inherit;
+              @include font($primaryFont, 14, medium, normal, 19.6);
+            }
+          }
+
+          .btn-remove {
+            width: size(40);
+            height: size(36);
+            @include flex-center;
+            @include setBgColor($red, $white);
+            @include radius(4);
+            padding: size(12);
+          }
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
