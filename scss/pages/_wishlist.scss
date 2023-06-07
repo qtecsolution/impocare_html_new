@@ -9,7 +9,6 @@
   &-header {
     background: $white;
     @include border(solid, 1, $border-1);
-    // @include radius(4);
     padding: size(16);
 
     .wish-title {

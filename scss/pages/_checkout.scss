@@ -1,0 +1,42 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.checkoutsection {
+  @include flex-column;
+  gap: size(8);
+  padding-bottom: size(96);
+
+  &-header {
+    background: $white;
+    @include border(solid, 1, $border-1);
+    @include radius(4);
+    @include flex-center-between;
+    padding: size(16);
+
+    .checkout-title {
+      @include flex-center-vert;
+      gap: size(8);
+
+      .icon {
+        @include square(24);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
+        }
+      }
+
+      .text {
+        color: $black;
+        @include font($primaryFont, 18, medium, normal, 25.2);
+        text-transform: uppercase;
+      }
+    }
+
+    .datetoday {
+      color: $black;
+      @include font($primaryFont, 15, normal, normal, 21);
+    }
+  }
+}
