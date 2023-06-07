@@ -3422,6 +3422,12 @@
           <h1 class="wish-title">Wishlist</h1>
         </div>
 
+        <!-- EMPTY-WISHLIST -->
+        <div class="emptywishlist">
+
+        </div>
+
+        <!-- WISHLIST-PRODUCTS -->
         <div class="wishlistsection-body">
           <div class="cardwish">
             <div class="leftinfo">
@@ -3455,7 +3461,7 @@
                   <span class="text">Buy Now</span>
                 </a>
 
-                <button type="button" class="btn-remove">
+                <button type="button" class="btn-remove" data-bs-toggle="modal" data-bs-target="#removeModal">
                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
                     <rect width="448" height="80" x="32" y="48" rx="32" ry="32"></rect>
                     <path d="M74.45 160a8 8 0 00-8 8.83l26.31 252.56a1.5 1.5 0 000 .22A48 48 0 00140.45 464h231.09a48 48 0 0047.67-42.39v-.21l26.27-252.57a8 8 0 00-8-8.83zm248.86 180.69a16 16 0 11-22.63 22.62L256 318.63l-44.69 44.68a16 16 0 01-22.63-22.62L233.37 296l-44.69-44.69a16 16 0 0122.63-22.62L256 273.37l44.68-44.68a16 16 0 0122.63 22.62L278.62 296z"></path>
@@ -3496,7 +3502,7 @@
                   <span class="text">Buy Now</span>
                 </a>
 
-                <button type="button" class="btn-remove">
+                <button type="button" class="btn-remove" data-bs-toggle="modal" data-bs-target="#removeModal">
                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
                     <rect width="448" height="80" x="32" y="48" rx="32" ry="32"></rect>
                     <path d="M74.45 160a8 8 0 00-8 8.83l26.31 252.56a1.5 1.5 0 000 .22A48 48 0 00140.45 464h231.09a48 48 0 0047.67-42.39v-.21l26.27-252.57a8 8 0 00-8-8.83zm248.86 180.69a16 16 0 11-22.63 22.62L256 318.63l-44.69 44.68a16 16 0 01-22.63-22.62L233.37 296l-44.69-44.69a16 16 0 0122.63-22.62L256 273.37l44.68-44.68a16 16 0 0122.63 22.62L278.62 296z"></path>
@@ -3537,7 +3543,7 @@
                   <span class="text">Buy Now</span>
                 </a>
 
-                <button type="button" class="btn-remove">
+                <button type="button" class="btn-remove" data-bs-toggle="modal" data-bs-target="#removeModal">
                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
                     <rect width="448" height="80" x="32" y="48" rx="32" ry="32"></rect>
                     <path d="M74.45 160a8 8 0 00-8 8.83l26.31 252.56a1.5 1.5 0 000 .22A48 48 0 00140.45 464h231.09a48 48 0 0047.67-42.39v-.21l26.27-252.57a8 8 0 00-8-8.83zm248.86 180.69a16 16 0 11-22.63 22.62L256 318.63l-44.69 44.68a16 16 0 01-22.63-22.62L233.37 296l-44.69-44.69a16 16 0 0122.63-22.62L256 273.37l44.68-44.68a16 16 0 0122.63 22.62L278.62 296z"></path>
@@ -3722,6 +3728,25 @@
     </div>
   </footer>
   <!-- FOOTER-SECTION END -->
+
+  <!-- CONFIRM-REMOVE MODAL -->
+  <div class="modal fade" id="removeModal" tabindex="-1" aria-labelledby="removeModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">Remove product</h1>
+        </div>
+        <div class="modal-body">
+          <p>Remove product from wishlist</p>
+        </div>
+        <div class="modal-footer justify-content-end gap-3">
+          <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-remove">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
   <!-- BOOTSTRAP SCRIPT -->
   <script src="assets/js/bootsrap/bootstrap.bundle.min.js"></script>
