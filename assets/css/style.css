@@ -11797,9 +11797,6 @@ button:not([disabled]):hover,
   font-style: normal;
   line-height: 1.4;
 }
-.orderdetails-content .order-detail .findagent-form .nice-select {
-  height: auto;
-}
 .orderdetails-content .order-detail .findagent-form .find-agent {
   display: flex;
   align-items: center;
@@ -12235,6 +12232,15 @@ button:not([disabled]):hover,
 .orderdetails-content .checkout-details .orderbox .btn-order:not([disabled]):hover {
   background: #177ba6;
   color: hsl(0, 0%, 100%);
+}
+
+.nice-select {
+  width: 100%;
+  height: auto;
+  background: hsl(0, 0%, 100%);
+}
+.nice-select-dropdown {
+  width: 100%;
 }
 
 .myorders {
@@ -12716,6 +12722,7 @@ button:not([disabled]):hover,
 }
 .profileinfo .profile-address .myaddressbox .myaddress-body .change-delete .change {
   width: calc(100% - 3rem);
+  max-width: 12.5rem;
 }
 .profileinfo .profile-address .myaddressbox .myaddress-body .change-delete .change .btn-changed {
   background: hsl(0, 0%, 100%);

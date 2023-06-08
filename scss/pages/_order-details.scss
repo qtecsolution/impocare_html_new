@@ -378,10 +378,6 @@
           @include font($primaryFont, 18, bold, normal, 25.2);
         }
 
-        .nice-select {
-          height: auto;
-        }
-
         .find-agent {
           @include flex-center-vert;
           gap: size(20);
@@ -762,5 +758,15 @@
         }
       }
     }
+  }
+}
+
+.nice-select {
+  @include w100;
+  height: auto;
+  background: $white;
+
+  &-dropdown {
+    @include w100;
   }
 }

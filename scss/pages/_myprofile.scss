@@ -336,6 +336,7 @@
 
             .change {
               width: calc(100% - 3rem);
+              max-width: size(200);
 
               .btn-changed {
                 @include setBgColor($white, $primary);
