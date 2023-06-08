@@ -39,4 +39,198 @@
       @include font($primaryFont, 15, normal, normal, 21);
     }
   }
+
+  &-body {
+    .checkoutinfo {
+      @include flex-column;
+      gap: size(8);
+    }
+
+    .checkoutdescript {
+      background: $white;
+      @include border(solid, 1, $border-1);
+      @include radius(4);
+      padding: size(16);
+    }
+
+    .inputbox {
+      @include flex-column;
+      gap: size(8);
+
+      .inputlabel {
+        color: $black;
+        font-size: size(14);
+        font-weight: 500;
+
+        span {
+          color: $red;
+          font: inherit;
+        }
+
+        .optional {
+          color: $prevpricetext;
+          font: inherit;
+        }
+      }
+
+      .inputfield {
+        @include border(solid, 1, $border-3);
+        @include setBgColor($white, $black);
+        @include radius(4);
+        font-size: size(14);
+        height: size(40);
+        padding: size(9) size(16);
+        @include transitionsall;
+
+        &::placeholder {
+          color: $cancelbg;
+        }
+
+        &:focus {
+          border-color: $prevpricetext;
+        }
+      }
+
+      .messagefield {
+        @include border(solid, 1, $border-3);
+        @include setBgColor($white, $black);
+        @include radius(4);
+        font-size: size(14);
+        padding: size(9) size(16);
+        @include transitionsall;
+
+        &::placeholder {
+          color: $cancelbg;
+        }
+
+        &:focus {
+          border-color: $prevpricetext;
+        }
+      }
+
+      .nice-select {
+        @include border(solid, 1, $border-3);
+        @include setBgColor($white, $black);
+        @include radius(4);
+        height: size(40);
+      }
+    }
+
+    .checkoutdetail {
+      &-body {
+        background: $white;
+        @include border(solid, 1, $border-1);
+        @include radius(6);
+        padding: size(10);
+
+        .checkoutprice {
+          @include flex-center-between;
+          padding: size(8);
+
+          .title {
+            color: $black;
+            font-size: size(15);
+            font-weight: 400;
+          }
+
+          .productprice {
+            color: $black;
+            font-size: size(16);
+            font-weight: 600;
+
+            span {
+              color: inherit;
+              font: inherit;
+            }
+          }
+        }
+
+        .paymentbox {
+          background: $rowbg;
+          @include radius(4);
+          @include flex-center-column;
+          gap: size(14);
+          text-align: center;
+          padding: size(16);
+          
+          .payment-title {
+            color: $black;
+            font-size: size(16);
+            font-weight: 500;
+
+            span {
+              color: inherit;
+              font: inherit;
+            }
+          }
+
+          button {
+            background: transparent;
+            text-align: center;
+            color: $black;
+            font-size: size(12);
+            font-weight: 600;
+
+            @include hover {
+              color: $red;
+            }
+          }
+
+          .coupon {
+            @include flex-center-vert;
+            height: size(40);
+            width: 90%;
+            margin-inline: auto;
+            @include radius(64);
+            overflow: hidden;
+
+            .couponfield {
+              height: size(40);
+              width: calc(100% - size(80));
+              padding-left: size(16);
+              font-size: size(14);
+              @include setBgColor($white, $black);
+
+              &::placeholder {
+                color: $cancelbg;
+              }
+            }
+
+            .btn-applying {
+              width: size(80);
+              height: size(40);
+              @include setBgColor(darken($primary, 25%), $white);
+              font-size: size(13);
+              font-weight: 600;
+              @include transitionsall;
+
+              @include hover {
+                @include setBgColor(darken($primary, 15%), $white);
+              }
+            }
+          }
+        }
+      }
+
+      &-footer {
+        margin-top: size(12);
+  
+        .btn-checkout {
+          @include w100;
+          height: size(42);
+          @include radius(4);
+          @include flex-center;
+          text-align: center;
+          font-size: size(15);
+          font-weight: 500;
+          @include setBgColor(darken($primary, 20%), $white);
+          @include transitionsall;
+  
+          @include hover {
+            @include setBgColor(darken($primary, 10%), $white);
+          }
+        }
+      } 
+    }
+  }
 }

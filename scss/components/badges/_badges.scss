@@ -1,3 +1,25 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+.badge-status {
+  padding: size(4) size(14);
+  @include radius(5);
+  text-align: center;
+  @include font($primaryFont, 12, normal, normal, 16.8);
+}
+
+.cancelled {
+  @include setBgColor($cancelledBg, $categoryBg);
+}
+
+.delivered {
+  @include setBgColor($deliveredBg, $primary-dark);
+}
+
+.pending {
+  @include setBgColor($pendingBg, $pendingColor);
+}
+
+.default {
+  @include setBgColor($gray-200, $gray-900);
+}

@@ -1,0 +1,766 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.orderdetails {
+  margin-bottom: size(48);
+
+  @include breakpoint(tablet991) {
+    margin-bottom: size(24);
+  }
+
+  &-content {
+    display: flex;
+    gap: size(32);
+
+    @include breakpoint(tablet991) {
+      flex-direction: column;
+    }
+
+    .order-detail {
+      width: calc(100% - size(370));
+      @include flex-column;
+      gap: size(32);
+
+      @include breakpoint(tablet991) {
+        @include w100;
+        padding: 0;
+      }
+
+      @include breakpoint(phone575) {
+        gap: size(20);
+      }
+
+      &-content {
+        @include flex-column;
+        gap: size(4);
+
+        .title-status {
+          @include flex-center-between;
+
+          .title {
+            width: calc(100% - size(80));
+          }
+
+          .status {
+            width: size(80);
+          }
+
+          .ordertitle {
+            @include font($primaryFont, 20, semibold, normal, 28);
+            color: $gray-800;
+            @include text-overflow;
+          }
+        }
+
+        .date {
+          @include font($primaryFont, 16, normal, normal, 22.4);
+          color: $gray-700;
+        }
+
+        .shop {
+          @include flex-center-vert;
+          gap: size(8);
+
+          &-title {
+            color: $gray-700;
+            @include font($primaryFont, 14, normal, normal, 19.6);
+
+            @include breakpoint(mobile576) {
+              font-size: size(16);
+            }
+          }
+
+          &-name {
+            color: $red;
+            @include font($primaryFont, 14, normal, normal, 19.6);
+
+            @include breakpoint(mobile576) {
+              font-size: size(16);
+            }
+          }
+        }
+      }
+
+      &-timeline {
+        background: $white;
+        padding: size(17) size(19);
+        @include flex-column;
+        gap: size(40);
+
+        @include breakpoint(phone500) {
+          gap: size(20);
+        }
+
+        .timelinetitle {
+          color: $gray-700;
+          @include font($primaryFont, 14, bold, normal, 19.6);
+
+          @include breakpoint(mobile576) {
+            font-size: size(16);
+          }
+        }
+
+        .timeline {
+          display: flex;
+
+          @include breakpoint(tablet991) {
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          &-box {
+            width: 25%;
+            @include flex-center-column;
+            gap: size(24);
+            text-align: center;
+
+            @include breakpoint(tablet991) {
+              width: 100%;
+              margin: 0 auto;
+              min-height: size(140);
+              flex-direction: row;
+            }
+
+            &:first-of-type {
+              .timeline-progress {
+                &::before {
+                  left: 0;
+                  width: 0;
+                  height: size(0);
+                }
+              }
+            }
+
+            .timeline-time {
+              @include breakpoint(tablet991) {
+                width: calc(50% - size(46));
+              }
+
+              .date {
+                color: $textShipped;
+                @include font($primaryFont, 14, normal, normal, 19.6);
+      
+                @include breakpoint(desktop1200) {
+                  font-size: size(16);
+                }
+              }
+
+              .time {
+                color: $textShipped;
+                @include font($primaryFont, 14, normal, normal, 19.6);
+      
+                @include breakpoint(desktop1200) {
+                  font-size: size(16);
+                }
+              }
+            }
+
+            .timeline-progress {
+              @include square(46);
+              @include border(solid, 2, $timeline);
+              @include circle;
+              background: $white;
+              @include flex-center;
+              position: relative;
+
+              &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                left: -209%;
+                width: 205%;
+                height: size(2);
+                background: $textplaceholder;
+
+                @include breakpoint(desktop1200) {
+                  left: -308%;
+                  width: 308%;
+                }
+
+                // @include breakpoint(desktop1400) {
+                //   left: -305%;
+                //   width: 305%;
+                // }
+
+                // @include breakpoint(desktop1199) {
+                //   left: -200%;
+                //   width: 200%;
+                // }
+
+                @include breakpoint(tablet991) {
+                  left: 50%;
+                  @include translateX(-50%);
+                  width: size(2);
+                  top: -230%;
+                  height: 230%;
+                }
+              }
+
+              .timelinebox {
+                @include square(30);
+                @include circle;
+                background: $white;
+              }
+            }
+
+            .timeline-status {
+              @include breakpoint(tablet991) {
+                width: calc(50% - size(46));
+                padding: 0 size(40);
+              }
+
+              @include breakpoint(phone500) {
+                padding: 0 size(10);
+              }
+
+              .statustitle {
+                color: $dark-2;
+                @include font($primaryFont, 14, normal, normal, 19.6);
+      
+                @include breakpoint(desktop1200) {
+                  font-size: size(16);
+                }
+              }
+
+              .statustext {
+                color: $textShipped;
+                @include font($primaryFont, 14, normal, normal, 19.6);
+      
+                @include breakpoint(desktop1200) {
+                  font-size: size(16);
+                }
+              }
+            }
+
+            &.active {
+              .timeline-progress {
+                border-color: $primary;
+
+                &::before {
+                  background: $primary;
+                }
+
+                .timelinebox {
+                  background: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &-shipping {
+        background: $white;
+        padding: size(17) size(19);
+        @include flex-column;
+        gap: size(40);
+
+        @include breakpoint(phone500) {
+          gap: size(20);
+        }
+
+        .shipping-title {
+          @include font($primaryFont, 18, bold, normal, 25.2);
+        }
+
+        .address-change {
+          @include flex-center-between;
+
+          @include breakpoint(phone500) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: size(12);
+          }
+        }
+        
+        .address {
+          .inputbox {
+            .inputlabel {
+              @include flex-column;
+              @include font($primaryFont, 14, medium, normal, 19.6);
+              color: $checkRadioColor;
+              cursor: pointer;
+              position: relative;
+              padding-left: size(30);
+              max-width: size(240);
+
+              &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                @include translateY(-50%);
+                @include square(20);
+                @include circle;
+                @include border(solid, 2, $subTotalBorder);
+                left: 0;
+                @include transitionsall;
+                background: $radioInputBg;
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                @include translateY(-50%);
+                left: size(5);
+                @include square(10);
+                @include circle;
+                background: $primary;
+                opacity: 0;
+                visibility: hidden;
+                @include transitionsall;
+              }
+
+              .name {
+                @include font($primaryFont, 14, bold, normal, 19.6);
+                color: $headingcolor;
+                letter-spacing: size(-0.08);
+              }
+
+              .phone {
+                @include font($primaryFont, 14, normal, normal, 19.6);
+                color: $gray-700;
+              }
+
+              .address {
+                @include font($primaryFont, 14, normal, normal, 19.6);
+                color: $gray-800;
+              }
+            }
+
+            .inputfield {
+              &:checked ~ .inputlabel {
+                color: $headingcolor;
+
+                &::before {
+                  border-color: $primary;
+                }
+
+                &::after {
+                  opacity: 1;
+                  visibility: visible;
+                }
+              }
+            }
+          }
+        }
+
+        .change {
+          @include flex;
+
+          .btn-change {
+            @include font($primaryFont, 12, semibold, normal, 12);
+            padding: size(16) size(24);
+            text-align: center;
+            @include setBgColor($primary, $white);
+            @include radius(6);
+            @include transitionsall;
+
+            @include hover {
+              @include setBgColor(darken($primary, 15%), $white);
+            }
+          }
+        }
+      }
+
+      .findagent-form {
+        background: $white;
+        padding: size(17) size(19);
+        @include flex-column;
+        gap: size(40);
+
+        @include breakpoint(phone500) {
+          gap: size(20);
+        }
+
+        .findagent-title {
+          @include font($primaryFont, 18, bold, normal, 25.2);
+        }
+
+        .nice-select {
+          height: auto;
+        }
+
+        .find-agent {
+          @include flex-center-vert;
+          gap: size(20);
+
+          @include breakpoint(phone575) {
+            flex-direction: column;
+          }
+
+          .selectbox {
+            @include w100;
+            @include flex-column;
+            gap: size(8);
+            max-width: 40%;
+
+            @include breakpoint(phone575) {
+              max-width: 100%;
+            }
+
+            .inputlabel {
+              @include font($primaryFont, 14, normal, normal, 19.6);
+              color: $dark-1;
+            }
+
+            .inputselect {
+              @include font($primaryFont, 15, normal, normal, 15);
+              @include setBgColor($white, $dark-1);
+              padding: size(14.5) size(16) size(16.5);
+              @include radius(6);
+              box-shadow: $input-shadow;
+              cursor: pointer;
+            }
+          }
+
+          .btn-find {
+            padding: size(16);
+            @include setBgColor(darken($primary, 25%), $white);
+            @include font($primaryFont, 14, medium, normal, 14);
+            text-align: center;
+            @include radius(8);
+            width: size(120);
+            height: size(48);
+            margin-top: size(24);
+            @include transitionsall;
+
+            @include breakpoint(phone575) {
+              margin-left: auto;
+            }
+
+            @include hover {
+              @include setBgColor(darken($primary, 15%), $white);
+            }
+          }
+        }
+      }
+
+      .found-agent {
+        background: $white;
+        padding: size(17) size(19);
+        @include flex-column;
+        gap: size(40);
+
+        @include breakpoint(phone500) {
+          gap: size(20);
+        }
+
+        .foundagent-title {
+          @include font($primaryFont, 18, bold, normal, 25.2);
+        }
+
+        .agentlist {
+          @include flex-column;
+          gap: size(16);
+
+          &-item {
+            @include flex-center-vert;
+            gap: size(12);
+            background: $white;
+            box-shadow: $box-shadow-default;
+            padding: size(10) size(20);
+
+            .name-thumb {
+              @include square(24);
+              @include setBgColor($gray-300, $gray-600);
+              @include flex-center;
+              margin-top: size(4);
+              @include font($primaryFont, 14, medium, normal, 19.6);
+    
+              @include breakpoint(mobile576) {
+                font-size: size(16);
+              }
+            }
+
+            .detail {
+              .name {
+                color: $gray-800;
+                @include font($primaryFont, 14, normal, normal, 19.6);
+      
+                @include breakpoint(mobile576) {
+                  font-size: size(16);
+                }
+              }
+
+              .number {
+                color: $gray-800;
+                @include font($primaryFont, 14, normal, normal, 19.6);
+      
+                @include breakpoint(mobile576) {
+                  font-size: size(16);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .checkout-details {
+      background: $white;
+      width: size(370);
+      padding: size(19) size(15);
+
+      @include breakpoint(tablet991) {
+        @include w100;
+      }
+
+      .checkouttitle {
+        @include font($primaryFont, 18, bold, normal, 25.2);
+        color: $gray-700;
+        letter-spacing: size(-0.08);
+        margin-bottom: size(19);
+      }
+
+      .productlist {
+        @include flex-column;
+        gap: size(18);
+        margin-bottom: size(52);
+
+        @include breakpoint(tablet991) {
+          margin-bottom: size(26);
+        }
+      }
+
+      .subtotal-shipping {
+        .subtotal {
+          @include border-single(top, solid, 1, $subTotalBorder);
+          @include border-single(bottom, solid, 1, $subTotalBorder);
+          padding: size(26) size(0) size(18);
+          @include flex-center-between;
+
+          .title {
+            @include font($primaryFont, 14, semibold, normal, 19.6);
+            color: $gray-800;
+            margin-bottom: 0;
+          }
+
+          .price {
+            @include font($primaryFont, 14, semibold, normal, 19.6);
+            color: $gray-800;
+          }
+        }
+
+        .shipping {
+          @include flex-center-between;
+          padding: size(30) size(0) size(30);
+
+          .title {
+            @include font($primaryFont, 14, semibold, normal, 19.6);
+            color: $gray-800;
+            margin-bottom: 0;
+          }
+
+          .shippingcosts {
+            @include flex-column;
+            gap: size(12);
+
+            .shippingcost {
+              width: size(175);
+
+              .inputlabel {
+                @include flex-center-vert;
+                @include font($primaryFont, 14, medium, normal, 19.6);
+                color: $checkRadioColor;
+                cursor: pointer;
+                position: relative;
+                padding-right: size(30);
+                text-align: right;
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  @include translateY(-50%);
+                  @include square(20);
+                  @include circle;
+                  @include border(solid, 2, $subTotalBorder);
+                  right: 0;
+                  @include transitionsall;
+                  background: $radioInputBg;
+                }
+
+                &::after {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  @include translateY(-50%);
+                  right: size(5);
+                  @include square(10);
+                  @include circle;
+                  background: $primary;
+                  opacity: 0;
+                  visibility: hidden;
+                  @include transitionsall;
+                }
+              }
+
+              .inputfield {
+                &:checked ~ .inputlabel {
+                  color: $headingcolor;
+
+                  &::before {
+                    border-color: $primary;
+                  }
+
+                  &::after {
+                    opacity: 1;
+                    visibility: visible;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .totalcost {
+        @include border-single(top, solid, 1, $subTotalBorder);
+        @include border-single(bottom, solid, 1, $subTotalBorder);
+        padding: size(18) size(0) size(20);
+        @include flex-center-between;
+        margin-bottom: size(18);
+
+        .title {
+          @include font($primaryFont, 14, medium, normal, 19.6);
+          color: $gray-800;
+          margin-bottom: 0;
+        }
+
+        .price {
+          @include font($primaryFont, 14, bold, normal, 19.6);
+          color: $gray-800;
+          letter-spacing: size(-0.08);
+        }
+      }
+
+      .paymentmethod {
+        @include flex-column;
+        gap: size(22);
+
+        .title {
+          @include font($primaryFont, 14, semibold, normal, 19.6);
+          color: $gray-800;
+          margin-bottom: 0;
+        }
+
+        .methods {
+          @include flex-column;
+          gap: size(10);
+          margin-bottom: size(34);
+
+          .singlemethod {
+            .inputfield {
+              &:checked ~ .inputlabel {
+                color: $headingcolor;
+
+                &::before {
+                  border-color: $primary;
+                }
+
+                &::after {
+                  opacity: 1;
+                  visibility: visible;
+                }
+              }
+            }
+
+            .inputlabel {
+              @include flex-center-vert;
+              @include font($primaryFont, 14, medium, normal, 19.6);
+              color: $checkRadioColor;
+              cursor: pointer;
+              position: relative;
+              padding-left: size(30);
+
+              &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                @include translateY(-50%);
+                @include square(20);
+                @include circle;
+                @include border(solid, 2, $subTotalBorder);
+                left: 0;
+                @include transitionsall;
+                background: $radioInputBg;
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                @include translateY(-50%);
+                left: size(5);
+                @include square(10);
+                @include circle;
+                background: $primary;
+                opacity: 0;
+                visibility: hidden;
+                @include transitionsall;
+              }
+            }
+          }
+        }
+      }
+
+      .wishpayment {
+        @include flex-column;
+        gap: size(8);
+        margin-bottom: size(15);
+
+        .inputlabel {
+          @include font($primaryFont, 14, medium, normal, 19.6);
+          color: $dark-1;
+        }
+
+        .inputfield {
+          @include font($primaryFont, 15, normal, normal, 15);
+          @include setBgColor($white, $dark-1);
+          padding: size(12.5) size(16);
+          @include radius(6);
+          @include border(solid, 1, $border-3);
+          @include transitionsall;
+
+          &::placeholder {
+            color: $textplaceholder;
+          }
+
+          &:focus {
+            border-color: $primary;
+          }
+        }
+      }
+
+      .detailbox {
+        margin-bottom: size(40);
+
+        .detailtext {
+          @include font($primaryFont, 14, normal, normal, 19.6);
+          color: $dark-1;
+        }
+      }
+
+      .orderbox {
+        @include flex-center;
+
+        .btn-order {
+          width: size(170);
+          height: size(46);
+          padding: size(16);
+          @include font($primaryFont, 14, normal, normal, 19.6);
+          @include setBgColor($primary, $white);
+          @include radius(8);
+          text-align: center;
+          @include transitionsall;
+
+          @include hover {
+            @include setBgColor(darken($primary, 15%), $white);
+          }
+        }
+      }
+    }
+  }
+}

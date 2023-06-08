@@ -92,3 +92,123 @@
     }
   }
 }
+
+.card-horizontal {
+  display: flex;
+  gap: size(14);
+  background: $bodybg;
+  padding: size(14) size(12);
+
+  .card-thumbnail {
+    @include square(99);
+    @include flex-center;
+    overflow: hidden;
+    padding: size(5);
+    background: $white;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+  .card-details {
+    @include flex-column;
+    gap: size(8);
+
+    .cardlink {
+      @include font($primaryFont, 14, semibold, normal, 19.6);
+    }
+
+    .title {
+      @include font($primaryFont, 14, semibold, normal, 19.6);
+      @include line-clamp;
+      color: $gray-700;
+    }
+
+    .pricecount {
+      @include flex-center-vert;
+      gap: size(14);
+
+      .count {
+        @include font($primaryFont, 14, normal, normal, 19.6);
+        color: $gray-700;
+      }
+
+      .countprice {
+        @include font($primaryFont, 14, normal, normal, 19.6);
+        color: $gray-700;
+
+        span {
+          color: inherit;
+          font: inherit;
+        }
+      }
+    }
+
+    .counterbox {
+      @include flex-center-vert;
+      gap: size(14);
+
+      .countcart {
+        max-width: size(116);
+        height: size(32);
+        @include radius(4);
+        padding: size(4);
+        background: $gray-100;
+        @include flex-center-vert;
+        overflow: hidden;
+
+        .counter {
+          width: calc(100% - size(52));
+          @include font($primaryFont, 12, normal, normal, 16.8);
+          color: $gray-700;
+          text-align: center;
+          background: transparent;
+        }
+
+        .btn-decrement,
+        .btn-increment {
+          @include transparent-button;
+          @include radius(4);
+          @include square(26);
+          @include flex-center;
+          overflow: hidden;
+        }
+      }
+
+      .icon {
+        height: size(14);
+        width: size(6);
+        @include flex-center;
+
+        svg {
+          @include wh100;
+        }
+      }
+
+      .totalcountprice {
+        color: $gray-700;
+        @include font($primaryFont, 12, normal, normal, 16.8);
+
+        @include breakpoint(mobile576) {
+          font-size: size(14);
+        }
+
+        span {
+          color: inherit;
+          font: inherit;
+        }
+      }
+    }
+
+    .price {
+      color: $primary;
+
+      span {
+        color: inherit;
+        font: inherit;
+      }
+    }
+  }
+}

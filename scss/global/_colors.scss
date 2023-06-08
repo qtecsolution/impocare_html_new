@@ -19,7 +19,24 @@ $bgrow: hsl(0, 0%, 97%); //#f8f8f8
 $cancelbg: hsl(0, 0%, 67%); //#aaaaaa
 $savebg: hsl(322, 87%, 94%); //#fde2f3
 
-// ICON-BACKGROUNDS
+$timeline: hsl(0, 0%, 74%); //#BDBDBD
+$breadCrumbText: hsl(0, 0%, 69%); //#B0B0B0
+$breadCrumbActive: hsl(184, 54%, 15%); //#12393C
+$tertiary: hsl(45, 94%, 49%); //#F2B807
+$textShipped: hsl(0, 0%, 53%); //#888888
+$dark-1: hsl(210, 21%, 33%); //#425466
+$dark-2: hsl(240, 3%, 13%); //#202022
+$checkRadioColor: hsl(219, 21%, 39%); //#4E5D78
+$subTotalBorder:hsl(0, 0%, 92%); //#EBEBEB
+$headingcolor: hsl(240, 8%, 17%); //#27272E
+$radioInputBg: rgba(5, 16, 51, 0.0001);
+$primary-dark: hsl(120, 100%, 22%); //#007000
+
+$deliveredBg: hsl(124, 100%, 90%); //#CCFFCF
+$cancelledBg: hsl(1, 100%, 90%); //#FFCDCC
+$pendingBg: hsl(47, 100%, 85%); //#FFEEB3
+$pendingColor: hsl(28, 87%, 62%); //#F2994A
+$categoryBg: hsl(1, 73%, 54%); //#DF3835
 
 
 // TEXT-COLORS
@@ -37,7 +54,16 @@ $twitterbg: hsl(203, 89%, 53%); //#1DA1F2
 // SUCCESS COLOR
 
 
-// DANGER COLOR
+$gray-900: hsl(220, 26%, 14%); //#1A202C
+$gray-800: hsl(218, 23%, 23%); //#2D3748
+$gray-700: hsl(218, 17%, 35%); //#4A5568
+$gray-600: hsl(216, 15%, 52%); //#718096
+$gray-500: hsl(214, 20%, 69%); //#A0AEC0
+$gray-400: hsl(211, 25%, 84%); //#CBD5E0
+$gray-300: hsl(214, 32%, 91%); //#E2E8F0
+$gray-200: hsl(210, 38%, 95%); //#EDF2F7
+$gray-100: hsl(204, 45%, 98%); //#F7FAFC
+$gray-50: hsl(0, 0%, 98%); //#FAFAFA
 
 
 // LINEAR-BACKGROUNDS
@@ -51,9 +77,14 @@ $border-4: hsl(0, 0%, 95%); //#f2f2f2
 
 // SHADOWS
 $shadow1: hsl(0, 0%, 80%); //#cccccc
+$shadow-1: rgba(12, 26, 75, 0.1);
+$shadow-7: rgba(50, 50, 71, 0.08);
+$shadow-8: rgba(50, 50, 71, 0.2);
 
 $bordershadow-1: inset 0 0 0 .0625rem $shadow1;
 $bordershadow-2: inset 0 0 0 .0625rem $primary;
+$input-shadow: 0rem .0625rem .125rem $shadow-7, 0rem 0rem .0625rem $shadow-8;
+$box-shadow-default: 0rem 0rem .0625rem $shadow-1, 0rem .25rem 1.25rem -0.125rem $shadow-7;
 
 // BOX-SHADOWS
 

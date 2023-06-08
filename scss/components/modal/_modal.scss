@@ -9,6 +9,12 @@
   &-header {
     border-bottom: 0;
 
+    .modal-title {
+      color: $black;
+      font-size: size(18);
+      font-weight: 500;
+    }
+
     .btn-close {
       @include square(24);
       @include flex-center;
@@ -139,6 +145,20 @@
         span {
           color: inherit;
           font: inherit;
+        }
+      }
+    }
+
+    .deliverylist {
+      @include flex-column;
+      gap: size(8);
+
+      &-item {
+        span {
+          color: $red;
+          font-size: size(12);
+          display: inline-block;
+          margin-top: size(2);
         }
       }
     }

@@ -3454,9 +3454,11 @@
                       <div class="info">
                         <h5 class="orderid">Order ID: #647eXX</h5>
                         <div class="infotext">
-                          <p class="text">
-                            Love confinement shoe cotton slippers, love bags, soft bottom home slippers indoor slippers
-                          </p>
+                          <a href="product-details.html" class="link">
+                            <p class="text">
+                              Love confinement shoe cotton slippers, love bags, soft bottom home slippers indoor slippers
+                            </p>
+                          </a>
                         </div>
                       </div>
                       
@@ -3578,9 +3580,11 @@
                       <div class="info">
                         <h5 class="orderid">Order ID: #647eXX</h5>
                         <div class="infotext">
-                          <p class="text">
-                            Love confinement shoe cotton slippers, love bags, soft bottom home slippers indoor slippers
-                          </p>
+                          <a href="product-details.html" class="link">
+                            <p class="text">
+                              Love confinement shoe cotton slippers, love bags, soft bottom home slippers indoor slippers
+                            </p>
+                          </a>
                         </div>
                       </div>
                       
@@ -3712,7 +3716,7 @@
                 <div class="payinfo">
                   <p class="title">Pay after delivery</p>
 
-                  <p class="text">
+                  <button class="text" data-bs-toggle="modal" data-bs-target="#shippingModal">
                     ৳ 0 + Shipping & Courier Charge
                     <span class="icon">
                       <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="20" width="20" xmlns="http://www.w3.org/2000/svg" style="margin-left: 6px;">
@@ -3721,7 +3725,7 @@
                         <path d="M256 367.91a20 20 0 1120-20 20 20 0 01-20 20z"></path>
                       </svg>
                     </span>
-                  </p>
+                  </button>
                 </div>
               </div>
 
@@ -3978,6 +3982,37 @@
     </div>
   </div>
   <!-- EDIT-MODAL END -->
+
+  <!-- SHIPPING MODAL -->
+  <div class="modal fade" id="shippingModal" tabindex="-1" aria-labelledby="shippingModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title">Delivery & Courier Charges</h1>
+        </div>
+        <div class="modal-body">
+          <ul class="deliverylist">
+            <li class="deliverylist-item">
+              Delivery Charge: 670 / 850 টাকা প্রতি কেজি।
+              <br>
+              <span>
+                পণ্য বাংলাদেশে আসার পর পণ্যের ক্যাটাগরীর উপর নির্ভর করে চূড়ান্ত শিপিং চার্জ নির্ধারণ করা হবে।
+              </span>
+            </li>
+
+            <li class="deliverylist-item">
+              China Courier Charge.
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer justify-content-end gap-3">
+          <button type="button" class="btn btn-update" data-bs-dismiss="modal">
+            Okay
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- BOOTSTRAP SCRIPT -->
   <script src="assets/js/bootsrap/bootstrap.bundle.min.js"></script>

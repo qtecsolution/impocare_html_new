@@ -7850,6 +7850,72 @@ table tr th, table tr td {
   height: 100%;
 }
 
+.badge-status {
+  padding: 0.25rem 0.875rem;
+  border-radius: 0.3125rem;
+  border-radius: 0.3125rem;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.cancelled {
+  background: hsl(1, 100%, 90%);
+  color: hsl(1, 73%, 54%);
+}
+
+.delivered {
+  background: hsl(124, 100%, 90%);
+  color: hsl(120, 100%, 22%);
+}
+
+.pending {
+  background: hsl(47, 100%, 85%);
+  color: hsl(28, 87%, 62%);
+}
+
+.default {
+  background: hsl(210, 38%, 95%);
+  color: hsl(220, 26%, 14%);
+}
+
+.site-breadcrumb {
+  padding: 1.5rem 0rem;
+}
+.site-breadcrumb nav .breadcrumb {
+  margin-bottom: 0;
+}
+.site-breadcrumb nav .breadcrumb-item {
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(0, 0%, 69%);
+}
+.site-breadcrumb nav .breadcrumb-item a {
+  font: inherit;
+  color: inherit;
+  font-weight: 100;
+}
+.site-breadcrumb nav .breadcrumb-item::before {
+  content: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.09222 5L0 1.11094L1.16897 0L6.43016 5L1.16897 10L0 8.88906L4.09222 5Z' fill='%23B0B0B0'/%3E%3C/svg%3E%0A");
+}
+.site-breadcrumb nav .breadcrumb-item:first-child::before {
+  content: "";
+}
+.site-breadcrumb nav .breadcrumb-item.active {
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(184, 54%, 15%);
+}
+
 button,
 [type=button],
 [type=reset],
@@ -7986,6 +8052,154 @@ button:not([disabled]):hover,
 }
 .homeproduct:not([disabled]):hover .homeproduct-header img {
   transform: scale(0.95);
+}
+
+.card-horizontal {
+  display: flex;
+  gap: 0.875rem;
+  background: hsl(0, 0%, 96%);
+  padding: 0.875rem 0.75rem;
+}
+.card-horizontal .card-thumbnail {
+  width: 6.1875rem;
+  height: 6.1875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.3125rem;
+  background: hsl(0, 0%, 100%);
+}
+.card-horizontal .card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-horizontal .card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card-horizontal .card-details .cardlink {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.4;
+}
+.card-horizontal .card-details .title {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  color: hsl(218, 17%, 35%);
+}
+.card-horizontal .card-details .pricecount {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.card-horizontal .card-details .pricecount .count {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 17%, 35%);
+}
+.card-horizontal .card-details .pricecount .countprice {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 17%, 35%);
+}
+.card-horizontal .card-details .pricecount .countprice span {
+  color: inherit;
+  font: inherit;
+}
+.card-horizontal .card-details .counterbox {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.card-horizontal .card-details .counterbox .countcart {
+  max-width: 7.25rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  background: hsl(204, 45%, 98%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.card-horizontal .card-details .counterbox .countcart .counter {
+  width: calc(100% - 3.25rem);
+  font-family: "Jost", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 17%, 35%);
+  text-align: center;
+  background: transparent;
+}
+.card-horizontal .card-details .counterbox .countcart .btn-decrement,
+.card-horizontal .card-details .counterbox .countcart .btn-increment {
+  background: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  width: 1.625rem;
+  height: 1.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card-horizontal .card-details .counterbox .icon {
+  height: 0.875rem;
+  width: 0.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-horizontal .card-details .counterbox .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.card-horizontal .card-details .counterbox .totalcountprice {
+  color: hsl(218, 17%, 35%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .card-horizontal .card-details .counterbox .totalcountprice {
+    font-size: 0.875rem;
+  }
+}
+.card-horizontal .card-details .counterbox .totalcountprice span {
+  color: inherit;
+  font: inherit;
+}
+.card-horizontal .card-details .price {
+  color: hsl(198, 76%, 52%);
+}
+.card-horizontal .card-details .price span {
+  color: inherit;
+  font: inherit;
 }
 
 .header {
@@ -8384,6 +8598,11 @@ button:not([disabled]):hover,
 .modal-header {
   border-bottom: 0;
 }
+.modal-header .modal-title {
+  color: hsl(0, 0%, 0%);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
 .modal-header .btn-close {
   width: 1.5rem;
   height: 1.5rem;
@@ -8524,6 +8743,17 @@ button:not([disabled]):hover,
 .modal-body .total-subtotal .total span {
   color: inherit;
   font: inherit;
+}
+.modal-body .deliverylist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.modal-body .deliverylist-item span {
+  color: hsl(354, 73%, 43%);
+  font-size: 0.75rem;
+  display: inline-block;
+  margin-top: 0.125rem;
 }
 .modal-footer {
   display: flex;
@@ -10266,6 +10496,8 @@ button:not([disabled]):hover,
   line-height: 1.4;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .cartsection .cartdetail-footer {
   margin-top: 0.75rem;
@@ -10289,18 +10521,19 @@ button:not([disabled]):hover,
   background: #1a8cbc;
   color: hsl(0, 0%, 100%);
 }
-.cartsection .cartitems {
+
+.cartitems {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.cartsection .cartitems .item {
+.cartitems .item {
   background: hsl(0, 0%, 100%);
   border: solid 0.0625rem hsl(0, 0%, 93%);
   border-radius: 0.25rem;
   border-radius: 0.25rem;
 }
-.cartsection .cartitems .item-header {
+.cartitems .item-header {
   padding: 0.75rem;
   border-bottom: solid 0.0625rem hsl(0, 0%, 93%);
   display: flex;
@@ -10308,25 +10541,25 @@ button:not([disabled]):hover,
   gap: 0.75rem;
 }
 @media screen and (min-width: 62rem) {
-  .cartsection .cartitems .item-header {
+  .cartitems .item-header {
     padding: 1rem;
   }
 }
-.cartsection .cartitems .item-header .itemcheck {
+.cartitems .item-header .itemcheck {
   width: 1.5rem;
   height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.cartsection .cartitems .item-header .item-detail {
+.cartitems .item-header .item-detail {
   width: calc(100% - 2.125rem);
   display: flex;
   align-items: center;
   gap: 1rem;
   padding-left: 0.5rem;
 }
-.cartsection .cartitems .item-header .item-detail .thumb {
+.cartitems .item-header .item-detail .thumb {
   width: 4rem;
   height: 4rem;
   display: flex;
@@ -10334,22 +10567,22 @@ button:not([disabled]):hover,
   justify-content: center;
   overflow: hidden;
 }
-.cartsection .cartitems .item-header .item-detail .thumb img {
+.cartitems .item-header .item-detail .thumb img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cartsection .cartitems .item-header .item-detail .detail {
+.cartitems .item-header .item-detail .detail {
   width: calc(100% - 5rem);
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.cartsection .cartitems .item-header .item-detail .detail .info {
+.cartitems .item-header .item-detail .detail .info {
   width: calc(100% - 2.5rem);
 }
-.cartsection .cartitems .item-header .item-detail .detail .info .orderid {
+.cartitems .item-header .item-detail .detail .info .orderid {
   color: hsl(0, 0%, 0%);
   font-family: "Jost", sans-serif;
   font-size: 0.9375rem;
@@ -10361,7 +10594,7 @@ button:not([disabled]):hover,
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.cartsection .cartitems .item-header .item-detail .detail .info .text {
+.cartitems .item-header .item-detail .detail .info .text {
   color: hsl(0, 0%, 0%);
   font-family: "Jost", sans-serif;
   font-size: 0.8125rem;
@@ -10374,24 +10607,24 @@ button:not([disabled]):hover,
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
 }
-.cartsection .cartitems .item-header .item-detail .detail .deleteitem {
+.cartitems .item-header .item-detail .detail .deleteitem {
   width: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.cartsection .cartitems .item-header .item-detail .detail .deleteitem .btn-delete {
+.cartitems .item-header .item-detail .detail .deleteitem .btn-delete {
   background: transparent;
   border: none;
 }
-.cartsection .cartitems .item-body .infolist {
+.cartitems .item-body .infolist {
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
 }
-.cartsection .cartitems .item-body .infolist-item {
+.cartitems .item-body .infolist-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10399,13 +10632,13 @@ button:not([disabled]):hover,
   padding: 0.75rem;
 }
 @media screen and (min-width: 62rem) {
-  .cartsection .cartitems .item-body .infolist-item {
+  .cartitems .item-body .infolist-item {
     padding: 0.75rem 1.5rem;
   }
 }
-.cartsection .cartitems .item-body .infolist-item .leftdetail,
-.cartsection .cartitems .item-body .infolist-item .centerdetail,
-.cartsection .cartitems .item-body .infolist-item .rightdetail {
+.cartitems .item-body .infolist-item .leftdetail,
+.cartitems .item-body .infolist-item .centerdetail,
+.cartitems .item-body .infolist-item .rightdetail {
   color: hsl(0, 0%, 0%);
   font-family: "Jost", sans-serif;
   font-size: 0.75rem;
@@ -10414,30 +10647,30 @@ button:not([disabled]):hover,
   line-height: 1.6333333333;
 }
 @media screen and (min-width: 62rem) {
-  .cartsection .cartitems .item-body .infolist-item .leftdetail,
-  .cartsection .cartitems .item-body .infolist-item .centerdetail,
-  .cartsection .cartitems .item-body .infolist-item .rightdetail {
+  .cartitems .item-body .infolist-item .leftdetail,
+  .cartitems .item-body .infolist-item .centerdetail,
+  .cartitems .item-body .infolist-item .rightdetail {
     font-size: 0.875rem;
   }
 }
-.cartsection .cartitems .item-body .infolist-item .leftdetail span,
-.cartsection .cartitems .item-body .infolist-item .centerdetail span,
-.cartsection .cartitems .item-body .infolist-item .rightdetail span {
+.cartitems .item-body .infolist-item .leftdetail span,
+.cartitems .item-body .infolist-item .centerdetail span,
+.cartitems .item-body .infolist-item .rightdetail span {
   color: inherit;
   font: inherit;
 }
-.cartsection .cartitems .item-body .infolist-item .leftdetail {
+.cartitems .item-body .infolist-item .leftdetail {
   flex: 3 1 0%;
 }
-.cartsection .cartitems .item-body .infolist-item .centerdetail {
+.cartitems .item-body .infolist-item .centerdetail {
   flex: 2 1 0%;
 }
-.cartsection .cartitems .item-body .infolist-item .rightdetail {
+.cartitems .item-body .infolist-item .rightdetail {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
-.cartsection .cartitems .item-body .infolist-item .rightdetail .btn-edit {
+.cartitems .item-body .infolist-item .rightdetail .btn-edit {
   background: #115a79;
   color: hsl(0, 0%, 100%);
   display: flex;
@@ -10452,11 +10685,11 @@ button:not([disabled]):hover,
   padding: 0.5rem;
   transition: all 350ms ease-in-out;
 }
-.cartsection .cartitems .item-body .infolist-item .rightdetail .btn-edit:not([disabled]):hover {
+.cartitems .item-body .infolist-item .rightdetail .btn-edit:not([disabled]):hover {
   background: #177ba6;
   color: hsl(0, 0%, 100%);
 }
-.cartsection .cartitems .item-footer {
+.cartitems .item-footer {
   border-top: solid 0.0625rem hsl(0, 0%, 93%);
   display: flex;
   align-items: center;
@@ -10465,17 +10698,17 @@ button:not([disabled]):hover,
   padding: 0.75rem;
 }
 @media screen and (min-width: 62rem) {
-  .cartsection .cartitems .item-footer {
+  .cartitems .item-footer {
     padding: 0.75rem 1.5rem;
   }
 }
-.cartsection .cartitems .item-footer .leftdetail {
+.cartitems .item-footer .leftdetail {
   flex: 3 1 0%;
 }
-.cartsection .cartitems .item-footer .centerdetail {
+.cartitems .item-footer .centerdetail {
   flex: 2 1 0%;
 }
-.cartsection .cartitems .item-footer .title {
+.cartitems .item-footer .title {
   color: hsl(0, 0%, 0%);
   font-family: "Jost", sans-serif;
   font-size: 0.75rem;
@@ -10484,11 +10717,11 @@ button:not([disabled]):hover,
   line-height: 1.6333333333;
 }
 @media screen and (min-width: 62rem) {
-  .cartsection .cartitems .item-footer .title {
+  .cartitems .item-footer .title {
     font-size: 0.875rem;
   }
 }
-.cartsection .cartitems .item-footer .totalitems {
+.cartitems .item-footer .totalitems {
   color: hsl(0, 0%, 0%);
   font-family: "Jost", sans-serif;
   font-size: 0.75rem;
@@ -10497,11 +10730,11 @@ button:not([disabled]):hover,
   line-height: 1.6333333333;
 }
 @media screen and (min-width: 62rem) {
-  .cartsection .cartitems .item-footer .totalitems {
+  .cartitems .item-footer .totalitems {
     font-size: 0.875rem;
   }
 }
-.cartsection .cartitems .item-footer .totalprice {
+.cartitems .item-footer .totalprice {
   color: hsl(0, 0%, 0%);
   font-family: "Jost", sans-serif;
   font-size: 0.75rem;
@@ -10510,11 +10743,11 @@ button:not([disabled]):hover,
   line-height: 1.6333333333;
 }
 @media screen and (min-width: 62rem) {
-  .cartsection .cartitems .item-footer .totalprice {
+  .cartitems .item-footer .totalprice {
     font-size: 0.875rem;
   }
 }
-.cartsection .cartitems .item-footer .totalprice span {
+.cartitems .item-footer .totalprice span {
   color: inherit;
   font: inherit;
 }
@@ -10750,6 +10983,1061 @@ button:not([disabled]):hover,
   font-weight: 400;
   font-style: normal;
   line-height: 1.4;
+}
+.checkoutsection-body .checkoutinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.checkoutsection-body .checkoutdescript {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(0, 0%, 93%);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+.checkoutsection-body .inputbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.checkoutsection-body .inputbox .inputlabel {
+  color: hsl(0, 0%, 0%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.checkoutsection-body .inputbox .inputlabel span {
+  color: hsl(354, 73%, 43%);
+  font: inherit;
+}
+.checkoutsection-body .inputbox .inputlabel .optional {
+  color: hsl(0, 0%, 60%);
+  font: inherit;
+}
+.checkoutsection-body .inputbox .inputfield {
+  border: solid 0.0625rem hsl(0, 0%, 87%);
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  padding: 0.5625rem 1rem;
+  transition: all 350ms ease-in-out;
+}
+.checkoutsection-body .inputbox .inputfield::-moz-placeholder {
+  color: hsl(0, 0%, 67%);
+}
+.checkoutsection-body .inputbox .inputfield::placeholder {
+  color: hsl(0, 0%, 67%);
+}
+.checkoutsection-body .inputbox .inputfield:focus {
+  border-color: hsl(0, 0%, 60%);
+}
+.checkoutsection-body .inputbox .messagefield {
+  border: solid 0.0625rem hsl(0, 0%, 87%);
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  padding: 0.5625rem 1rem;
+  transition: all 350ms ease-in-out;
+}
+.checkoutsection-body .inputbox .messagefield::-moz-placeholder {
+  color: hsl(0, 0%, 67%);
+}
+.checkoutsection-body .inputbox .messagefield::placeholder {
+  color: hsl(0, 0%, 67%);
+}
+.checkoutsection-body .inputbox .messagefield:focus {
+  border-color: hsl(0, 0%, 60%);
+}
+.checkoutsection-body .inputbox .nice-select {
+  border: solid 0.0625rem hsl(0, 0%, 87%);
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  height: 2.5rem;
+}
+.checkoutsection-body .checkoutdetail-body {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem hsl(0, 0%, 93%);
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  padding: 0.625rem;
+}
+.checkoutsection-body .checkoutdetail-body .checkoutprice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.checkoutsection-body .checkoutdetail-body .checkoutprice .title {
+  color: hsl(0, 0%, 0%);
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+.checkoutsection-body .checkoutdetail-body .checkoutprice .productprice {
+  color: hsl(0, 0%, 0%);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.checkoutsection-body .checkoutdetail-body .checkoutprice .productprice span {
+  color: inherit;
+  font: inherit;
+}
+.checkoutsection-body .checkoutdetail-body .paymentbox {
+  background: hsl(189, 19%, 93%);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.875rem;
+  text-align: center;
+  padding: 1rem;
+}
+.checkoutsection-body .checkoutdetail-body .paymentbox .payment-title {
+  color: hsl(0, 0%, 0%);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.checkoutsection-body .checkoutdetail-body .paymentbox .payment-title span {
+  color: inherit;
+  font: inherit;
+}
+.checkoutsection-body .checkoutdetail-body .paymentbox button {
+  background: transparent;
+  text-align: center;
+  color: hsl(0, 0%, 0%);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.checkoutsection-body .checkoutdetail-body .paymentbox button:not([disabled]):hover {
+  color: hsl(354, 73%, 43%);
+}
+.checkoutsection-body .checkoutdetail-body .paymentbox .coupon {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  width: 90%;
+  margin-inline: auto;
+  border-radius: 4rem;
+  border-radius: 4rem;
+  overflow: hidden;
+}
+.checkoutsection-body .checkoutdetail-body .paymentbox .coupon .couponfield {
+  height: 2.5rem;
+  width: calc(100% - 5rem);
+  padding-left: 1rem;
+  font-size: 0.875rem;
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+}
+.checkoutsection-body .checkoutdetail-body .paymentbox .coupon .couponfield::-moz-placeholder {
+  color: hsl(0, 0%, 67%);
+}
+.checkoutsection-body .checkoutdetail-body .paymentbox .coupon .couponfield::placeholder {
+  color: hsl(0, 0%, 67%);
+}
+.checkoutsection-body .checkoutdetail-body .paymentbox .coupon .btn-applying {
+  width: 5rem;
+  height: 2.5rem;
+  background: #115a79;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  transition: all 350ms ease-in-out;
+}
+.checkoutsection-body .checkoutdetail-body .paymentbox .coupon .btn-applying:not([disabled]):hover {
+  background: #177ba6;
+  color: hsl(0, 0%, 100%);
+}
+.checkoutsection-body .checkoutdetail-footer {
+  margin-top: 0.75rem;
+}
+.checkoutsection-body .checkoutdetail-footer .btn-checkout {
+  width: 100%;
+  height: 2.625rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  background: #146a90;
+  color: hsl(0, 0%, 100%);
+  transition: all 350ms ease-in-out;
+}
+.checkoutsection-body .checkoutdetail-footer .btn-checkout:not([disabled]):hover {
+  background: #1a8cbc;
+  color: hsl(0, 0%, 100%);
+}
+
+.orderdetails {
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails {
+    margin-bottom: 1.5rem;
+  }
+}
+.orderdetails-content {
+  display: flex;
+  gap: 2rem;
+}
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails-content {
+    flex-direction: column;
+  }
+}
+.orderdetails-content .order-detail {
+  width: calc(100% - 23.125rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails-content .order-detail {
+    width: 100%;
+    padding: 0;
+  }
+}
+.orderdetails-content .order-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.orderdetails-content .order-detail-content .title-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.orderdetails-content .order-detail-content .title-status .title {
+  width: calc(100% - 5rem);
+}
+.orderdetails-content .order-detail-content .title-status .status {
+  width: 5rem;
+}
+.orderdetails-content .order-detail-content .title-status .ordertitle {
+  font-family: "Jost", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 23%, 23%);
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.orderdetails-content .order-detail-content .date {
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 17%, 35%);
+}
+.orderdetails-content .order-detail-content .shop {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.orderdetails-content .order-detail-content .shop-title {
+  color: hsl(218, 17%, 35%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .orderdetails-content .order-detail-content .shop-title {
+    font-size: 1rem;
+  }
+}
+.orderdetails-content .order-detail-content .shop-name {
+  color: hsl(354, 73%, 43%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .orderdetails-content .order-detail-content .shop-name {
+    font-size: 1rem;
+  }
+}
+.orderdetails-content .order-detail-timeline {
+  background: hsl(0, 0%, 100%);
+  padding: 1.0625rem 1.1875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (max-width: 31.25rem) {
+  .orderdetails-content .order-detail-timeline {
+    gap: 1.25rem;
+  }
+}
+.orderdetails-content .order-detail-timeline .timelinetitle {
+  color: hsl(218, 17%, 35%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .orderdetails-content .order-detail-timeline .timelinetitle {
+    font-size: 1rem;
+  }
+}
+.orderdetails-content .order-detail-timeline .timeline {
+  display: flex;
+}
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails-content .order-detail-timeline .timeline {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.orderdetails-content .order-detail-timeline .timeline-box {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails-content .order-detail-timeline .timeline-box {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 8.75rem;
+    flex-direction: row;
+  }
+}
+.orderdetails-content .order-detail-timeline .timeline-box:first-of-type .timeline-progress::before {
+  left: 0;
+  width: 0;
+  height: 0rem;
+}
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails-content .order-detail-timeline .timeline-box .timeline-time {
+    width: calc(50% - 2.875rem);
+  }
+}
+.orderdetails-content .order-detail-timeline .timeline-box .timeline-time .date {
+  color: hsl(0, 0%, 53%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 75rem) {
+  .orderdetails-content .order-detail-timeline .timeline-box .timeline-time .date {
+    font-size: 1rem;
+  }
+}
+.orderdetails-content .order-detail-timeline .timeline-box .timeline-time .time {
+  color: hsl(0, 0%, 53%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 75rem) {
+  .orderdetails-content .order-detail-timeline .timeline-box .timeline-time .time {
+    font-size: 1rem;
+  }
+}
+.orderdetails-content .order-detail-timeline .timeline-box .timeline-progress {
+  width: 2.875rem;
+  height: 2.875rem;
+  border: solid 0.125rem hsl(0, 0%, 74%);
+  border-radius: 100%;
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.orderdetails-content .order-detail-timeline .timeline-box .timeline-progress::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -209%;
+  width: 205%;
+  height: 0.125rem;
+  background: hsl(0, 0%, 77%);
+}
+@media screen and (min-width: 75rem) {
+  .orderdetails-content .order-detail-timeline .timeline-box .timeline-progress::before {
+    left: -308%;
+    width: 308%;
+  }
+}
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails-content .order-detail-timeline .timeline-box .timeline-progress::before {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.125rem;
+    top: -230%;
+    height: 230%;
+  }
+}
+.orderdetails-content .order-detail-timeline .timeline-box .timeline-progress .timelinebox {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 100%;
+  background: hsl(0, 0%, 100%);
+}
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails-content .order-detail-timeline .timeline-box .timeline-status {
+    width: calc(50% - 2.875rem);
+    padding: 0 2.5rem;
+  }
+}
+@media screen and (max-width: 31.25rem) {
+  .orderdetails-content .order-detail-timeline .timeline-box .timeline-status {
+    padding: 0 0.625rem;
+  }
+}
+.orderdetails-content .order-detail-timeline .timeline-box .timeline-status .statustitle {
+  color: hsl(240, 3%, 13%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 75rem) {
+  .orderdetails-content .order-detail-timeline .timeline-box .timeline-status .statustitle {
+    font-size: 1rem;
+  }
+}
+.orderdetails-content .order-detail-timeline .timeline-box .timeline-status .statustext {
+  color: hsl(0, 0%, 53%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 75rem) {
+  .orderdetails-content .order-detail-timeline .timeline-box .timeline-status .statustext {
+    font-size: 1rem;
+  }
+}
+.orderdetails-content .order-detail-timeline .timeline-box.active .timeline-progress {
+  border-color: hsl(198, 76%, 52%);
+}
+.orderdetails-content .order-detail-timeline .timeline-box.active .timeline-progress::before {
+  background: hsl(198, 76%, 52%);
+}
+.orderdetails-content .order-detail-timeline .timeline-box.active .timeline-progress .timelinebox {
+  background: hsl(198, 76%, 52%);
+}
+.orderdetails-content .order-detail-shipping {
+  background: hsl(0, 0%, 100%);
+  padding: 1.0625rem 1.1875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (max-width: 31.25rem) {
+  .orderdetails-content .order-detail-shipping {
+    gap: 1.25rem;
+  }
+}
+.orderdetails-content .order-detail-shipping .shipping-title {
+  font-family: "Jost", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+}
+.orderdetails-content .order-detail-shipping .address-change {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 31.25rem) {
+  .orderdetails-content .order-detail-shipping .address-change {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+.orderdetails-content .order-detail-shipping .address .inputbox .inputlabel {
+  display: flex;
+  flex-direction: column;
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(219, 21%, 39%);
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.875rem;
+  max-width: 15rem;
+}
+.orderdetails-content .order-detail-shipping .address .inputbox .inputlabel::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  border: solid 0.125rem hsl(0, 0%, 92%);
+  left: 0;
+  transition: all 350ms ease-in-out;
+  background: rgba(5, 16, 51, 0.0001);
+}
+.orderdetails-content .order-detail-shipping .address .inputbox .inputlabel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.3125rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 100%;
+  background: hsl(198, 76%, 52%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 350ms ease-in-out;
+}
+.orderdetails-content .order-detail-shipping .address .inputbox .inputlabel .name {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(240, 8%, 17%);
+  letter-spacing: -0.005rem;
+}
+.orderdetails-content .order-detail-shipping .address .inputbox .inputlabel .phone {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 17%, 35%);
+}
+.orderdetails-content .order-detail-shipping .address .inputbox .inputlabel .address {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 23%, 23%);
+}
+.orderdetails-content .order-detail-shipping .address .inputbox .inputfield:checked ~ .inputlabel {
+  color: hsl(240, 8%, 17%);
+}
+.orderdetails-content .order-detail-shipping .address .inputbox .inputfield:checked ~ .inputlabel::before {
+  border-color: hsl(198, 76%, 52%);
+}
+.orderdetails-content .order-detail-shipping .address .inputbox .inputfield:checked ~ .inputlabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+.orderdetails-content .order-detail-shipping .change {
+  display: flex;
+}
+.orderdetails-content .order-detail-shipping .change .btn-change {
+  font-family: "Jost", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  background: hsl(198, 76%, 52%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  transition: all 350ms ease-in-out;
+}
+.orderdetails-content .order-detail-shipping .change .btn-change:not([disabled]):hover {
+  background: #177ba6;
+  color: hsl(0, 0%, 100%);
+}
+.orderdetails-content .order-detail .findagent-form {
+  background: hsl(0, 0%, 100%);
+  padding: 1.0625rem 1.1875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (max-width: 31.25rem) {
+  .orderdetails-content .order-detail .findagent-form {
+    gap: 1.25rem;
+  }
+}
+.orderdetails-content .order-detail .findagent-form .findagent-title {
+  font-family: "Jost", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+}
+.orderdetails-content .order-detail .findagent-form .nice-select {
+  height: auto;
+}
+.orderdetails-content .order-detail .findagent-form .find-agent {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.orderdetails-content .order-detail .findagent-form .find-agent .selectbox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 40%;
+}
+.orderdetails-content .order-detail .findagent-form .find-agent .selectbox .inputlabel {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(210, 21%, 33%);
+}
+.orderdetails-content .order-detail .findagent-form .find-agent .selectbox .inputselect {
+  font-family: "Jost", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  background: hsl(0, 0%, 100%);
+  color: hsl(210, 21%, 33%);
+  padding: 0.90625rem 1rem 1.03125rem;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  box-shadow: 0rem 0.0625rem 0.125rem rgba(50, 50, 71, 0.08), 0rem 0rem 0.0625rem rgba(50, 50, 71, 0.2);
+  cursor: pointer;
+}
+.orderdetails-content .order-detail .findagent-form .find-agent .btn-find {
+  padding: 1rem;
+  background: #115a79;
+  color: hsl(0, 0%, 100%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1;
+  text-align: center;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  width: 7.5rem;
+  height: 3rem;
+  margin-top: 1.5rem;
+  transition: all 350ms ease-in-out;
+}
+.orderdetails-content .order-detail .findagent-form .find-agent .btn-find:not([disabled]):hover {
+  background: #177ba6;
+  color: hsl(0, 0%, 100%);
+}
+.orderdetails-content .order-detail .found-agent {
+  background: hsl(0, 0%, 100%);
+  padding: 1.0625rem 1.1875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+@media screen and (max-width: 31.25rem) {
+  .orderdetails-content .order-detail .found-agent {
+    gap: 1.25rem;
+  }
+}
+.orderdetails-content .order-detail .found-agent .foundagent-title {
+  font-family: "Jost", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+}
+.orderdetails-content .order-detail .found-agent .agentlist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.orderdetails-content .order-detail .found-agent .agentlist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0rem 0rem 0.0625rem rgba(12, 26, 75, 0.1), 0rem 0.25rem 1.25rem -0.125rem rgba(50, 50, 71, 0.08);
+  padding: 0.625rem 1.25rem;
+}
+.orderdetails-content .order-detail .found-agent .agentlist-item .name-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: hsl(214, 32%, 91%);
+  color: hsl(216, 15%, 52%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.25rem;
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .orderdetails-content .order-detail .found-agent .agentlist-item .name-thumb {
+    font-size: 1rem;
+  }
+}
+.orderdetails-content .order-detail .found-agent .agentlist-item .detail .name {
+  color: hsl(218, 23%, 23%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .orderdetails-content .order-detail .found-agent .agentlist-item .detail .name {
+    font-size: 1rem;
+  }
+}
+.orderdetails-content .order-detail .found-agent .agentlist-item .detail .number {
+  color: hsl(218, 23%, 23%);
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+@media screen and (min-width: 36rem) {
+  .orderdetails-content .order-detail .found-agent .agentlist-item .detail .number {
+    font-size: 1rem;
+  }
+}
+.orderdetails-content .checkout-details {
+  background: hsl(0, 0%, 100%);
+  width: 23.125rem;
+  padding: 1.1875rem 0.9375rem;
+}
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails-content .checkout-details {
+    width: 100%;
+  }
+}
+.orderdetails-content .checkout-details .checkouttitle {
+  font-family: "Jost", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 17%, 35%);
+  letter-spacing: -0.005rem;
+  margin-bottom: 1.1875rem;
+}
+.orderdetails-content .checkout-details .productlist {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  margin-bottom: 3.25rem;
+}
+@media screen and (max-width: 61.9375rem) {
+  .orderdetails-content .checkout-details .productlist {
+    margin-bottom: 1.625rem;
+  }
+}
+.orderdetails-content .checkout-details .subtotal-shipping .subtotal {
+  border-top: solid 0.0625rem hsl(0, 0%, 92%);
+  border-bottom: solid 0.0625rem hsl(0, 0%, 92%);
+  padding: 1.625rem 0rem 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.orderdetails-content .checkout-details .subtotal-shipping .subtotal .title {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 23%, 23%);
+  margin-bottom: 0;
+}
+.orderdetails-content .checkout-details .subtotal-shipping .subtotal .price {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 23%, 23%);
+}
+.orderdetails-content .checkout-details .subtotal-shipping .shipping {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.875rem 0rem 1.875rem;
+}
+.orderdetails-content .checkout-details .subtotal-shipping .shipping .title {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 23%, 23%);
+  margin-bottom: 0;
+}
+.orderdetails-content .checkout-details .subtotal-shipping .shipping .shippingcosts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.orderdetails-content .checkout-details .subtotal-shipping .shipping .shippingcosts .shippingcost {
+  width: 10.9375rem;
+}
+.orderdetails-content .checkout-details .subtotal-shipping .shipping .shippingcosts .shippingcost .inputlabel {
+  display: flex;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(219, 21%, 39%);
+  cursor: pointer;
+  position: relative;
+  padding-right: 1.875rem;
+  text-align: right;
+}
+.orderdetails-content .checkout-details .subtotal-shipping .shipping .shippingcosts .shippingcost .inputlabel::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  border: solid 0.125rem hsl(0, 0%, 92%);
+  right: 0;
+  transition: all 350ms ease-in-out;
+  background: rgba(5, 16, 51, 0.0001);
+}
+.orderdetails-content .checkout-details .subtotal-shipping .shipping .shippingcosts .shippingcost .inputlabel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0.3125rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 100%;
+  background: hsl(198, 76%, 52%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 350ms ease-in-out;
+}
+.orderdetails-content .checkout-details .subtotal-shipping .shipping .shippingcosts .shippingcost .inputfield:checked ~ .inputlabel {
+  color: hsl(240, 8%, 17%);
+}
+.orderdetails-content .checkout-details .subtotal-shipping .shipping .shippingcosts .shippingcost .inputfield:checked ~ .inputlabel::before {
+  border-color: hsl(198, 76%, 52%);
+}
+.orderdetails-content .checkout-details .subtotal-shipping .shipping .shippingcosts .shippingcost .inputfield:checked ~ .inputlabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+.orderdetails-content .checkout-details .totalcost {
+  border-top: solid 0.0625rem hsl(0, 0%, 92%);
+  border-bottom: solid 0.0625rem hsl(0, 0%, 92%);
+  padding: 1.125rem 0rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.125rem;
+}
+.orderdetails-content .checkout-details .totalcost .title {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 23%, 23%);
+  margin-bottom: 0;
+}
+.orderdetails-content .checkout-details .totalcost .price {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 23%, 23%);
+  letter-spacing: -0.005rem;
+}
+.orderdetails-content .checkout-details .paymentmethod {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+}
+.orderdetails-content .checkout-details .paymentmethod .title {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(218, 23%, 23%);
+  margin-bottom: 0;
+}
+.orderdetails-content .checkout-details .paymentmethod .methods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-bottom: 2.125rem;
+}
+.orderdetails-content .checkout-details .paymentmethod .methods .singlemethod .inputfield:checked ~ .inputlabel {
+  color: hsl(240, 8%, 17%);
+}
+.orderdetails-content .checkout-details .paymentmethod .methods .singlemethod .inputfield:checked ~ .inputlabel::before {
+  border-color: hsl(198, 76%, 52%);
+}
+.orderdetails-content .checkout-details .paymentmethod .methods .singlemethod .inputfield:checked ~ .inputlabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+.orderdetails-content .checkout-details .paymentmethod .methods .singlemethod .inputlabel {
+  display: flex;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(219, 21%, 39%);
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.875rem;
+}
+.orderdetails-content .checkout-details .paymentmethod .methods .singlemethod .inputlabel::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  border: solid 0.125rem hsl(0, 0%, 92%);
+  left: 0;
+  transition: all 350ms ease-in-out;
+  background: rgba(5, 16, 51, 0.0001);
+}
+.orderdetails-content .checkout-details .paymentmethod .methods .singlemethod .inputlabel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.3125rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 100%;
+  background: hsl(198, 76%, 52%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 350ms ease-in-out;
+}
+.orderdetails-content .checkout-details .wishpayment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.9375rem;
+}
+.orderdetails-content .checkout-details .wishpayment .inputlabel {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(210, 21%, 33%);
+}
+.orderdetails-content .checkout-details .wishpayment .inputfield {
+  font-family: "Jost", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  background: hsl(0, 0%, 100%);
+  color: hsl(210, 21%, 33%);
+  padding: 0.78125rem 1rem;
+  border-radius: 0.375rem;
+  border-radius: 0.375rem;
+  border: solid 0.0625rem hsl(0, 0%, 87%);
+  transition: all 350ms ease-in-out;
+}
+.orderdetails-content .checkout-details .wishpayment .inputfield::-moz-placeholder {
+  color: hsl(0, 0%, 77%);
+}
+.orderdetails-content .checkout-details .wishpayment .inputfield::placeholder {
+  color: hsl(0, 0%, 77%);
+}
+.orderdetails-content .checkout-details .wishpayment .inputfield:focus {
+  border-color: hsl(198, 76%, 52%);
+}
+.orderdetails-content .checkout-details .detailbox {
+  margin-bottom: 2.5rem;
+}
+.orderdetails-content .checkout-details .detailbox .detailtext {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  color: hsl(210, 21%, 33%);
+}
+.orderdetails-content .checkout-details .orderbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orderdetails-content .checkout-details .orderbox .btn-order {
+  width: 10.625rem;
+  height: 2.875rem;
+  padding: 1rem;
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  background: hsl(198, 76%, 52%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.orderdetails-content .checkout-details .orderbox .btn-order:not([disabled]):hover {
+  background: #177ba6;
+  color: hsl(0, 0%, 100%);
 }
 
 /*
