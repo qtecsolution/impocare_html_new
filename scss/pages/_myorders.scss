@@ -1,0 +1,108 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.myorders {
+  margin-bottom: size(86);
+
+  @include breakpoint(tablet991) {
+    margin-bottom: size(43);
+  }
+
+  .ordernav {
+    background: $white;
+
+    @include breakpoint(phone768) {
+      @include flex-center-between;
+      padding: size(15);
+      margin-bottom: size(15);
+    }
+
+    .ordertitle {
+      @include font($primaryFont, 20, bold, normal, 28);
+      color: $headingcolor;
+      letter-spacing: size(-0.08);
+      padding: size(15);
+
+      @include breakpoint(phone768) {
+        padding: size(0);
+      }
+    }
+
+    .orderlist {
+      @include list-vertical;
+
+      &-link {
+        @include flex-center-between;
+        padding: size(11) size(6) size(12) size(18);
+        @include setBgColor($white, $gray-800);
+
+        &:hover:not(.active) {
+          @include setBgColor($gray-300, $primary);
+        }
+
+        &.active {
+          @include setBgColor($gray-300, $primary);
+        }
+
+        .text {
+          @include font($primaryFont, 14, normal, normal, 19.6);
+        }
+      }
+    }
+
+    .btn-orderlist {
+      @include square(size(24));
+      @include transparent-button;
+      display: none;
+
+      @include breakpoint(phone768) {
+        @include flex-center;
+      }
+
+      @include transitionsall;
+
+      @include hover {
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .myorderlist {
+    @include flex-column;
+    gap: size(8);
+  }
+}
+
+// MOBILE ORDERLIST
+.mobileorderlist {
+  .offcanvas-header {
+    .offcanvas-title {
+      @include font($primaryFont, 20, bold, normal, 29);
+      color: $headingcolor;
+      letter-spacing: size(-0.08);
+    }
+
+    .btn-close {
+      @include square(size(24));
+      @include flex-center;
+      @include transparent-button;
+
+      @include hover {
+        svg {
+          path {
+            fill: $error-border;
+          }
+        }
+      }
+
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+  }
+}

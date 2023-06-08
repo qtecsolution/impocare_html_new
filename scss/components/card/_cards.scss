@@ -1,5 +1,5 @@
-@use "../../global" as *;
-@use "../../partials" as *;
+@use '../../global' as *;
+@use '../../partials' as *;
 
 .homeproduct {
   @include border(solid, 1, $border-2);
@@ -26,7 +26,7 @@
     @include flex-column;
     gap: size(8);
     padding: size(8) size(8) size(5);
-  
+
     .producttitle {
       color: $black;
       @include font($primaryFont, 12, medium, normal, 16.8);
@@ -87,7 +87,7 @@
   @include hover {
     .homeproduct-header {
       img {
-        @include scale(.95);
+        @include scale(0.95);
       }
     }
   }
@@ -208,6 +208,163 @@
       span {
         color: inherit;
         font: inherit;
+      }
+    }
+  }
+}
+
+.card-order {
+  background: $white;
+  padding: size(12) size(16);
+  display: flex;
+  gap: size(16);
+
+  .card-cap {
+    @include square(99);
+    @include flex-center;
+    padding: size(4) size(12);
+    background: $gray-300;
+
+    @include breakpoint(tablet991) {
+      margin-top: size(30);
+    }
+
+    @include breakpoint(phone500) {
+      @include square(60);
+    }
+
+    img {
+      @include wh100;
+    }
+  }
+
+  .card-details {
+    width: calc(100% - 6.1875rem);
+    @include flex-column;
+    gap: size(8);
+
+    @include breakpoint(phone500) {
+      width: calc(100% - 3.75rem);
+    }
+
+    .details-head {
+      @include flex-center-between;
+
+      @include breakpoint(tablet991) {
+        flex-direction: column;
+      }
+
+      .ordertime {
+        @include flex-column;
+        gap: size(2);
+        max-width: size(380);
+
+        @include breakpoint(tablet991) {
+          @include w100;
+          order: 1;
+        }
+
+        .ordernumber {
+          @include font($primaryFont, 18, medium, normal, 25.2);
+          color: $gray-700;
+          letter-spacing: size(-0.08);
+          @include text-overflow;
+
+          @include breakpoint(phone500) {
+            font-size: size(16);
+          }
+        }
+
+        .orderdate {
+          @include font($primaryFont, 14, normal, normal, 19.6);
+          color: $gray-700;
+
+          @include breakpoint(phone500) {
+            font-size: size(12);
+          }
+        }
+      }
+
+      .status {
+        @include breakpoint(tablet991) {
+          order: 0;
+          @include w100;
+          @include flex-end;
+        }
+      }
+    }
+
+    .details-body {
+      @include flex-center-between;
+
+      @include breakpoint(tablet991) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: size(10);
+      }
+
+      .total-due {
+        @include flex-center-baseline;
+        gap: size(24);
+
+        @include breakpoint(tablet991) {
+          flex-direction: column;
+          gap: size(0);
+        }
+
+        .total {
+          &-cost {
+            @include font($primaryFont, 16, normal, normal, 22.4);
+            color: $gray-700;
+
+            @include breakpoint(tablet991) {
+              font-size: size(14);
+            }
+          }
+        }
+
+        .due {
+          &-cost {
+            @include font($primaryFont, 20, normal, normal, 28);
+            color: $gray-800;
+
+            @include breakpoint(tablet991) {
+              font-size: size(16);
+            }
+          }
+        }
+      }
+
+      .detail-pay {
+        @include flex-center-vert;
+        gap: size(8);
+
+        .btn-detail {
+          @include font($primaryFont, 12, semibold, normal, 12);
+          padding: size(12) size(20);
+          text-align: center;
+          @include setBgColor($white, $primary);
+          @include border(solid, 1, $primary);
+          @include radius(6);
+          @include transitionsall;
+
+          @include hover {
+            @include setBgColor($primary, $white);
+          }
+        }
+
+        .btn-pay {
+          @include font($primaryFont, 12, semibold, normal, 12);
+          padding: size(12) size(20);
+          text-align: center;
+          @include setBgColor($primary, $white);
+          @include radius(6);
+          @include transitionsall;
+
+          @include hover {
+            @include setBgColor(darken($primary, 20%), $white);
+          }
+        }
       }
     }
   }

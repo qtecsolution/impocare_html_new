@@ -1,0 +1,659 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.myprofile {
+  margin-bottom: size(86);
+
+  @include breakpoint(tablet991) {
+    margin-bottom: size(43);
+  }
+
+  .profilenav {
+    background: $white;
+
+    @include breakpoint(phone768) {
+      @include flex-center-between;
+      padding: size(15);
+      margin-bottom: size(15);
+    }
+
+    .profiletitle {
+      @include font($primaryFont, 20, bold, normal, 28);
+      color: $headingcolor;
+      letter-spacing: size(-0.08);
+      padding: size(15);
+
+      @include breakpoint(phone768) {
+        padding: size(0);
+      }
+    }
+
+    .profilelist {
+      @include list-vertical;
+
+      &-link {
+        @include flex-center-between;
+        padding: size(11) size(6) size(12) size(18);
+        @include setBgColor($white, $gray-800);
+
+        &:hover:not(.active) {
+          @include setBgColor($gray-300, $primary);
+        }
+
+        &.active {
+          @include setBgColor($gray-300, $primary);
+        }
+
+        .text {
+          @include font($primaryFont, 14, normal, normal, 19.6);
+        }
+      }
+    }
+
+    .btn-profile {
+      @include square(24);
+      @include transparent-button;
+      display: none;
+      @include transitionsall;
+
+      @include breakpoint(phone768) {
+        @include flex-center;
+      }
+
+      @include hover {
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .myorderlist {
+    @include flex-column;
+    gap: size(8);
+  }
+}
+
+// MOBILE ORDERLIST
+.mobileprofilelist {
+  .offcanvas-header {
+    .offcanvas-title {
+      @include font($primaryFont, 20, bold, normal, 28);
+      color: $headingcolor;
+      letter-spacing: size(-0.08);
+    }
+
+    .btn-close {
+      @include square(24);
+      @include flex-center;
+      @include transparent-button;
+
+      @include hover {
+        svg {
+          path {
+            fill: $error-border;
+          }
+        }
+      }
+
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+  }
+}
+
+.profileinfo {
+  @include flex-column;
+  gap: size(8);
+
+  .profile-info {
+    background: $white;
+    padding: size(24) size(27) size(40);
+    @include flex-column;
+    gap: size(36);
+
+    &-head {
+      .profile-thumbnail {
+        @include flex-center-vert;
+        gap: size(16);
+
+        .upload-thumbnail {
+          position: relative;
+          @include square(82);
+          @include flex-center;
+          @include circle;
+
+          img {
+            @include wh100;
+            @include circle;
+          }
+
+          .form-label {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            cursor: pointer;
+          }
+        }
+
+        &-details {
+          @include flex-column;
+          gap: size(4);
+
+          .name {
+            @include font($primaryFont, 18, bold, normal, 25.2);
+            color: $headingcolor;
+            letter-spacing: size(-0.08);
+          }
+
+          .phonenumber {
+            @include font($primaryFont, 14, normal, normal, 19.6);
+            color: $gray-700;
+          }
+        }
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: size(56);
+
+      @include breakpoint(tablet991) {
+        gap: size(28);
+      }
+
+      .info-head {
+        @include flex-center-vert;
+        gap: size(32);
+
+        .infotitle {
+          @include font($primaryFont, 18, bold, normal, 25.2);
+          color: $headingcolor;
+          letter-spacing: size(-0.08);
+        }
+
+        .btn-edit {
+          @include setBgColor($successBg, $primary);
+          padding: size(4) size(10);
+          text-align: center;
+          @include radius(6);
+          @include transitionsall;
+          @include font($primaryFont, 12, normal, normal, 16.8);
+
+          @include hover {
+            @include setBgColor($primary, $successBg);
+          }
+        }
+      }
+
+      .info-body {
+        max-width: size(600);
+        @include flex-column;
+        gap: size(32) size(12);
+
+        @include breakpoint(phone500) {
+          gap: size(12);
+        }
+
+        .inforow {
+          @include flex-center-vert;
+          gap: size(32) size(12);
+
+          @include breakpoint(phone500) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: size(12);
+          }
+
+          .infocol {
+            width: 50%;
+
+            @include breakpoint(phone500) {
+              @include w100;
+            }
+
+            .infobox {
+              @include flex-center-vert;
+              gap: size(16);
+
+              .icon {
+                @include square(36);
+                @include circle;
+                overflow: hidden;
+                @include flex-center;
+
+                svg {
+                  @include wh100;
+                }
+              }
+
+              .infodetail {
+                .infotitle {
+                  @include font($primaryFont, 14, normal, normal, 19.6);
+                  color: $black;
+                }
+
+                .infotext {
+                  color: $dark-1;
+                  @include font($primaryFont, 14, normal, normal, 19.6);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .profile-address {
+    background: $white;
+    padding: size(24) size(27) size(40);
+    @include flex-column;
+    gap: size(44);
+
+    @include breakpoint(tablet991) {
+      gap: size(24);
+    }
+
+    .addresstitle {
+      @include font($primaryFont, 18, bold, normal, 25.2);
+      color: $gray-700;
+      letter-spacing: size(-0.08);
+    }
+
+    .myaddressbox {
+      @include flex-column;
+      gap: size(32);
+      max-width: size(700);
+
+      @include breakpoint(phone768) {
+        gap: size(16);
+      }
+
+      .myaddress {
+        @include flex-column;
+        gap: size(20);
+        background: $white;
+
+        &-header {
+          @include flex-center-between;
+          align-items: flex-start;
+
+          .headinfo {
+            @include flex-column;
+            gap: size(2);
+            width: calc(100% - 3rem);
+
+            .name {
+              @include font($primaryFont, 18, bold, normal, 25.2);
+              color: $headingcolor;
+              letter-spacing: size(-0.08);
+            }
+
+            .contact {
+              @include font($primaryFont, 14, normal, normal, 19.6);
+              color: $gray-700;
+            }
+
+            .address {
+              @include font($primaryFont, 14, normal, normal, 19.6);
+              color: $gray-700;
+            }
+          }
+
+          .edit {
+            @include square(48);
+            @include flex-center;
+            overflow: hidden;
+
+            .btn-edit {
+              @include transparent-button;
+
+              svg {
+                path {
+                  @include transitionsall;
+                }
+              }
+
+              @include hover {
+                svg {
+                  path {
+                    fill: $primary;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &-body {
+          .change-delete {
+            @include flex-center-between;
+
+            .change {
+              width: calc(100% - 3rem);
+
+              .btn-changed {
+                @include setBgColor($white, $primary);
+                padding: size(8) size(16);
+                text-align: center;
+                letter-spacing: size(-0.08);
+                @include font($primaryFont, 12, normal, normal, 16.8);
+                @include border(solid, 1, $primary);
+                @include radius(4);
+                @include transitionsall;
+
+                @include hover {
+                  @include setBgColor($primary, $white);
+                }
+              }
+            }
+
+            .delete {
+              @include square(48);
+              @include flex-center;
+              overflow: hidden;
+
+              .btn-delete {
+                @include transparent-button;
+
+                svg {
+                  path {
+                    @include transitionsall;
+                  }
+                }
+
+                @include hover {
+                  svg {
+                    path {
+                      fill: $badgeBg;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .add-address {
+      .btn-add {
+        @include setBgColor($primary, $white);
+        padding: size(16) size(24);
+        @include font($primaryFont, 14, normal, normal, 19.6);
+        @include radius(8);
+        @include transitionsall;
+
+        @include hover {
+          @include setBgColor($primary-dark, $white);
+        }
+      }
+    }
+
+    .checkout-form {
+      @include flex-column;
+      gap: size(32);
+
+      .formrow {
+        @include flex-center-vert;
+        gap: size(32);
+
+        @include breakpoint(phone768) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: size(16);
+        }
+
+        .formcol {
+          width: 50%;
+
+          @include breakpoint(phone768) {
+            @include w100;
+          }
+
+          .inputbox {
+            @include w100;
+            @include flex-column;
+            gap: size(8);
+
+            .inputlabel {
+              @include font($primaryFont, 14, normal, normal, 19.6);
+              color: $dark-1;
+            }
+
+            .inputfield {
+              @include font($primaryFont, 15, normal, normal, 15);
+              font-weight: 100;
+              @include setBgColor($white, $dark-1);
+              padding: size(14.5) size(16) size(16.5);
+              @include radius(6);
+              box-shadow: $input-shadow;
+            }
+          }
+
+          .selectbox {
+            @include w100;
+            @include flex-column;
+            gap: size(8);
+
+            .inputlabel {
+              @include font($primaryFont, 14, normal, normal, 19.6);
+              color: $dark-1;
+            }
+
+            .inputselect {
+              @include font($primaryFont, 15, normal, normal, 15);
+              @include setBgColor($white, $dark-1);
+              padding: size(14.5) size(16) size(16.5);
+              @include radius(6);
+              box-shadow: $input-shadow;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .address {
+        @include w100;
+
+        .inputbox {
+          @include w100;
+          @include flex-column;
+          gap: size(8);
+
+          .inputlabel {
+            @include font($primaryFont, 14, normal, normal, 19.6);
+            color: $dark-1;
+          }
+
+          .inputfield {
+            @include font($primaryFont, 15, normal, normal, 15);
+            font-weight: 100;
+            color: $dark-1;
+            padding: size(14.5) size(16) size(16.5);
+            @include radius(6);
+            box-shadow: $input-shadow;
+          }
+        }
+      }
+    }
+  }
+}
+
+.profilechangepassword {
+  max-width: size(550);
+  padding: size(42) size(60) size(80);
+  background: $white;
+
+  @include breakpoint(phone575) {
+    padding: size(20) size(24) size(40);
+  }
+
+  .change-passwordbox {
+    @include flex-column;
+    gap: size(32);
+
+    &-header {
+      .changetitle {
+        color: $gray-700;
+
+        @include breakpoint(phone575) {
+          font-size: size(20);
+        }
+      }
+    }
+
+    &-body {
+      .form-changepassword {
+        @include flex-column;
+        gap: size(30);
+
+        .inputbox {
+          @include w100;
+          @include flex-column;
+          gap: size(8);
+
+          .inputlabel {
+            @include font($primaryFont, 14, normal, normal, 19.6);
+            color: $dark-1;
+          }
+
+          .inputfield {
+            @include font($primaryFont, 15, normal, normal, 15);
+            font-weight: 100;
+            @include setBgColor($white, $dark-1);
+            padding: size(14.5) size(16) size(16.5);
+            @include radius(6);
+            box-shadow: $input-shadow;
+          }
+        }
+
+        .submitbox {
+          margin-top: size(10);
+
+          .btn-submit {
+            @include w100;
+            padding: size(16);
+            @include setBgColor($primary, $white);
+            @include font($primaryFont, 14, medium, normal, 19.6);
+            text-align: center;
+            @include radius(8);
+            @include transitionsall;
+
+            @include hover {
+              @include setBgColor($primary-dark, $white);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.editinfo {
+  @include flex-column;
+  gap: size(32);
+  padding: size(42) size(60) size(80);
+  background: $white;
+
+  @include breakpoint(phone575) {
+    padding: size(20) size(24) size(40);
+  }
+
+  &-header {
+    .editinfotitle {
+      color: $gray-700;
+
+      @include breakpoint(phone575) {
+        font-size: size(20);
+      }
+    }
+  }
+
+  &-body {
+    .edit-form {
+      @include flex-column;
+      gap: size(32);
+
+      .formrow {
+        @include flex-center-vert;
+        gap: size(32);
+
+        @include breakpoint(phone768) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: size(16);
+        }
+
+        .formcol {
+          width: 50%;
+
+          @include breakpoint(phone768) {
+            @include w100;
+          }
+
+          .inputbox {
+            @include w100;
+            @include flex-column;
+            gap: size(8);
+
+            .inputlabel {
+              @include font($primaryFont, 14, medium, normal, 19.6);
+              color: $dark-1;
+            }
+
+            .inputfield {
+              @include font($primaryFont, 14, normal, normal, 19.6);
+              font-weight: 100;
+              @include setBgColor($white, $dark-1);
+              padding: size(14.5) size(16) size(16.5);
+              @include radius(6);
+              box-shadow: $input-shadow;
+            }
+          }
+
+          .selectbox {
+            @include w100;
+            @include flex-column;
+            gap: size(8);
+
+            .inputlabel {
+              @include font($primaryFont, 14, normal, normal, 19.6);
+              color: $dark-1;
+            }
+
+            .inputselect {
+              @include font($primaryFont, 14, normal, normal, 19.6);
+              @include setBgColor($white, $dark-1);
+              padding: size(14.5) size(16) size(16.5);
+              @include radius(6);
+              box-shadow: $input-shadow;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .submit {
+        .btn-submit {
+          @include radius(8);
+          padding: size(16) size(24);
+          text-align: center;
+          @include setBgColor($primary, $white);
+          @include transitionsall;
+          @include font($primaryFont, 14, medium, normal, 19.6);
+          min-width: size(200);
+
+          @include hover {
+            @include setBgColor($primary-dark, $white);
+          }
+        }
+      }
+    }
+  }
+}

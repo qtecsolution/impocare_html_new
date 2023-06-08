@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ImpoCare | Order Details</title>
+  <title>ImpoCare | My Orders</title>
   <!-- FAVICON-ICON -->
   <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/svg+xml">
   <!-- FONTAWESOME -->
@@ -13,8 +13,6 @@
   <link rel="stylesheet" href="assets/css/boxicons.min.css">
   <!-- BACK-TO-TOP-CSS -->
   <link rel="stylesheet" href="assets/css/back-top/back-top.css">
-  <!-- NICE-SELECT-CSS -->
-  <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
   <!-- BOOTSTRAP-CSS -->
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
   <!-- CUSTOM-STYLESHEET -->
@@ -1268,437 +1266,351 @@
             <li class="breadcrumb-item">
               <a href="index.html">Home</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">Order Details</li>
+            <li class="breadcrumb-item active" aria-current="page">My Orders</li>
           </ol>
         </nav>
       </div>
     </div>
     <!-- SITE BREADCRUMB END -->
 
-    <!-- ORDER DETAILS SECTION START -->
-    <section class="orderdetails">
+    <!-- MY ORDERS SECTION START -->
+    <section class="myorders">
       <div class="container">
-        <div class="orderdetails-content">
-          <!-- ORDER DETAILS START -->
-          <div class="order-detail">
-            <!-- ORDER DETAILS START -->
-            <div class="order-detail-content">
-              <div class="title-status">
-                <div class="title">
-                  <h3 class="ordertitle">Order: 145 569 854 236</h3>
-                </div>
-
-                <div class="status">
-                  <span class="badge-status pending">Pending</span>
-                </div>
-              </div>
-
-              <p class="date">Purchase Date: 30 November, 2021</p>
-              <dl class="shop">
-                <dt class="shop-title">Shop name:</dt>
-                <dd class="shop-name">ABCD Smart Gadget</dd>
-              </dl>
-            </div>
-            <!-- ORDER DETAILS END -->
-
-            <!-- ORDER DETAILS TIMELINE START -->
-            <div class="order-detail-timeline">
-              <h4 class="timelinetitle">Timeline</h4>
-
-              <div class="timeline">
-                <div class="timeline-box active">
-                  <div class="timeline-time">
-                    <p class="date">Nov 12 2021</p>
-                    <p class="time">10.00 AM</p>
-                  </div>
-
-                  <div class="timeline-progress">
-                    <div class="timelinebox"></div>
-                  </div>
-
-                  <div class="timeline-status">
-                    <h5 class="statustitle">Picked</h5>
-
-                    <p class="statustext">
-                      Delivery assigned to delivery hero by John Doe.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="timeline-box active">
-                  <div class="timeline-time">
-                    <p class="date">Nov 12 2021</p>
-                    <p class="time">10.00 AM</p>
-                  </div>
-
-                  <div class="timeline-progress">
-                    <div class="timelinebox"></div>
-                  </div>
-
-                  <div class="timeline-status">
-                    <h5 class="statustitle">Picked</h5>
-
-                    <p class="statustext">
-                      Jane Doe is picking up our products from the shop-prime
-                    </p>
-                  </div>
-                </div>
-
-                <div class="timeline-box">
-                  <div class="timeline-time">
-                    <p class="date">Nov 12 2021</p>
-                    <p class="time">10.00 AM</p>
-                  </div>
-
-                  <div class="timeline-progress">
-                    <div class="timelinebox"></div>
-                  </div>
-
-                  <div class="timeline-status">
-                    <h5 class="statustitle">Shipped</h5>
-
-                    <p class="statustext">
-                      Delivery assigned to delivery hero by John Doe.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="timeline-box">
-                  <div class="timeline-time">
-                    <p class="date">Nov 12 2021</p>
-                    <p class="time">10.00 AM</p>
-                  </div>
-
-                  <div class="timeline-progress">
-                    <div class="timelinebox"></div>
-                  </div>
-
-                  <div class="timeline-status">
-                    <h5 class="statustitle">Delivered</h5>
-
-                    <p class="statustext">
-                      Delivery assigned to delivery hero by John Doe.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- ORDER DETAILS TIMELINE END -->
-
-            <!-- ORDER SHIPPING ADDRESS START -->
-            <div class="order-detail-shipping">
-              <h4 class="shipping-title">Shipping Address</h4>
-
-              <div class="address-change">
-                <div class="address">
-                  <div class="inputbox">
-                    <input type="radio" class="inputfield" name="selectaddress" id="select-address" checked hidden>
-
-                    <label for="select-address" class="inputlabel">
-                      <span class="name">Nabil Emon</span>
-                      <span class="phone">01679494116</span>
-                      <span class="address">
-                        Sector10, Uttara, Dhaka, Dhaka
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div class="change">
-                  <a href="#" class="btn-change">Change Address</a>
-                </div>
-              </div>
-            </div>
-            <!-- ORDER SHIPPING ADDRESS END -->
-
-            <!-- FIND AGENT FORM START -->
-            <form class="findagent-form">
-              <h4 class="findagent-title">Find Agent</h4>
-
-              <div class="find-agent">
-                <div class="selectbox">
-                  <label for="divisions" class="inputlabel">Division</label>
-                  <select id="divisions" class="inputselect wide">
-                    <option selected>Select your division</option>
-                    <option value="Dhaka">Dhaka</option>
-                    <option value="Chittagong">Chittagong</option>
-                    <option value="Sylhet">Sylhet</option>
-                    <option value="Barishal">Barishal</option>
-                    <option value="Khulna">Khulna</option>
-                    <option value="Mymensingh">Mymensingh</option>
-                  </select>
-                </div>
-
-                <div class="selectbox">
-                  <label for="districts" class="inputlabel">District</label>
-                  <select id="districts" class="inputselect wide">
-                    <option selected>Select your district</option>
-                    <option value="Sherpur">Sherpur</option>
-                    <option value="Dhaka">Dhaka</option>
-                    <option value="Sylhet">Sylhet</option>
-                    <option value="Barishal">Barishal</option>
-                    <option value="Khulna">Khulna</option>
-                    <option value="Mymensingh">Mymensingh</option>
-                  </select>
-                </div>
-
-                <button class="btn-find" type="button" data-bs-toggle="modal" data-bs-target="#findAgent">Find</button>
-              </div>
-            </form>
-            <!-- FIND AGENT FORM END -->      
-              
-            <!-- FOUND AGENT START -->
-            <div class="found-agent">
-              <h4 class="foundagent-title">Agent Information</h4>
-
-              <div class="agentlist">
-                <div class="agentlist-item">
-                  <p class="name-thumb">J</p>
-
-                  <div class="detail">
-                    <p class="name">Jesan-Ul-Bannah</p>
-                    <p class="number">01700000000</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- FOUND AGENT END -->
-
-            <!-- FIND AGENT MODAL START -->
-            <div class="modal fade findmodal" id="findAgent" tabindex="-1" aria-labelledby="findAgent" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title">Find Agent</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20ZM12 10.586L14.828 7.757L16.243 9.172L13.414 12L16.243 14.828L14.828 16.243L12 13.414L9.172 16.243L7.757 14.828L10.586 12L7.757 9.172L9.172 7.757L12 10.586Z" fill="#718096"></path>
+        <div class="row">
+          <!-- ORDER STATUS START -->
+          <div class="col-lg-3 col-md-4 col-12">
+            <nav class="ordernav">
+              <h2 class="ordertitle">My Orders</h2>
+              <!-- DESKTOP ORDERLIST START -->
+              <ul class="orderlist d-none d-md-block">
+                <li class="orderlist-item">
+                  <a href="my-orders.html" class="orderlist-link active">
+                    <span class="text">All Orders</span>
+                    <span class="icon">
+                      <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.94064C4.2365 1.76979 4.5135 1.76979 4.68436 1.94064L9.93436 7.19064C10.1052 7.3615 10.1052 7.6385 9.93436 7.80936L4.68436 13.0594C4.5135 13.2302 4.2365 13.2302 4.06564 13.0594C3.89479 12.8885 3.89479 12.6115 4.06564 12.4406L9.00628 7.5L4.06564 2.55936C3.89479 2.3885 3.89479 2.1115 4.06564 1.94064Z" fill="#718096"/>
                       </svg>
-                    </button>
+                    </span>
+                  </a>
+                </li>
+                <li class="orderlist-item">
+                  <a href="pending.html" class="orderlist-link">
+                    <span class="text">Pending</span>
+                    <span class="icon">
+                      <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.94064C4.2365 1.76979 4.5135 1.76979 4.68436 1.94064L9.93436 7.19064C10.1052 7.3615 10.1052 7.6385 9.93436 7.80936L4.68436 13.0594C4.5135 13.2302 4.2365 13.2302 4.06564 13.0594C3.89479 12.8885 3.89479 12.6115 4.06564 12.4406L9.00628 7.5L4.06564 2.55936C3.89479 2.3885 3.89479 2.1115 4.06564 1.94064Z" fill="#718096"/>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                <li class="orderlist-item">
+                  <a href="cancelled.html" class="orderlist-link">
+                    <span class="text">Cancelled</span>
+                    <span class="icon">
+                      <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.94064C4.2365 1.76979 4.5135 1.76979 4.68436 1.94064L9.93436 7.19064C10.1052 7.3615 10.1052 7.6385 9.93436 7.80936L4.68436 13.0594C4.5135 13.2302 4.2365 13.2302 4.06564 13.0594C3.89479 12.8885 3.89479 12.6115 4.06564 12.4406L9.00628 7.5L4.06564 2.55936C3.89479 2.3885 3.89479 2.1115 4.06564 1.94064Z" fill="#718096"/>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+                <li class="orderlist-item">
+                  <a href="delivered.html" class="orderlist-link">
+                    <span class="text">Delivered</span>
+                    <span class="icon">
+                      <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.94064C4.2365 1.76979 4.5135 1.76979 4.68436 1.94064L9.93436 7.19064C10.1052 7.3615 10.1052 7.6385 9.93436 7.80936L4.68436 13.0594C4.5135 13.2302 4.2365 13.2302 4.06564 13.0594C3.89479 12.8885 3.89479 12.6115 4.06564 12.4406L9.00628 7.5L4.06564 2.55936C3.89479 2.3885 3.89479 2.1115 4.06564 1.94064Z" fill="#718096"/>
+                      </svg>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <!-- DESKTOP ORDERLIST END -->
+              <!-- ORDERLIST ICON START -->
+              <button class="btn-orderlist" type="button" data-bs-toggle="offcanvas" data-bs-target="#myorder-list" aria-controls="myorder-list">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+              </button>
+              <!-- ORDERLIST ICON END -->
+              <!-- MOBILE ORDERLIST START -->
+              <div class="offcanvas offcanvas-start mobileorderlist" tabindex="-1" id="myorder-list" aria-labelledby="myorder-list">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title">
+                    My Orders
+                  </h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20ZM12 10.586L14.828 7.757L16.243 9.172L13.414 12L16.243 14.828L14.828 16.243L12 13.414L9.172 16.243L7.757 14.828L10.586 12L7.757 9.172L9.172 7.757L12 10.586Z" fill="#718096"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="orderlist">
+                    <li class="orderlist-item">
+                      <a href="my-orders.html" class="orderlist-link active">
+                        <span class="text">All Orders</span>
+                        <span class="icon">
+                          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.94064C4.2365 1.76979 4.5135 1.76979 4.68436 1.94064L9.93436 7.19064C10.1052 7.3615 10.1052 7.6385 9.93436 7.80936L4.68436 13.0594C4.5135 13.2302 4.2365 13.2302 4.06564 13.0594C3.89479 12.8885 3.89479 12.6115 4.06564 12.4406L9.00628 7.5L4.06564 2.55936C3.89479 2.3885 3.89479 2.1115 4.06564 1.94064Z" fill="#718096"/>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="orderlist-item">
+                      <a href="pending.html" class="orderlist-link">
+                        <span class="text">Pending</span>
+                        <span class="icon">
+                          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.94064C4.2365 1.76979 4.5135 1.76979 4.68436 1.94064L9.93436 7.19064C10.1052 7.3615 10.1052 7.6385 9.93436 7.80936L4.68436 13.0594C4.5135 13.2302 4.2365 13.2302 4.06564 13.0594C3.89479 12.8885 3.89479 12.6115 4.06564 12.4406L9.00628 7.5L4.06564 2.55936C3.89479 2.3885 3.89479 2.1115 4.06564 1.94064Z" fill="#718096"/>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="orderlist-item">
+                      <a href="cancelled.html" class="orderlist-link">
+                        <span class="text">Cancelled</span>
+                        <span class="icon">
+                          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.94064C4.2365 1.76979 4.5135 1.76979 4.68436 1.94064L9.93436 7.19064C10.1052 7.3615 10.1052 7.6385 9.93436 7.80936L4.68436 13.0594C4.5135 13.2302 4.2365 13.2302 4.06564 13.0594C3.89479 12.8885 3.89479 12.6115 4.06564 12.4406L9.00628 7.5L4.06564 2.55936C3.89479 2.3885 3.89479 2.1115 4.06564 1.94064Z" fill="#718096"/>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="orderlist-item">
+                      <a href="delivered.html" class="orderlist-link">
+                        <span class="text">Delivered</span>
+                        <span class="icon">
+                          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.06564 1.94064C4.2365 1.76979 4.5135 1.76979 4.68436 1.94064L9.93436 7.19064C10.1052 7.3615 10.1052 7.6385 9.93436 7.80936L4.68436 13.0594C4.5135 13.2302 4.2365 13.2302 4.06564 13.0594C3.89479 12.8885 3.89479 12.6115 4.06564 12.4406L9.00628 7.5L4.06564 2.55936C3.89479 2.3885 3.89479 2.1115 4.06564 1.94064Z" fill="#718096"/>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- MOBILE ORDERLIST END -->
+            </nav>
+          </div>
+
+          <!-- ORDER CONTENT START -->
+          <div class="col-lg-9 col-md-8 col-12">
+            <div class="myorderlist">
+              <div class="card-order">
+                <div class="card-cap">
+                  <img src="https://cbu01.alicdn.com/img/ibank/2020/411/015/14341510114_505570945.310x310.jpg" alt="order-thumbnail">
+                </div>
+                <div class="card-details">
+                  <div class="details-head">
+                    <div class="ordertime">
+                      <h4 class="ordernumber">Order: 145 569 854 236</h4>
+                      <p class="orderdate">Placed on Mar 29, 04:50 AM GMT +06:00</p>
+                    </div>
+                    <div class="status">
+                      <span class="badge-status delivered">Delivered</span>
+                    </div>
                   </div>
-                  
-                  <div class="modal-body">
-                    <div class="agentlist">
-                      <div class="agentlist-item">
-                        <p class="name-thumb">J</p>
-
-                        <div class="detail">
-                          <p class="name">Jesan-Ul-Bannah</p>
-                          <p class="number">01700000000</p>
-                        </div>
+                  <div class="details-body">
+                    <div class="total-due">
+                      <div class="total">
+                        <h5 class="total-cost">Total: BDT 29,60,056</h5>
                       </div>
-
-                      <div class="agentlist-item">
-                        <p class="name-thumb">N</p>
-
-                        <div class="detail">
-                          <p class="name">Nabil Emon</p>
-                          <p class="number">01800000000</p>
-                        </div>
+                      <div class="due">
+                        <h3 class="due-cost">Due: BDT 29,60,056</h3>
                       </div>
+                    </div>
+                    <div class="detail-pay">
+                      <a href="orderdetails.html" class="btn-detail">
+                      Order Detail
+                      </a>
+                      <a href="#" class="btn-pay">
+                      Pay Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-order">
+                <div class="card-cap">
+                  <img src="https://cbu01.alicdn.com/img/ibank/O1CN01Kt6pZO2ARC4cPyIe2_!!2206530968199-0-cib.310x310.jpg" alt="order-thumbnail">
+                </div>
+                <div class="card-details">
+                  <div class="details-head">
+                    <div class="ordertime">
+                      <h4 class="ordernumber">Order: 145 569 854 236</h4>
+                      <p class="orderdate">Placed on Mar 29, 04:50 AM GMT +06:00</p>
+                    </div>
+                    <div class="status">
+                      <span class="badge-status delivered">Delivered</span>
+                    </div>
+                  </div>
+                  <div class="details-body">
+                    <div class="total-due">
+                      <div class="total">
+                        <h5 class="total-cost">Total: BDT 29,60,056</h5>
+                      </div>
+                      <div class="due">
+                        <h3 class="due-cost">Due: BDT 29,60,056</h3>
+                      </div>
+                    </div>
+                    <div class="detail-pay">
+                      <a href="orderdetails.html" class="btn-detail">
+                      Order Detail
+                      </a>
+                      <a href="#" class="btn-pay">
+                      Pay Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-order">
+                <div class="card-cap">
+                  <img src="https://cbu01.alicdn.com/img/ibank/2013/429/185/947581924_1930057347.310x310.jpg" alt="order-thumbnail">
+                </div>
+                <div class="card-details">
+                  <div class="details-head">
+                    <div class="ordertime">
+                      <h4 class="ordernumber">Order: 145 569 854 236</h4>
+                      <p class="orderdate">Placed on Mar 29, 04:50 AM GMT +06:00</p>
+                    </div>
+                    <div class="status">
+                      <span class="badge-status delivered">Delivered</span>
+                    </div>
+                  </div>
+                  <div class="details-body">
+                    <div class="total-due">
+                      <div class="total">
+                        <h5 class="total-cost">Total: BDT 29,60,056</h5>
+                      </div>
+                      <div class="due">
+                        <h3 class="due-cost">Due: BDT 29,60,056</h3>
+                      </div>
+                    </div>
+                    <div class="detail-pay">
+                      <a href="orderdetails.html" class="btn-detail">
+                      Order Detail
+                      </a>
+                      <a href="#" class="btn-pay">
+                      Pay Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-order">
+                <div class="card-cap">
+                  <img src="https://cbu01.alicdn.com/img/ibank/2020/041/304/16484403140_303410146.310x310.jpg" alt="order-thumbnail">
+                </div>
+                <div class="card-details">
+                  <div class="details-head">
+                    <div class="ordertime">
+                      <h4 class="ordernumber">Order: 145 569 854 236</h4>
+                      <p class="orderdate">Placed on Mar 29, 04:50 AM GMT +06:00</p>
+                    </div>
+                    <div class="status">
+                      <span class="badge-status delivered">Delivered</span>
+                    </div>
+                  </div>
+                  <div class="details-body">
+                    <div class="total-due">
+                      <div class="total">
+                        <h5 class="total-cost">Total: BDT 29,60,056</h5>
+                      </div>
+                      <div class="due">
+                        <h3 class="due-cost">Due: BDT 29,60,056</h3>
+                      </div>
+                    </div>
+                    <div class="detail-pay">
+                      <a href="orderdetails.html" class="btn-detail">
+                      Order Detail
+                      </a>
+                      <a href="#" class="btn-pay">
+                      Pay Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-order">
+                <div class="card-cap">
+                  <img src="https://cbu01.alicdn.com/img/ibank/2013/587/100/744001785_1730013397.310x310.jpg" alt="order-thumbnail">
+                </div>
+                <div class="card-details">
+                  <div class="details-head">
+                    <div class="ordertime">
+                      <h4 class="ordernumber">Order: 145 569 854 236</h4>
+                      <p class="orderdate">Placed on Mar 29, 04:50 AM GMT +06:00</p>
+                    </div>
+                    <div class="status">
+                      <span class="badge-status delivered">Delivered</span>
+                    </div>
+                  </div>
+                  <div class="details-body">
+                    <div class="total-due">
+                      <div class="total">
+                        <h5 class="total-cost">Total: BDT 29,60,056</h5>
+                      </div>
+                      <div class="due">
+                        <h3 class="due-cost">Due: BDT 29,60,056</h3>
+                      </div>
+                    </div>
+                    <div class="detail-pay">
+                      <a href="orderdetails.html" class="btn-detail">
+                      Order Detail
+                      </a>
+                      <a href="#" class="btn-pay">
+                      Pay Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-order">
+                <div class="card-cap">
+                  <img src="https://cbu01.alicdn.com/img/ibank/2018/251/603/9304306152_1654820263.310x310.jpg" alt="order-thumbnail">
+                </div>
+                <div class="card-details">
+                  <div class="details-head">
+                    <div class="ordertime">
+                      <h4 class="ordernumber">Order: 145 569 854 236</h4>
+                      <p class="orderdate">Placed on Mar 29, 04:50 AM GMT +06:00</p>
+                    </div>
+                    <div class="status">
+                      <span class="badge-status delivered">Delivered</span>
+                    </div>
+                  </div>
+                  <div class="details-body">
+                    <div class="total-due">
+                      <div class="total">
+                        <h5 class="total-cost">Total: BDT 29,60,056</h5>
+                      </div>
+                      <div class="due">
+                        <h3 class="due-cost">Due: BDT 29,60,056</h3>
+                      </div>
+                    </div>
+                    <div class="detail-pay">
+                      <a href="orderdetails.html" class="btn-detail">
+                      Order Detail
+                      </a>
+                      <a href="#" class="btn-pay">
+                      Pay Now
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- FIND AGENT MODAL END -->
           </div>
-          <!-- ORDER DETAILS END -->
-
-          <!-- CHECKOUT DETAILS START -->
-          <div class="checkout-details">
-            <h2 class="checkouttitle">Your Order</h2>
-
-            <div class="productlist">
-              <div class="card-horizontal">
-                <figure class="card-thumbnail">
-                  <a href="product-details.html" class="cardlink">
-                    <img src="https://cbu01.alicdn.com/img/ibank/2020/411/015/14341510114_505570945.310x310.jpg" alt="wishlist-thumb">
-                  </a>
-                </figure>
-
-                <div class="card-details">
-                  <a href="product-details.html" class="cardlink">
-                    <h6 class="title">
-                      OPPO Reno 5 5G 8GB RAM/
-                      128 GB ROM
-                    </h6>
-                  </a>
-
-                  <div class="pricecount">
-                    <span class="count">1</span>
-                    <figure class="icon">
-                      <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.94727 2.47461L4.35352 0.160156H5.61914L3.54492 3.29492L5.68359 6.5H4.42969L2.96484 4.12695L1.5 6.5H0.240234L2.37891 3.29492L0.304688 0.160156H1.55859L2.94727 2.47461Z" fill="#4A5568"/>
-                      </svg>
-                    </figure>
-                    <span class="countprice">
-                      <span>&#2547;</span> 35990
-                    </span>
-                  </div>
-
-                  <h5 class="price">
-                    <span>&#2547;</span> 35990
-                  </h5>
-                </div>
-              </div>
-
-              <div class="card-horizontal">
-                <figure class="card-thumbnail">
-                  <a href="product-details.html" class="cardlink">
-                    <img src="https://cbu01.alicdn.com/img/ibank/O1CN01FAmuWd1LvNneV0E9L_!!2019211361-0-cib.310x310.jpg" alt="wishlist-thumb">
-                  </a>
-                </figure>
-
-                <div class="card-details">
-                  <a href="product-details.html" class="cardlink">
-                    <h6 class="title">
-                      OPPO Reno 5 5G 8GB RAM/
-                      128 GB ROM
-                    </h6>
-                  </a>
-
-                  <div class="pricecount">
-                    <span class="count">1</span>
-                    <figure class="icon">
-                      <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.94727 2.47461L4.35352 0.160156H5.61914L3.54492 3.29492L5.68359 6.5H4.42969L2.96484 4.12695L1.5 6.5H0.240234L2.37891 3.29492L0.304688 0.160156H1.55859L2.94727 2.47461Z" fill="#4A5568"/>
-                      </svg>
-                    </figure>
-                    <span class="countprice">
-                      <span>&#2547;</span> 35990
-                    </span>
-                  </div>
-
-                  <h5 class="price">
-                    <span>&#2547;</span> 35990
-                  </h5>
-                </div>
-              </div>
-
-              <div class="card-horizontal">
-                <figure class="card-thumbnail">
-                  <a href="product-details.html" class="cardlink">
-                    <img src="https://cbu01.alicdn.com/img/ibank/2018/400/169/9083961004_1463588341.310x310.jpg" alt="wishlist-thumb">
-                  </a>
-                </figure>
-
-                <div class="card-details">
-                  <a href="product-details.html" class="cardlink">
-                    <h6 class="title">
-                      OPPO Reno 5 5G 8GB RAM/
-                      128 GB ROM
-                    </h6>
-                  </a>
-
-                  <div class="pricecount">
-                    <span class="count">1</span>
-                    <figure class="icon">
-                      <svg width="6" height="7" viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.94727 2.47461L4.35352 0.160156H5.61914L3.54492 3.29492L5.68359 6.5H4.42969L2.96484 4.12695L1.5 6.5H0.240234L2.37891 3.29492L0.304688 0.160156H1.55859L2.94727 2.47461Z" fill="#4A5568"/>
-                      </svg>
-                    </figure>
-                    <span class="countprice">
-                      <span>&#2547;</span> 35990
-                    </span>
-                  </div>
-
-                  <h5 class="price">
-                    <span>&#2547;</span> 35990
-                  </h5>
-                </div>
-              </div>
-            </div>
-
-            <div class="subtotal-shipping">
-              <div class="subtotal">
-                <h6 class="title">Subtotal</h6>
-                <h6 class="price">
-                  <span>&#2547;</span> 35990
-                </h6>
-              </div>
-
-              <div class="shipping">
-                <h6 class="title">Shipping</h6>
-
-                <div class="shippingcosts">
-                  <div class="shippingcost">
-                    <input type="radio" class="inputfield" name="shippingcost" id="insideDhaka" checked hidden>
-                    <label for="insideDhaka" class="inputlabel">
-                      Inside Dhaka <span>&#2547;</span> 50
-                    </label>
-                  </div>
-                  
-                  <div class="shippingcost">
-                    <input type="radio" class="inputfield" name="shippingcost" id="outsideDhaka" hidden>
-                    <label for="outsideDhaka" class="inputlabel">
-                      Outside Dhaka <span>&#2547;</span> 120
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="totalcost">
-              <h6 class="title">Total</h6>
-              <h4 class="price"><span>&#2547;</span> 35990</h4>
-            </div>
-
-            <div class="paymentmethod">
-              <h6 class="title">Payment method</h6>
-
-              <div class="methods">
-                <div class="singlemethod">
-                  <input type="radio" class="inputfield" name="paymentmethod" id="bankcard" hidden>
-                  <label for="bankcard" class="inputlabel">
-                    Credit/Debit Card
-                  </label>
-                </div>
-
-                <div class="singlemethod">
-                  <input type="radio" class="inputfield" name="paymentmethod" id="bKash" checked hidden>
-                  <label for="bKash" class="inputlabel">
-                    bkash
-                  </label>
-                </div>
-
-                <div class="singlemethod">
-                  <input type="radio" class="inputfield" name="paymentmethod" id="cashondelivery" hidden>
-                  <label for="cashondelivery" class="inputlabel">
-                    Cash On Delivery
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            <div class="wishpayment">
-              <label class="inputlabel" for="wishpay">
-                How much do you want to pay?
-              </label>
-              <input class="inputfield" class="inputfield" type="text" id="wishpay" placeholder="00">
-            </div>
-
-            <div class="detailbox">
-              <p class="detailtext">
-                Make Payment এ যেয়ে 01308464618 এই 
-                নাম্বারে পেমেন্ট করুন
-                রেফারেন্সে অবশ্যই অর্ডার নাম্বারটি দিবেন পেমেন্ট 
-                করে বিকাশ এপ থেকে ট্রানজেকশন এর স্ক্রিনশট নিয়ে 
-                আমদের মেইল করবেন <br> payment@bangladeshdeal.com <br>
-                ২৪-৭২ ঘন্টার মধ্যে পেমেন্ট আপডেট হয়ে যাবে ।
-              </p>
-            </div>
-
-            <div class="orderbox">
-              <button type="button" class="btn-order">
-                Confirm Order
-              </button>
-            </div>
-          </div>
-          <!-- CHECKOUT DETAILS END -->
         </div>
       </div>
     </section>
-  <!-- ORDER DETAILS SECTION END -->
+    <!-- MY ORDERS SECTION END -->
   </main>
 
   <!-- FOOTER-SECTION START -->
@@ -1886,8 +1798,5 @@
   <!-- BACK-TO-TOP -->
   <script src="assets/js/back-top/back-top.js"></script>
   <script src="assets/js/back-top/backtotop.js"></script>
-  <!-- NICE-SELECT-JS -->
-  <script src="assets/js/nice-select/nice-select2.js"></script>
-  <script src="assets/js/nice-select/orderselect.js"></script>
 </body>
 </html>
