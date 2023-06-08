@@ -10,21 +10,22 @@
 
   .ordernav {
     background: $white;
+    @include flex-center-between;
+    padding: size(15);
+    margin-bottom: size(15);
 
-    @include breakpoint(phone768) {
-      @include flex-center-between;
-      padding: size(15);
-      margin-bottom: size(15);
+    @include breakpoint(mobile768) {
+      display: none;
     }
 
     .ordertitle {
       @include font($primaryFont, 20, bold, normal, 28);
       color: $headingcolor;
       letter-spacing: size(-0.08);
-      padding: size(15);
-
-      @include breakpoint(phone768) {
-        padding: size(0);
+      padding: size(0);
+      
+      @include breakpoint(mobile768) {
+        padding: size(15);
       }
     }
 
@@ -51,12 +52,12 @@
     }
 
     .btn-orderlist {
-      @include square(size(24));
+      @include flex-center;
+      @include square(24);
       @include transparent-button;
-      display: none;
 
-      @include breakpoint(phone768) {
-        @include flex-center;
+      @include breakpoint(mobile768) {
+        display: none;
       }
 
       @include transitionsall;
@@ -87,7 +88,7 @@
     }
 
     .btn-close {
-      @include square(size(24));
+      @include square(24);
       @include flex-center;
       @include transparent-button;
 

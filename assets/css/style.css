@@ -12247,6 +12247,17 @@ button:not([disabled]):hover,
 }
 .myorders .ordernav {
   background: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9375rem;
+  margin-bottom: 0.9375rem;
+}
+@media screen and (min-width: 48rem) {
+  .myorders .ordernav {
+    display: none;
+  }
 }
 .myorders .ordernav .ordertitle {
   font-family: "Jost", sans-serif;
@@ -12256,7 +12267,12 @@ button:not([disabled]):hover,
   line-height: 1.4;
   color: hsl(240, 8%, 17%);
   letter-spacing: -0.005rem;
-  padding: 0.9375rem;
+  padding: 0rem;
+}
+@media screen and (min-width: 48rem) {
+  .myorders .ordernav .ordertitle {
+    padding: 0.9375rem;
+  }
 }
 .myorders .ordernav .orderlist {
   margin: 0;
@@ -12290,12 +12306,19 @@ button:not([disabled]):hover,
   line-height: 1.4;
 }
 .myorders .ordernav .btn-orderlist {
-  width: calc(1.5rem / 16)rem;
-  height: calc(1.5rem / 16)rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
   background: transparent;
   border: none;
-  display: none;
   transition: all 350ms ease-in-out;
+}
+@media screen and (min-width: 48rem) {
+  .myorders .ordernav .btn-orderlist {
+    display: none;
+  }
 }
 .myorders .ordernav .btn-orderlist:not([disabled]):hover svg path {
   fill: hsl(198, 76%, 52%);
@@ -12316,8 +12339,8 @@ button:not([disabled]):hover,
   letter-spacing: -0.005rem;
 }
 .mobileorderlist .offcanvas-header .btn-close {
-  width: calc(1.5rem / 16)rem;
-  height: calc(1.5rem / 16)rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
