@@ -12769,7 +12769,7 @@ button:not([disabled]):hover,
   transition: all 350ms ease-in-out;
 }
 .profileinfo .profile-address .add-address .btn-add:not([disabled]):hover {
-  background: hsl(120, 100%, 22%);
+  background: #115a79;
   color: hsl(0, 0%, 100%);
 }
 .profileinfo .profile-address .checkout-form {
@@ -12937,7 +12937,7 @@ button:not([disabled]):hover,
   transition: all 350ms ease-in-out;
 }
 .profilechangepassword .change-passwordbox-body .form-changepassword .submitbox .btn-submit:not([disabled]):hover {
-  background: hsl(120, 100%, 22%);
+  background: #115a79;
   color: hsl(0, 0%, 100%);
 }
 
@@ -13036,7 +13036,7 @@ button:not([disabled]):hover,
   min-width: 12.5rem;
 }
 .editinfo-body .edit-form .submit .btn-submit:not([disabled]):hover {
-  background: hsl(120, 100%, 22%);
+  background: #115a79;
   color: hsl(0, 0%, 100%);
 }
 

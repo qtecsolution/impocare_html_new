@@ -390,7 +390,7 @@
         @include transitionsall;
 
         @include hover {
-          @include setBgColor($primary-dark, $white);
+          @include setBgColor(darken($primary, 25%), $white);
         }
       }
     }
@@ -546,7 +546,7 @@
             @include transitionsall;
 
             @include hover {
-              @include setBgColor($primary-dark, $white);
+              @include setBgColor(darken($primary, 25%), $white);
             }
           }
         }
@@ -650,7 +650,7 @@
           min-width: size(200);
 
           @include hover {
-            @include setBgColor($primary-dark, $white);
+            @include setBgColor(darken($primary, 25%), $white);
           }
         }
       }
