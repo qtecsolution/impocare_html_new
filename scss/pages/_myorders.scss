@@ -15,7 +15,8 @@
     margin-bottom: size(15);
 
     @include breakpoint(mobile768) {
-      display: none;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     .ordertitle {
@@ -31,11 +32,13 @@
 
     .orderlist {
       @include list-vertical;
+      @include w100;
 
       &-link {
         @include flex-center-between;
         padding: size(11) size(6) size(12) size(18);
         @include setBgColor($white, $gray-800);
+        @include w100;
 
         &:hover:not(.active) {
           @include setBgColor($gray-300, $primary);
