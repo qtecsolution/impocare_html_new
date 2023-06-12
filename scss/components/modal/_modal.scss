@@ -100,7 +100,7 @@
           width: size(96);
           height: size(28);
           background: $white;
-          @include border(solid, 2, darken($primary, 20%));
+          @include border(solid, 2, darken($primary, 10%));
           @include radius(50);
           @include flex-center-vert;
     
@@ -114,7 +114,7 @@
           button {
             @include square(24);
             @include circle;
-            @include setBgColor(darken($primary, 20%), $white);
+            @include setBgColor(darken($primary, 10%), $white);
             padding: size(4);
             @include flex-center;
             overflow: hidden;

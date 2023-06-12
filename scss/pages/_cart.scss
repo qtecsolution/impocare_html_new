@@ -21,7 +21,7 @@
       gap: size(10);
 
       .count {
-        @include setBgColor(darken($primary, 20%), $white);
+        @include setBgColor(darken($primary, 10%), $white);
         font-size: size(14);
         font-weight: bold;
         @include square(24);
@@ -145,7 +145,7 @@
         text-align: center;
         font-size: size(15);
         font-weight: 500;
-        @include setBgColor(darken($primary, 20%), $white);
+        @include setBgColor(darken($primary, 10%), $white);
         @include transitionsall;
 
         @include hover {

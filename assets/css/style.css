@@ -7559,7 +7559,7 @@ video {
   font: inherit;
 }
 a::-moz-selection, abbr::-moz-selection, acronym::-moz-selection, address::-moz-selection, applet::-moz-selection, article::-moz-selection, aside::-moz-selection, audio::-moz-selection, b::-moz-selection, big::-moz-selection, blockquote::-moz-selection, button::-moz-selection, body::-moz-selection, canvas::-moz-selection, caption::-moz-selection, center::-moz-selection, cite::-moz-selection, code::-moz-selection, dd::-moz-selection, del::-moz-selection, details::-moz-selection, dfn::-moz-selection, div::-moz-selection, dl::-moz-selection, dt::-moz-selection, em::-moz-selection, embed::-moz-selection, fieldset::-moz-selection, figcaption::-moz-selection, figure::-moz-selection, footer::-moz-selection, form::-moz-selection, header::-moz-selection, hgroup::-moz-selection, html::-moz-selection, i::-moz-selection, input::-moz-selection, iframe::-moz-selection, img::-moz-selection, ins::-moz-selection, kbd::-moz-selection, label::-moz-selection, legend::-moz-selection, li::-moz-selection, mark::-moz-selection, menu::-moz-selection, main::-moz-selection, nav::-moz-selection, object::-moz-selection, ol::-moz-selection, output::-moz-selection, option::-moz-selection, p::-moz-selection, pre::-moz-selection, q::-moz-selection, ruby::-moz-selection, s::-moz-selection, samp::-moz-selection, section::-moz-selection, small::-moz-selection, span::-moz-selection, strike::-moz-selection, strong::-moz-selection, sub::-moz-selection, summary::-moz-selection, select::-moz-selection, sup::-moz-selection, table::-moz-selection, tbody::-moz-selection, td::-moz-selection, tfoot::-moz-selection, th::-moz-selection, thead::-moz-selection, time::-moz-selection, tr::-moz-selection, tt::-moz-selection, u::-moz-selection, ul::-moz-selection, var::-moz-selection, video::-moz-selection {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
 }
 a::selection,
@@ -7642,7 +7642,7 @@ u::selection,
 ul::selection,
 var::selection,
 video::selection {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
 }
 
@@ -7676,7 +7676,7 @@ h6 {
   margin: 0;
 }
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
 }
 h1::selection,
@@ -7685,7 +7685,7 @@ h3::selection,
 h4::selection,
 h5::selection,
 h6::selection {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
 }
 
@@ -7815,7 +7815,7 @@ table tr th, table tr td {
   height: 100%;
 }
 .appmenu .applist-link .text {
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
   font-family: "Jost", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
@@ -7828,7 +7828,7 @@ table tr th, table tr td {
   justify-content: center;
 }
 .appmenu .applist .homelink .homelinkinfo {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   width: 3.75rem;
   height: 3.75rem;
   border-radius: 100%;
@@ -8043,7 +8043,7 @@ button:not([disabled]):hover,
   display: inline-block;
   border-radius: 0.25rem;
   border-radius: 0.25rem;
-  background: #dbf1fa;
+  background: #e8f9fd;
   color: hsl(0, 0%, 0%);
   font-size: 0.8125rem;
   font-weight: 500;
@@ -8195,7 +8195,7 @@ button:not([disabled]):hover,
   font: inherit;
 }
 .card-horizontal .card-details .price {
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
 }
 .card-horizontal .card-details .price span {
   color: inherit;
@@ -8370,14 +8370,14 @@ button:not([disabled]):hover,
   padding: 0.75rem 1.25rem;
   text-align: center;
   background: hsl(0, 0%, 100%);
-  color: hsl(198, 76%, 52%);
-  border: solid 0.0625rem hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
+  border: solid 0.0625rem hsl(192, 84%, 55%);
   border-radius: 0.375rem;
   border-radius: 0.375rem;
   transition: all 350ms ease-in-out;
 }
 .card-order .card-details .details-body .detail-pay .btn-detail:not([disabled]):hover {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
 }
 .card-order .card-details .details-body .detail-pay .btn-pay {
@@ -8388,14 +8388,14 @@ button:not([disabled]):hover,
   line-height: 1;
   padding: 0.75rem 1.25rem;
   text-align: center;
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
   border-radius: 0.375rem;
   border-radius: 0.375rem;
   transition: all 350ms ease-in-out;
 }
 .card-order .card-details .details-body .detail-pay .btn-pay:not([disabled]):hover {
-  background: #146a90;
+  background: #12add3;
   color: hsl(0, 0%, 100%);
 }
 
@@ -8726,7 +8726,7 @@ button:not([disabled]):hover,
   height: 2.5rem;
   overflow: hidden;
   flex-grow: 100;
-  border: solid 0.0625rem hsl(198, 76%, 52%);
+  border: solid 0.0625rem hsl(192, 84%, 55%);
 }
 @media screen and (min-width: 64rem) {
   .searchbox {
@@ -8762,7 +8762,7 @@ button:not([disabled]):hover,
   transition: all 350ms ease-in-out;
 }
 .searchbox .leftinfo .uploadfile label:not([disabled]):hover svg {
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
 }
 .searchbox .leftinfo .search {
   width: calc(100% - 1.5rem);
@@ -8782,7 +8782,7 @@ button:not([disabled]):hover,
 .searchbox .btn-search {
   width: 4rem;
   height: 2.5rem;
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8858,7 +8858,7 @@ button:not([disabled]):hover,
   font-weight: 400;
 }
 .modal-body .topinfo .cardrange.active {
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
 }
 .modal-body .midinfo {
@@ -8888,7 +8888,7 @@ button:not([disabled]):hover,
   width: 6rem;
   height: 1.75rem;
   background: hsl(0, 0%, 100%);
-  border: solid 0.125rem #146a90;
+  border: solid 0.125rem #12add3;
   border-radius: 3.125rem;
   border-radius: 3.125rem;
   display: flex;
@@ -8904,7 +8904,7 @@ button:not([disabled]):hover,
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 100%;
-  background: #146a90;
+  background: #12add3;
   color: hsl(0, 0%, 100%);
   padding: 0.25rem;
   display: flex;
@@ -8998,29 +8998,29 @@ button:not([disabled]):hover,
   color: hsl(0, 0%, 100%);
 }
 .modal-footer .btn-update {
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
 }
 .modal-footer .btn-update:not([disabled]):hover {
-  background: #177ba6;
+  background: #1099bc;
   color: hsl(0, 0%, 100%);
 }
 
 .tooltip-inner {
-  background: #177ba6;
+  background: #1099bc;
   font-size: 0.75rem;
 }
 .tooltip.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before {
-  border-top-color: #177ba6;
+  border-top-color: #1099bc;
 }
 .tooltip.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
-  border-bottom-color: #177ba6;
+  border-bottom-color: #1099bc;
 }
 .tooltip.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
-  border-left-color: #177ba6;
+  border-left-color: #1099bc;
 }
 .tooltip.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
-  border-right-color: #177ba6;
+  border-right-color: #1099bc;
 }
 
 .footer {
@@ -9064,7 +9064,7 @@ button:not([disabled]):hover,
   color: hsl(0, 0%, 100%);
 }
 .footer .footerdetail-body .footlist-link:hover {
-  color: #81cdee;
+  color: #5bd3f1;
   text-decoration: underline;
 }
 .footer .footerdetail-body .listsocial {
@@ -9085,7 +9085,7 @@ button:not([disabled]):hover,
   font-size: 2.25rem;
 }
 .footer .footerdetail-body .listsocial-link:not([disabled]):hover {
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
 }
 .footer .footerdetail-body .contactlist {
   margin: 0;
@@ -9110,7 +9110,7 @@ button:not([disabled]):hover,
   font-size: 1.125rem;
 }
 .footer .footerdetail-body .contactlist-link:not([disabled]):hover {
-  color: #98d6f1;
+  color: #a1e6f7;
 }
 .footer .copyright {
   background: hsl(0, 0%, 7%);
@@ -9152,7 +9152,7 @@ button:not([disabled]):hover,
 .preloader .loader div {
   width: 0.5rem;
   height: 0.5rem;
-  border: solid 0.0625rem hsl(198, 76%, 52%);
+  border: solid 0.0625rem hsl(192, 84%, 55%);
   border-radius: 100%;
   position: absolute;
   top: 0.125rem;
@@ -9421,8 +9421,8 @@ button:not([disabled]):hover,
 }
 
 .customcheck-box:checked ~ .customcheck-label::before {
-  background: #115a79;
-  border-color: #115a79;
+  background: #0c738d;
+  border-color: #0c738d;
 }
 .customcheck-box:checked ~ .customcheck-label::after {
   opacity: 1;
@@ -9461,11 +9461,11 @@ button:not([disabled]):hover,
 }
 .customcheck-label::-moz-selection {
   background: transparent;
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
 }
 .customcheck-label::selection {
   background: transparent;
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
 }
 
 .custom-radio .radio-input:checked ~ .radio-label::after {
@@ -9604,7 +9604,7 @@ button:not([disabled]):hover,
 .homeproducts-header .viewmore {
   height: 1.875rem;
   padding-inline: 0.625rem;
-  background: #1d9cd3;
+  background: #14c0eb;
   color: hsl(0, 0%, 100%);
   border-radius: 0.25rem;
   border-radius: 0.25rem;
@@ -9654,7 +9654,7 @@ button:not([disabled]):hover,
 .trendingproducts-body .btn-loadmore {
   height: 2.5rem;
   padding-inline: 1.5rem;
-  background: #1d9cd3;
+  background: #14c0eb;
   color: hsl(0, 0%, 100%);
   border-radius: 0.25rem;
   border-radius: 0.25rem;
@@ -9741,8 +9741,8 @@ button:not([disabled]):hover,
   height: 100%;
 }
 .productdetails-body .vanilla-zoom .sidebar .previewthumb:not([disabled]):hover {
-  border-color: #146a90;
-  box-shadow: inset 0 0 0 0.0625rem hsl(198, 76%, 52%);
+  border-color: #12add3;
+  box-shadow: inset 0 0 0 0.0625rem hsl(192, 84%, 55%);
 }
 .productdetails-body .details {
   width: 100%;
@@ -9807,9 +9807,9 @@ button:not([disabled]):hover,
   font-size: 0.8125rem;
 }
 .productdetails-body .details-header .ranges .rangesingle.active {
-  background: #146a90;
+  background: #12add3;
   color: hsl(0, 0%, 100%);
-  border-color: #146a90;
+  border-color: #12add3;
 }
 .productdetails-body .details-header .ranges .rangesingle.active .rangeprice .price {
   color: hsl(0, 0%, 100%);
@@ -9857,12 +9857,12 @@ button:not([disabled]):hover,
   height: 100%;
 }
 .productdetails-body .details-header .quantities .colors-variant .previewthumb.active {
-  border-color: #146a90;
-  box-shadow: inset 0 0 0 0.0625rem hsl(198, 76%, 52%);
+  border-color: #12add3;
+  box-shadow: inset 0 0 0 0.0625rem hsl(192, 84%, 55%);
 }
 .productdetails-body .details-header .quantities .colors-variant .previewthumb:hover:not(.active) {
-  border-color: #146a90;
-  box-shadow: inset 0 0 0 0.0625rem hsl(198, 76%, 52%);
+  border-color: #12add3;
+  box-shadow: inset 0 0 0 0.0625rem hsl(192, 84%, 55%);
 }
 .productdetails-body .details-body {
   max-height: 19.5rem;
@@ -9903,7 +9903,7 @@ button:not([disabled]):hover,
   width: 6rem;
   height: 1.75rem;
   background: hsl(0, 0%, 100%);
-  border: solid 0.125rem #146a90;
+  border: solid 0.125rem #12add3;
   border-radius: 3.125rem;
   border-radius: 3.125rem;
   z-index: 10;
@@ -9923,7 +9923,7 @@ button:not([disabled]):hover,
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 100%;
-  background: #146a90;
+  background: #12add3;
   color: hsl(0, 0%, 100%);
   padding: 0.25rem;
   display: flex;
@@ -9941,7 +9941,7 @@ button:not([disabled]):hover,
 .productdetails-body .details-body .table tbody .add-counterprod .btn-add {
   width: 6rem;
   height: 1.75rem;
-  background: #146a90;
+  background: #12add3;
   color: hsl(0, 0%, 100%);
   border-radius: 0.25rem;
   border-radius: 0.25rem;
@@ -10029,7 +10029,7 @@ button:not([disabled]):hover,
   padding: 0.75rem;
   border-radius: 0.25rem;
   border-radius: 0.25rem;
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
 }
 .productdetails-body .details-footer .descript .prodbuttons .btn-cart .text {
@@ -10050,7 +10050,7 @@ button:not([disabled]):hover,
   padding: 0.75rem;
   border-radius: 0.25rem;
   border-radius: 0.25rem;
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
 }
 .productdetails-body .details-footer .descript .prodbuttons .btn-buy .text {
@@ -10102,7 +10102,7 @@ button:not([disabled]):hover,
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
   border-radius: 2.5rem;
   border-radius: 2.5rem;
@@ -10147,9 +10147,9 @@ button:not([disabled]):hover,
 }
 .productdetails-footer .nav-tabs .nav-link {
   height: 3rem;
-  border: solid 0.0625rem #115a79;
+  border: solid 0.0625rem #0c738d;
   background: hsl(0, 0%, 100%);
-  color: #115a79;
+  color: #0c738d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10171,7 +10171,7 @@ button:not([disabled]):hover,
   }
 }
 .productdetails-footer .nav-tabs .nav-link.active {
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
 }
 .productdetails-footer .tabinfo {
@@ -10260,7 +10260,7 @@ button:not([disabled]):hover,
   font-size: 0.875rem;
 }
 .productdetails .productrightinfo .sellerinfo-top .btn-view {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
   padding: 0.3125rem 1.25rem;
   border-radius: 2.5rem;
@@ -10268,7 +10268,7 @@ button:not([disabled]):hover,
   font-size: 0.875rem;
 }
 .productdetails .productrightinfo .sellerinfo-top .scorebadge {
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
   padding: 0.25rem 0.5rem;
   border-radius: 2.5rem;
@@ -10412,7 +10412,7 @@ button:not([disabled]):hover,
   text-transform: uppercase;
 }
 .filtersection-header .leftinfo .title span {
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
   font: inherit;
   text-transform: inherit;
 }
@@ -10433,10 +10433,10 @@ button:not([disabled]):hover,
   border-color: hsl(0, 0%, 87%);
 }
 .filtersection-header .rightinfo .nice-select.open {
-  border-color: hsl(198, 76%, 52%);
+  border-color: hsl(192, 84%, 55%);
 }
 .filtersection-header .rightinfo .nice-select.open::after {
-  border-color: hsl(198, 76%, 52%);
+  border-color: hsl(192, 84%, 55%);
 }
 .filtersection-header .rightinfo .inputs {
   display: flex;
@@ -10463,7 +10463,7 @@ button:not([disabled]):hover,
   color: hsl(0, 0%, 77%);
 }
 .filtersection-header .rightinfo .inputs .priceinput:focus {
-  border-color: hsl(198, 76%, 52%);
+  border-color: hsl(192, 84%, 55%);
 }
 .filtersection-header .rightinfo .inputs span {
   color: hsl(0, 0%, 37%);
@@ -10475,12 +10475,12 @@ button:not([disabled]):hover,
   border-radius: 0.25rem;
   font-size: 0.8125rem;
   font-weight: 500;
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
   transition: all 350ms ease-in-out;
 }
 .filtersection-header .rightinfo .btn-filter:not([disabled]):hover {
-  background: #177ba6;
+  background: #1099bc;
   color: hsl(0, 0%, 100%);
 }
 .filtersection-body {
@@ -10517,7 +10517,7 @@ button:not([disabled]):hover,
   font-weight: 400;
 }
 .filtersection-footer .pagination .page-link.active {
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
 }
 .filtersection-footer .pagination .page-link:focus {
@@ -10555,7 +10555,7 @@ button:not([disabled]):hover,
   gap: 0.625rem;
 }
 .cartsection-header .cart-title .count {
-  background: #146a90;
+  background: #12add3;
   color: hsl(0, 0%, 100%);
   font-size: 0.875rem;
   font-weight: bold;
@@ -10710,12 +10710,12 @@ button:not([disabled]):hover,
   text-align: center;
   font-size: 0.9375rem;
   font-weight: 500;
-  background: #146a90;
+  background: #12add3;
   color: hsl(0, 0%, 100%);
   transition: all 350ms ease-in-out;
 }
 .cartsection .cartdetail-footer .btn-checkout:not([disabled]):hover {
-  background: #1a8cbc;
+  background: #12add3;
   color: hsl(0, 0%, 100%);
 }
 
@@ -10868,7 +10868,7 @@ button:not([disabled]):hover,
   gap: 0.75rem;
 }
 .cartitems .item-body .infolist-item .rightdetail .btn-edit {
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
   display: flex;
   align-items: center;
@@ -10883,7 +10883,7 @@ button:not([disabled]):hover,
   transition: all 350ms ease-in-out;
 }
 .cartitems .item-body .infolist-item .rightdetail .btn-edit:not([disabled]):hover {
-  background: #177ba6;
+  background: #1099bc;
   color: hsl(0, 0%, 100%);
 }
 .cartitems .item-footer {
@@ -11086,7 +11086,7 @@ button:not([disabled]):hover,
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
   border-radius: 0.25rem;
   border-radius: 0.25rem;
@@ -11344,14 +11344,14 @@ button:not([disabled]):hover,
 .checkoutsection-body .checkoutdetail-body .paymentbox .coupon .btn-applying {
   width: 5rem;
   height: 2.5rem;
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
   font-size: 0.8125rem;
   font-weight: 600;
   transition: all 350ms ease-in-out;
 }
 .checkoutsection-body .checkoutdetail-body .paymentbox .coupon .btn-applying:not([disabled]):hover {
-  background: #177ba6;
+  background: #1099bc;
   color: hsl(0, 0%, 100%);
 }
 .checkoutsection-body .checkoutdetail-footer {
@@ -11368,12 +11368,12 @@ button:not([disabled]):hover,
   text-align: center;
   font-size: 0.9375rem;
   font-weight: 500;
-  background: #146a90;
+  background: #12add3;
   color: hsl(0, 0%, 100%);
   transition: all 350ms ease-in-out;
 }
 .checkoutsection-body .checkoutdetail-footer .btn-checkout:not([disabled]):hover {
-  background: #1a8cbc;
+  background: #12add3;
   color: hsl(0, 0%, 100%);
 }
 
@@ -11641,13 +11641,13 @@ button:not([disabled]):hover,
   }
 }
 .orderdetails-content .order-detail-timeline .timeline-box.active .timeline-progress {
-  border-color: hsl(198, 76%, 52%);
+  border-color: hsl(192, 84%, 55%);
 }
 .orderdetails-content .order-detail-timeline .timeline-box.active .timeline-progress::before {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
 }
 .orderdetails-content .order-detail-timeline .timeline-box.active .timeline-progress .timelinebox {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
 }
 .orderdetails-content .order-detail-shipping {
   background: hsl(0, 0%, 100%);
@@ -11717,7 +11717,7 @@ button:not([disabled]):hover,
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 100%;
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   opacity: 0;
   visibility: hidden;
   transition: all 350ms ease-in-out;
@@ -11751,7 +11751,7 @@ button:not([disabled]):hover,
   color: hsl(240, 8%, 17%);
 }
 .orderdetails-content .order-detail-shipping .address .inputbox .inputfield:checked ~ .inputlabel::before {
-  border-color: hsl(198, 76%, 52%);
+  border-color: hsl(192, 84%, 55%);
 }
 .orderdetails-content .order-detail-shipping .address .inputbox .inputfield:checked ~ .inputlabel::after {
   opacity: 1;
@@ -11768,14 +11768,14 @@ button:not([disabled]):hover,
   line-height: 1;
   padding: 1rem 1.5rem;
   text-align: center;
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
   border-radius: 0.375rem;
   border-radius: 0.375rem;
   transition: all 350ms ease-in-out;
 }
 .orderdetails-content .order-detail-shipping .change .btn-change:not([disabled]):hover {
-  background: #177ba6;
+  background: #1099bc;
   color: hsl(0, 0%, 100%);
 }
 .orderdetails-content .order-detail .findagent-form {
@@ -11833,7 +11833,7 @@ button:not([disabled]):hover,
 }
 .orderdetails-content .order-detail .findagent-form .find-agent .btn-find {
   padding: 1rem;
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
   font-family: "Jost", sans-serif;
   font-size: 0.875rem;
@@ -11849,7 +11849,7 @@ button:not([disabled]):hover,
   transition: all 350ms ease-in-out;
 }
 .orderdetails-content .order-detail .findagent-form .find-agent .btn-find:not([disabled]):hover {
-  background: #177ba6;
+  background: #1099bc;
   color: hsl(0, 0%, 100%);
 }
 .orderdetails-content .order-detail .found-agent {
@@ -12047,7 +12047,7 @@ button:not([disabled]):hover,
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 100%;
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   opacity: 0;
   visibility: hidden;
   transition: all 350ms ease-in-out;
@@ -12056,7 +12056,7 @@ button:not([disabled]):hover,
   color: hsl(240, 8%, 17%);
 }
 .orderdetails-content .checkout-details .subtotal-shipping .shipping .shippingcosts .shippingcost .inputfield:checked ~ .inputlabel::before {
-  border-color: hsl(198, 76%, 52%);
+  border-color: hsl(192, 84%, 55%);
 }
 .orderdetails-content .checkout-details .subtotal-shipping .shipping .shippingcosts .shippingcost .inputfield:checked ~ .inputlabel::after {
   opacity: 1;
@@ -12114,7 +12114,7 @@ button:not([disabled]):hover,
   color: hsl(240, 8%, 17%);
 }
 .orderdetails-content .checkout-details .paymentmethod .methods .singlemethod .inputfield:checked ~ .inputlabel::before {
-  border-color: hsl(198, 76%, 52%);
+  border-color: hsl(192, 84%, 55%);
 }
 .orderdetails-content .checkout-details .paymentmethod .methods .singlemethod .inputfield:checked ~ .inputlabel::after {
   opacity: 1;
@@ -12155,7 +12155,7 @@ button:not([disabled]):hover,
   width: 0.625rem;
   height: 0.625rem;
   border-radius: 100%;
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   opacity: 0;
   visibility: hidden;
   transition: all 350ms ease-in-out;
@@ -12195,7 +12195,7 @@ button:not([disabled]):hover,
   color: hsl(0, 0%, 77%);
 }
 .orderdetails-content .checkout-details .wishpayment .inputfield:focus {
-  border-color: hsl(198, 76%, 52%);
+  border-color: hsl(192, 84%, 55%);
 }
 .orderdetails-content .checkout-details .detailbox {
   margin-bottom: 2.5rem;
@@ -12222,7 +12222,7 @@ button:not([disabled]):hover,
   font-weight: 400;
   font-style: normal;
   line-height: 1.4;
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
   border-radius: 0.5rem;
   border-radius: 0.5rem;
@@ -12230,7 +12230,7 @@ button:not([disabled]):hover,
   transition: all 350ms ease-in-out;
 }
 .orderdetails-content .checkout-details .orderbox .btn-order:not([disabled]):hover {
-  background: #177ba6;
+  background: #1099bc;
   color: hsl(0, 0%, 100%);
 }
 
@@ -12301,11 +12301,11 @@ button:not([disabled]):hover,
 }
 .myorders .ordernav .orderlist-link:hover:not(.active) {
   background: hsl(214, 32%, 91%);
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
 }
 .myorders .ordernav .orderlist-link.active {
   background: hsl(214, 32%, 91%);
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
 }
 .myorders .ordernav .orderlist-link .text {
   font-family: "Jost", sans-serif;
@@ -12330,7 +12330,7 @@ button:not([disabled]):hover,
   }
 }
 .myorders .ordernav .btn-orderlist:not([disabled]):hover svg path {
-  fill: hsl(198, 76%, 52%);
+  fill: hsl(192, 84%, 55%);
 }
 .myorders .myorderlist {
   display: flex;
@@ -12403,11 +12403,11 @@ button:not([disabled]):hover,
 }
 .myprofile .profilenav .profilelist-link:hover:not(.active) {
   background: hsl(214, 32%, 91%);
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
 }
 .myprofile .profilenav .profilelist-link.active {
   background: hsl(214, 32%, 91%);
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
 }
 .myprofile .profilenav .profilelist-link .text {
   font-family: "Jost", sans-serif;
@@ -12425,7 +12425,7 @@ button:not([disabled]):hover,
   transition: all 350ms ease-in-out;
 }
 .myprofile .profilenav .btn-profile:not([disabled]):hover svg path {
-  fill: hsl(198, 76%, 52%);
+  fill: hsl(192, 84%, 55%);
 }
 .myprofile .myorderlist {
   display: flex;
@@ -12544,7 +12544,7 @@ button:not([disabled]):hover,
 }
 .profileinfo .profile-info-body .info-head .btn-edit {
   background: hsl(112, 100%, 94%);
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
   padding: 0.25rem 0.625rem;
   text-align: center;
   border-radius: 0.375rem;
@@ -12557,7 +12557,7 @@ button:not([disabled]):hover,
   line-height: 1.4;
 }
 .profileinfo .profile-info-body .info-head .btn-edit:not([disabled]):hover {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(112, 100%, 94%);
 }
 .profileinfo .profile-info-body .info-body {
@@ -12712,7 +12712,7 @@ button:not([disabled]):hover,
   transition: all 350ms ease-in-out;
 }
 .profileinfo .profile-address .myaddressbox .myaddress-header .edit .btn-edit:not([disabled]):hover svg path {
-  fill: hsl(198, 76%, 52%);
+  fill: hsl(192, 84%, 55%);
 }
 .profileinfo .profile-address .myaddressbox .myaddress-body .change-delete {
   display: flex;
@@ -12726,7 +12726,7 @@ button:not([disabled]):hover,
 }
 .profileinfo .profile-address .myaddressbox .myaddress-body .change-delete .change .btn-changed {
   background: hsl(0, 0%, 100%);
-  color: hsl(198, 76%, 52%);
+  color: hsl(192, 84%, 55%);
   padding: 0.5rem 1rem;
   text-align: center;
   letter-spacing: -0.005rem;
@@ -12735,13 +12735,13 @@ button:not([disabled]):hover,
   font-weight: 400;
   font-style: normal;
   line-height: 1.4;
-  border: solid 0.0625rem hsl(198, 76%, 52%);
+  border: solid 0.0625rem hsl(192, 84%, 55%);
   border-radius: 0.25rem;
   border-radius: 0.25rem;
   transition: all 350ms ease-in-out;
 }
 .profileinfo .profile-address .myaddressbox .myaddress-body .change-delete .change .btn-changed:not([disabled]):hover {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
 }
 .profileinfo .profile-address .myaddressbox .myaddress-body .change-delete .delete {
@@ -12763,7 +12763,7 @@ button:not([disabled]):hover,
   fill: hsl(357, 100%, 44%);
 }
 .profileinfo .profile-address .add-address .btn-add {
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
   padding: 1rem 1.5rem;
   font-family: "Jost", sans-serif;
@@ -12776,7 +12776,7 @@ button:not([disabled]):hover,
   transition: all 350ms ease-in-out;
 }
 .profileinfo .profile-address .add-address .btn-add:not([disabled]):hover {
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
 }
 .profileinfo .profile-address .checkout-form {
@@ -12931,7 +12931,7 @@ button:not([disabled]):hover,
 .profilechangepassword .change-passwordbox-body .form-changepassword .submitbox .btn-submit {
   width: 100%;
   padding: 1rem;
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
   font-family: "Jost", sans-serif;
   font-size: 0.875rem;
@@ -12944,7 +12944,7 @@ button:not([disabled]):hover,
   transition: all 350ms ease-in-out;
 }
 .profilechangepassword .change-passwordbox-body .form-changepassword .submitbox .btn-submit:not([disabled]):hover {
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
 }
 
@@ -13032,7 +13032,7 @@ button:not([disabled]):hover,
   border-radius: 0.5rem;
   padding: 1rem 1.5rem;
   text-align: center;
-  background: hsl(198, 76%, 52%);
+  background: hsl(192, 84%, 55%);
   color: hsl(0, 0%, 100%);
   transition: all 350ms ease-in-out;
   font-family: "Jost", sans-serif;
@@ -13043,7 +13043,7 @@ button:not([disabled]):hover,
   min-width: 12.5rem;
 }
 .editinfo-body .edit-form .submit .btn-submit:not([disabled]):hover {
-  background: #115a79;
+  background: #0c738d;
   color: hsl(0, 0%, 100%);
 }
 
@@ -13100,4 +13100,4 @@ button:not([disabled]):hover,
 	- Author: Qtec Solution Limited
 	- Version: 1.0
 	- Website: https://www.qtecsolution.com/
-================================= */
+================================= *//*# sourceMappingURL=style.css.map */

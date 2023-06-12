@@ -362,7 +362,7 @@
           @include transitionsall;
 
           @include hover {
-            @include setBgColor(darken($primary, 20%), $white);
+            @include setBgColor(darken($primary, 10%), $white);
           }
         }
       }

@@ -67,7 +67,7 @@
           }
 
           @include hover {
-            border-color: darken($primary, 20%);
+            border-color: darken($primary, 10%);
             box-shadow: $bordershadow-2;
           }
         }
@@ -129,8 +129,8 @@
             }
 
             &.active {
-              @include setBgColor(darken($primary, 20%), $white);
-              border-color: darken($primary, 20%);
+              @include setBgColor(darken($primary, 10%), $white);
+              border-color: darken($primary, 10%);
 
               .rangeprice {
                 .price {
@@ -183,12 +183,12 @@
               }
 
               &.active {
-                border-color: darken($primary, 20%);
+                border-color: darken($primary, 10%);
                 box-shadow: $bordershadow-2;
               }
 
               &:hover:not(.active) {
-                border-color: darken($primary, 20%);
+                border-color: darken($primary, 10%);
                 box-shadow: $bordershadow-2;
               }
             }
@@ -239,7 +239,7 @@
                 width: size(96);
                 height: size(28);
                 background: $white;
-                @include border(solid, 2, darken($primary, 20%));
+                @include border(solid, 2, darken($primary, 10%));
                 @include radius(50);
                 z-index: 10;
                 display: none;
@@ -258,7 +258,7 @@
                 button {
                   @include square(24);
                   @include circle;
-                  @include setBgColor(darken($primary, 20%), $white);
+                  @include setBgColor(darken($primary, 10%), $white);
                   padding: size(4);
                   @include flex-center;
                   overflow: hidden;
@@ -276,7 +276,7 @@
               .btn-add {
                 width: size(96);
                 height: size(28);
-                @include setBgColor(darken($primary, 20%), $white);
+                @include setBgColor(darken($primary, 10%), $white);
                 @include radius(4);
                 @include flex-center;
                 font-size: size(13);

@@ -37,7 +37,7 @@
           color: $white;
 
           &:hover {
-            color: lighten($primary, 20%);
+            color: lighten($primary, 10%);
             text-decoration: underline;
           }
         }
